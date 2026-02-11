@@ -7,7 +7,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import { useState } from 'react';
 
-export default function Hero() {
+export default function HomePage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
     <div className="mx-auto ml-2 mr-2 mt-4 bg-gray-20">
@@ -35,7 +35,7 @@ export default function Hero() {
 )}
       <main className="flex flex-col lg:flex-row p-4 gap-4 rounded-b-md">
         <div className="p-4 flex-1 min-w-0">
-          <h1 className="p-4 text-8xl font-bebas mt-16 font-bold tracking-wide drop-shadow-md">IT Professional</h1>
+          <h1 className="p-4 text-4xl md:text-6xl lg:text-8xl font-bebas mt-16 font-bold tracking-wide drop-shadow-md">IT Professional</h1>
           <p className="p-4 mt-4 text-xl text-stone-500 font-oswald drop-shadow-md">Hi, I'm Ben, a passionate IT professional based in Bristol, England.<br />
            Managing IT systems by day, building projects by night. </p>
 
@@ -57,8 +57,12 @@ export default function Hero() {
               component="img"
               src="/profilephoto2.png"
               alt="Ben Foster"
-              sx={{ width: 500, height: 500, borderRadius: '50%', borderColor: 'white' }}
-            />
+              sx={{ 
+                width: { xs: '80vw', lg: 500 }, 
+                height: { xs: '80vw', lg: 500 }, 
+                borderRadius: '50%', 
+                borderColor: 'white' 
+              }}/>
         </div>
       </main>
     </div>
