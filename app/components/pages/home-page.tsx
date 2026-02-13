@@ -7,39 +7,20 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import { useState } from 'react';
 
+
 export default function HomePage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  
   return (
-    <div className="mx-auto ml-0 lg:ml-2 mr-0 lg:mr-2 mt-2 lg:mt-4 bg-gray-20">
-      <header className="sticky top-0 z-10 bg-gray-50 flex justify-between items-center rounded-t-md">
-        <div className="p-4 ml-6">signature</div>
-        <MenuIcon 
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="mr-6"
-          sx={{ 
-            fontSize: 60,
-            transition: 'all 0.3s',
-            '&:hover': {
-            color: 'black',
-            transform: 'scale(1.1)',
-            cursor: 'pointer'
-              }
-            }} />
-        </header> 
-        {isMenuOpen && (
-          <div className="absolute top-16 right-8 bg-white border-2 rounded-lg p-4 shadow-lg z-50">
-          <a href="#" className="block p-2 hover:bg-gray-100">Home</a>
-          <a href="#" className="block p-2 hover:bg-gray-100">About</a>
-          <a href="#" className="block p-2 hover:bg-gray-100">Contact</a>
-        </div>
-)}
+    <div className="mx-auto ml-0 lg:ml-2 mr-0 lg:mr-2 mt-0 lg:mt-4 bg-gray-20">
+    
       <main className="flex flex-col lg:flex-row p-0 lg:p-4 gap-4 rounded-b-md">
         <div className="p-0 lg:p-4 flex-1 min-w-0">
           <h1 className="px-4 lg:p-4 text-4xl md:text-6xl lg:text-8xl font-bebas mt-0 lg:mt-16 font-bold tracking-wide drop-shadow-md">IT Professional</h1>
-          <p className="p-2 lg:p-4 mt-2 lg:mt-4 text-lg lg:text-xl text-stone-500 font-oswald drop-shadow-md">Hi, I'm Ben, a passionate IT professional based in Bristol, England.<br />
+          <p className="px-4 lg:p-4 mt-2 lg:mt-4 text-lg lg:text-xl text-stone-500 font-oswald drop-shadow-md">Hi, I'm Ben, a passionate IT professional based in Bristol, England.<br />
            Managing IT systems by day, building projects by night. </p>
 
-          <div className="flex flex-wrap p-4 mt-8 lg:mt-28 gap-4 lg:gap-8 items-center">
+          <div className="flex flex-wrap p-4 mt-8 lg:mt-28 gap-4 lg:gap-8 items-center scale-50 lg:scale-100 origin-left">
             <p className="p-4 mt-4 text-stone-500 font-oswald font-bold">Passionate about <br /> tech</p>
             <div className="h-24 border-l-2 border-gray-300"></div>
             <div className="w-16 h-16 lg:w-24 lg:h-24 flex-shrink-0 rounded-full bg-white shadow-lg border-1 border-gray-200 flex items-center
@@ -52,7 +33,7 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-        <div className="order-first lg:order-last flex-shrink-0 w-fit p-8 mr-8">
+        <div className="order-first lg:order-last flex-shrink-0 w-fit p-2 lg:p-8 mr-8">
             <Box 
               component="img"
               src="/profilephoto2.png"
