@@ -1,3 +1,8 @@
+//root layout (app shell) for the entire app, shared across all pages and components
+//wraps everuything in the app, including the header and footer, and provides a common layout for all pages
+//fontsare imported here and made available globally via CSS variables, so they can be used throughout the app without needing to import them in each component or page
+
+
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Bebas_Neue, Oswald } from "next/font/google";
 import "./globals.css";

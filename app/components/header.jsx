@@ -2,32 +2,47 @@
 
 import MenuIcon from '@mui/icons-material/Menu'; 
 import { useState } from 'react';
+import { motion, AnimatePresence } from "framer-motion"
  
  export function Header () {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     return (
  
- <header className="sticky top-0 z-10 bg-gray-100 lg:bg-gray-50 flex justify-between items-center rounded-t-md">
-        <div className="p-4 ml-6">signature</div>
+ <header className="position: sticky top-0 z-10 bg-gray-100 lg:bg-gray-50 flex justify-between items-center rounded-t-md z-100">
+        <div className=" ml-6">Icon</div>
         <MenuIcon 
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           className="mr-6"
           sx={{ 
-            fontSize: 60,
+            fontSize: { xs: 42, sm: 42, md: 60 },
+            color: 'orange',
+            cursor: 'pointer',
             transition: 'all 0.3s',
             '&:hover': {
-            color: 'black',
+            color: '#cc7000',
             transform: 'scale(1.1)',
-            cursor: 'pointer'
               }
             }} />
-         {isMenuOpen && (
-          <div className="absolute top-16 right-8 bg-white border-2 rounded-lg p-4 shadow-lg z-50">
-          <a href="#" className="block p-2 hover:bg-gray-100">Home</a>
-          <a href="#" className="block p-2 hover:bg-gray-100">About</a>
-          <a href="#" className="block p-2 hover:bg-gray-100">Contact</a>
-        </div>
+          <AnimatePresence>  
+           {isMenuOpen && (
+              <motion.div
+              initial={{ x: "100%" }}
+                        animate={{ x: 0 }}
+                        exit={{ x: "100%" }}
+                        transition={{ type: "tween", duration: 0.3 }}
+              className="flex absolute top-0 lg:top-2 right-16 lg:right-24 z-50"> 
+                <a href="#" className="block p-2 hover:text-orange-400 hover:scale-110 cursor-pointer transition text-normal lg:text-xl text-stone-500 font-oswald">Home</a>
+                <a href="#" className="block p-2 hover:text-orange-400 hover:scale-110 cursor-pointer transition text-normal lg:text-xl text-stone-500 font-oswald">About</a>
+                <a href="#" className="block p-2 hover:text-orange-400 hover:scale-110 cursor-pointer transition text-normal lg:text-xl text-stone-500 font-oswald">Projects</a>
+                <a href="#" className="block p-2 hover:text-orange-400 hover:scale-110 cursor-pointer transition text-normal lg:text-xl text-stone-500 font-oswald">Contact</a>
+              </motion.div>
+              //these links are hardcoded and can be refactored
          )}
+         </AnimatePresence>      
         </header> 
         
 )}
+
+// this is a stateful ui component. it manages its own state. uses a boolean state controlling visibility
+// uses conditional rendering
+//navigation links are hardcodede rather than data driven - can be refactored

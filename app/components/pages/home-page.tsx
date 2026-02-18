@@ -9,7 +9,6 @@ import { useState } from 'react';
 
 
 export default function HomePage() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
   
   return (
     <div className="mx-auto ml-0 lg:ml-2 mr-0 lg:mr-2 mt-0 lg:mt-4 bg-gray-20">
@@ -22,7 +21,7 @@ export default function HomePage() {
 
           <div className="flex flex-wrap p-4 mt-8 lg:mt-28 gap-4 lg:gap-8 items-center scale-50 lg:scale-100 origin-left">
             <p className="p-4 mt-4 text-stone-500 font-oswald font-bold">Passionate about <br /> tech</p>
-            <div className="h-24 border-l-2 border-gray-300"></div>
+            <div className="h-24 border-l-2 border-orange-300"></div>
             <div className="w-16 h-16 lg:w-24 lg:h-24 flex-shrink-0 rounded-full bg-white shadow-lg border-1 border-gray-200 flex items-center
                  justify-center hover:scale-110 cursor-pointer transition">
               <LinkedInIcon sx={{ fontSize: 60, color: '#0A66C2', '&:hover': { color: '#004182' }, cursor: 'pointer', transition: 'color 0.3s' }} />
@@ -49,3 +48,4 @@ export default function HomePage() {
     </div>
   )
 }
+//ui page using tailwind alongside MUI components - why use both? can the MUI component be done with tailwind? could it just be im tag?
