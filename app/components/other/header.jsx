@@ -6,10 +6,15 @@ import { motion, AnimatePresence } from "framer-motion"
  
  export function Header () {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const handleNavClick = (event, targetId) => {
+      event.preventDefault();
+      document.getElementById(targetId)?.scrollIntoView({ behavior: 'smooth' });
+      setIsMenuOpen(false);
+    };
     return (
  
- <header className="position: sticky top-0 z-10 bg-gray-100 lg:bg-gray-50 flex justify-between items-center rounded-t-md z-100">
-        <div className=" ml-6">Icon</div>
+ <header className="sticky top-0 z-10 bg-gray-100 lg:bg-gray-100 flex justify-between items-center rounded-t-md">
+        <img src="/logo.png" alt="Logo" className="w-16 lg:w-32 h-6 lg:h-12 ml-6 lg:ml-12" />
         <MenuIcon 
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           className="mr-6"
@@ -31,10 +36,10 @@ import { motion, AnimatePresence } from "framer-motion"
                         exit={{ x: "100%" }}
                         transition={{ type: "tween", duration: 0.3 }}
               className="flex absolute top-0 lg:top-2 right-16 lg:right-24 z-50"> 
-                <a href="#" className="block p-2 hover:text-orange-400 hover:scale-110 cursor-pointer transition text-normal lg:text-xl text-stone-500 font-oswald">Home</a>
-                <a href="#" className="block p-2 hover:text-orange-400 hover:scale-110 cursor-pointer transition text-normal lg:text-xl text-stone-500 font-oswald">About</a>
-                <a href="#" className="block p-2 hover:text-orange-400 hover:scale-110 cursor-pointer transition text-normal lg:text-xl text-stone-500 font-oswald">Projects</a>
-                <a href="#" className="block p-2 hover:text-orange-400 hover:scale-110 cursor-pointer transition text-normal lg:text-xl text-stone-500 font-oswald">Contact</a>
+                <a href="#home" onClick={(event) => handleNavClick(event, 'home')} className="block p-2 hover:text-orange-400 hover:scale-110 cursor-pointer transition text-normal lg:text-xl text-stone-500 font-oswald">Home</a>
+                <a href="#about" onClick={(event) => handleNavClick(event, 'about')} className="block p-2 hover:text-orange-400 hover:scale-110 cursor-pointer transition text-normal lg:text-xl text-stone-500 font-oswald">About</a>
+                <a href="#projects" onClick={(event) => handleNavClick(event, 'projects')} className="block p-2 hover:text-orange-400 hover:scale-110 cursor-pointer transition text-normal lg:text-xl text-stone-500 font-oswald">Projects</a>
+                <a href="#" onClick={() => setIsMenuOpen(false)} className="block p-2 hover:text-orange-400 hover:scale-110 cursor-pointer transition text-normal lg:text-xl text-stone-500 font-oswald">Contact</a>
               </motion.div>
               //these links are hardcoded and can be refactored
          )}

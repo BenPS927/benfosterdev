@@ -9,9 +9,8 @@ import { useState } from 'react';
 
 
 export default function HomePage() {
-  
   return (
-    <div className="mx-auto ml-0 lg:ml-2 mr-0 lg:mr-2 mt-0 lg:mt-4 bg-gray-20">
+    <div id="home" className="mx-auto ml-0 lg:ml-2 mr-0 lg:mr-2 mt-0 lg:mt-4 bg-gray-20">
     
       <main className="flex flex-col lg:flex-row p-0 lg:p-4 gap-4 rounded-b-md">
         <div className="p-0 lg:p-4 flex-1 min-w-0">

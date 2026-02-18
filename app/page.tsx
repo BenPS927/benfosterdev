@@ -2,8 +2,8 @@
 //it imports the home page, about me page, and project page components and renders them in order on the page
 //next.js treats / as a route
 
-import HomePage from '@/app/components/pages/home-page';
-import ProjectPage from '@/app/components/pages/project-page';
+import HomePage from '@/app/components/pages/desktop-pages/home-page';
+import ProjectPage from '@/app/components/pages/desktop-pages/project-page';
 import { AboutMePage } from '@/app/components/pages/about-me-page';
 
 export default function Home() {
