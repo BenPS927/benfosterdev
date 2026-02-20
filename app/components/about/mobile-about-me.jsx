@@ -1,5 +1,5 @@
-import { AboutMeBoxMobile } from "../../other/about-me-box-mobile"
-import { aboutMeMobileData } from "../../data/about-me-mobile"
+import { AboutMeBoxMobile } from "./mobile-box-about-me"
+import { aboutMeMobileData } from "./data/about-me-mobile"
 import { motion } from 'framer-motion';
 
 export default function AboutMeMobile() {
@@ -7,7 +7,7 @@ export default function AboutMeMobile() {
 
     return (
         <div className="p-2 mt-4 bg-gradient-to-b from-white to-gray-200">
-            <h1 className="w-full p-4 flex justify-center mb-8 font-oswald text-2xl ">A bit about me...</h1>
+            <h1 className="w-full p-4 flex justify-center mb-8 font-oswald text-2xl text-orange-500">A bit about me...</h1>
             <div>
                 <div className="text-sm mb-8">
                     <div>

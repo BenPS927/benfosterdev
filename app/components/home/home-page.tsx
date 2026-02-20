@@ -1,6 +1,6 @@
 
 'use client';
-import HomePageDesktop  from '../desktop-pages/home-page-desktop'
+import HomePageDesktop  from './home-desktop'
 
 export default function HomePage() {
   return (

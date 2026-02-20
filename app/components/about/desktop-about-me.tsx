@@ -3,8 +3,8 @@
 
 'use client'
 import { useState } from 'react'
-import { AboutMeBoxDesktop } from "../../other/about-me-box-desktop";
-import { aboutMeDesktop } from "../../data/about-me-desktop"
+import { AboutMeBoxDesktop } from "./desktop-box-about-me";
+import { aboutMeDesktop } from "./data/about-me-desktop"
 import { motion } from 'framer-motion';
 
 export default function AboutMeDesktop() {

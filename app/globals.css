@@ -12,6 +12,7 @@
   --font-mono: var(--font-geist-mono);
   --font-bebas: var(--font-bebas-neue);
   --font-oswald: var(--font-oswald);
+  --font-inter: "Inter", sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
