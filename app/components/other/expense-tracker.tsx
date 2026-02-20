@@ -17,10 +17,10 @@ export function ExpenseTracker() {
             <AnimatePresence>
                 {isMenuOpen && (
                     <motion.div 
-                        initial={{ x: "100%" }}
+                        initial={{ x: 500 }}
                         animate={{ x: 0 }}
-                        exit={{ x: "100%" }}
-                        transition={{ type: "tween", duration: 0.3 }}className="absolute top-18 right-3 lg:right-12 w-30 lg:w-60 space-y-2 lg:space-y-4">
+                        exit={{ x: 500 }}
+                        transition={{ type: "tween", duration: 0.5 }}className="absolute top-18 right-3 lg:right-12 w-30 lg:w-60 space-y-2 lg:space-y-4">
                         <div className="bg-white p-1 lg:p-2 rounded-md font-sora text-purple-700 shadow-lg"> 
                             Item bought: 
                         </div>

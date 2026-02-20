@@ -1,8 +1,8 @@
 import { ExpenseTracker } from "@/app/components/other/expense-tracker";
 
-export default function ProjectPage() {
+export default function ProjectPageDesktop() {
     return ( 
-        <div id="projects" className="mx-auto ml-2 mr-2 mt-4 space-y-4 bg-gray-20 rounded-md">
+        <div id="projects" className="mx-auto ml-2 mr-2 space-y-4 bg-gradient-to-b from-gray-200 to-purple-100">
             <div className="rounded-md flex flex-col lg:flex-row justify-center p-4 gap-4">
                 <div className="rounded-md w-full lg:w-1/3 p-4">
                     <h1 className="text-2xl text-stone-500 font-oswald">Welcome to my project page!</h1>

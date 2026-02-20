@@ -4,8 +4,8 @@
 'use client'
 import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
-import AboutMeDesktop from './desktop-pages/about-me';
-import AboutMeMobile from './mobile-pages/about-me';
+import AboutMeDesktop from '../desktop-pages/about-me';
+import AboutMeMobile from '../mobile-pages/about-me';
 
 export function AboutMePage() {
     const sectionRef = useRef(null)

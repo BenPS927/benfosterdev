@@ -13,7 +13,7 @@ import { motion, AnimatePresence } from "framer-motion"
     };
     return (
  
- <header className="sticky top-0 z-10 bg-gray-100 lg:bg-gray-100 flex justify-between items-center rounded-t-md">
+ <header className="sticky top-0 z-10 bg-gray-100 lg:bg-gray-100 flex justify-between items-center rounded-t-md z-100 shadow-md">
         <img src="/logo.png" alt="Logo" className="w-16 lg:w-32 h-6 lg:h-12 ml-6 lg:ml-12" />
         <MenuIcon 
           onClick={() => setIsMenuOpen(!isMenuOpen)}
