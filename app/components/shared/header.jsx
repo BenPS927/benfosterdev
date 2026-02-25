@@ -34,12 +34,12 @@ import { motion, AnimatePresence } from "framer-motion"
               initial={{ x: "100%" }}
                         animate={{ x: 0 }}
                         exit={{ x: "100%" }}
-                        transition={{ type: "tween", duration: 0.3 }}
+                        transition={{ type: "tween", duration: 0.4 }}
               className="flex absolute top-0 lg:top-2 right-16 lg:right-24 z-50"> 
                 <a href="#home" onClick={(event) => handleNavClick(event, 'home')} className="block p-2 hover:text-orange-400 hover:scale-110 cursor-pointer transition text-normal lg:text-xl text-stone-500 font-oswald">Home</a>
                 <a href="#about" onClick={(event) => handleNavClick(event, 'about')} className="block p-2 hover:text-orange-400 hover:scale-110 cursor-pointer transition text-normal lg:text-xl text-stone-500 font-oswald">About</a>
                 <a href="#projects" onClick={(event) => handleNavClick(event, 'projects')} className="block p-2 hover:text-orange-400 hover:scale-110 cursor-pointer transition text-normal lg:text-xl text-stone-500 font-oswald">Projects</a>
-                <a href="#" onClick={() => setIsMenuOpen(false)} className="block p-2 hover:text-orange-400 hover:scale-110 cursor-pointer transition text-normal lg:text-xl text-stone-500 font-oswald">Contact</a>
+                <a href="#contact" onClick={(event) => handleNavClick(event, 'contact')} className="block p-2 hover:text-orange-400 hover:scale-110 cursor-pointer transition text-normal lg:text-xl text-stone-500 font-oswald">Contact</a>
               </motion.div>
               //these links are hardcoded and can be refactored
          )}

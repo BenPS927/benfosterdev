@@ -34,7 +34,7 @@ export default function AboutMeMobile() {
                 </div>
                 
             </div>
-            <div className="w-full p-4 flex justify-center text-xl ">Have a look at my projects below!</div>
+            
         </div>
     )
 }

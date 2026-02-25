@@ -15,7 +15,7 @@ export function AboutMePage() {
         <motion.div
             id="about"
             ref={sectionRef}
-            className="mx-auto ml-0 lg:ml-2 mr-0 lg:mr-2 mt-0 lg:mt-4"
+            className="mx-auto"
             initial={{ opacity: 0 }}
             animate={{ opacity: isInView ? 1 : 0 }}
             transition={{ duration: 1.2 }}

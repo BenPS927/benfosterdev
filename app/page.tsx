@@ -6,7 +6,10 @@ import HomePage from '@/app/components/home/home-page';
 import ProjectsPage from '@/app/components/projects/projects-page';
 import { AboutMePage } from '@/app/components/about/about-me-page';
 import { Divider1 } from '@/app/components/layout/section-dividers';
-import { Divider2 } from '@/app/components/layout/section-dividers'
+import { Divider2 } from '@/app/components/layout/section-dividers';
+import { Divider3 } from '@/app/components/layout/section-dividers';
+import { ContactPage } from '@/app/components/contact/contact-page';
+import { Footer } from '@/app/components/footer/footer'
 
 export default function Home() {
   return (
@@ -16,6 +19,9 @@ export default function Home() {
       <ProjectsPage />
       <Divider1 />
       <AboutMePage />
+      <Divider3 />
+      <ContactPage />
+      <Footer />
     </main>
   );
 }

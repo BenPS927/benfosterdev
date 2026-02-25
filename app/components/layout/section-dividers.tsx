@@ -11,3 +11,10 @@ export function Divider2() {
         </div>
     );
 }
+
+export function Divider3() {
+    return (
+        <div className="bg-gradient-to-b from-gray-200 to-blue-100 h-[25vh]">
+        </div>
+    );
+}
