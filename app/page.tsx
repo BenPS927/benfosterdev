@@ -11,6 +11,7 @@ import { Divider3 } from '@/app/components/layout/section-dividers';
 import { ContactPage } from '@/app/components/contact/contact-page';
 import { Footer } from '@/app/components/footer/footer'
 
+// ...existing code...
 export default function Home() {
   return (
     <main>
@@ -25,3 +26,4 @@ export default function Home() {
     </main>
   );
 }
+// ...existing code...

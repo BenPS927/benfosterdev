@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 
 export function ContactPage() {
     return (
-        <div id="contact" className="mx-auto bg-gradient-to-b from-blue-100 to-white max-w-full">
+        <div id="contact" className="relative mx-auto bg-gradient-to-b from-blue-100 to-white max-w-full">
             <motion.div
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -25,6 +25,8 @@ export function ContactPage() {
                 >
                     Interested in working together? Reach out
                 </motion.h2>
+
+                <div className="absolute top-20 right-10 w-32 h-32 bg-gradient-to-br from-purple-200 to-blue-200 rounded-full blur-3xl opacity-40 z-0" />
                 
                 <main className="p-2 lg:p-4">
                     <motion.div
