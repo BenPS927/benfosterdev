@@ -3,7 +3,7 @@ import MobileProjectsPage from "@/app/components/projects/mobile-projects-page"
 
 export default function ProjectsPage() {
     return (
-        <div>
+        <div id="projects">
             <div className="hidden lg:block">
                 <DesktopProjectsPage />
             </div>

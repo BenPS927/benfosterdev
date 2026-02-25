@@ -16,7 +16,7 @@ export default function AboutMeDesktop() {
                 {aboutMeDesktop.map((box) => (
                     <motion.div 
                         key={box.id} 
-                        className={`${box.position} hover:z-50`}
+                        className={`${box.position} hover:z-50 font-inter`}
                         initial={{x: box.startX, opacity: 0}}
                         whileInView={{x: 0, opacity: 1}}
                         transition={{ duration: box.duration, ease: "easeOut", delay: box.delay }}

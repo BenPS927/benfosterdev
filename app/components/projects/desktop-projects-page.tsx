@@ -1,28 +1,55 @@
+'use client'
 import { ExpenseTracker } from "./expense-tracker";
 import { CodeExpenseTracker } from "./code-expense-tracker"
+import { motion } from 'framer-motion';
+
 
 export default function DesktoprojectsPage() {
     return ( 
         <div id="projects" className="mx-auto space-y-32 bg-gradient-to-b from-white to-purple-100 p-4">
             <div>
-                <h1 className="text-8xl font-bebas flex justify-center font-bold mb-16">Projects</h1>
-                <h2 className="text-normal lg:text-xl font-oswald flex justify-center text-stone-500 mb-8">This is where you'll find the project I'm currently working on, and the ones I've compeleted</h2>
+                <motion.h1 
+                    initial={{x: -600, opacity: 0}}
+                    whileInView={{x: 0, opacity: 1}}
+                    viewport={{ once:true, amount: 0.1}}
+                    transition={{ duration: 0.3}}
+                    className="text-8xl font-bebas flex justify-center font-bold mb-16 text-purple-800">Projects</motion.h1>
+                <motion.h2 
+                    initial={{x: 600, opacity: 0}}
+                    whileInView={{x: 0, opacity: 1}}
+                    viewport={{ once:true, amount: 0.1}}
+                    transition={{ duration: 0.3}}
+                    className="text-normal lg:text-xl font-oswald flex justify-center text-stone-500 mb-8">
+                        This is where you'll find the project I'm currently working on, and the ones I've compeleted</motion.h2>
             </div>
             <div className="flex p-4 mt-8 gap-8">
-                <div className="w-1/3 p-4 font-inter">
-                    <p>Not including this website, this is my first real project. 
-                        It's a simplified expense tracker, meaning I have to get comfortable 
-                        with handling data, interactivity and logic to control what happens 
-                        when you interact. As time goes on, this will get better looking
-                        and more advanced. Beside it you can see the code for the project. 
-                    </p>
-                </div>
-                <div className="w-1/3">
+                <motion.div 
+                    initial={{x: -300, opacity: 0}}
+                    whileInView={{x: 0, opacity: 1}}
+                    viewport={{ once:true, amount: 0.1}}
+                    transition={{ duration: 0.3}}
+                    className="w-1/3 p-4 font-inter leading-[3]">
+                        <p>This is my expense tracker project. </p>
+                        <p>It might seem simple, but this requires logic and interactivity, fundamental concepts for me to grasp.</p>
+                        <p>Currently, there is only the 'add an item' button to bring up input forms.</p>
+                        <p>the next step for me to do to learn this is learn how to crate forms, then i can move onto the logic.</p>
+                </motion.div>
+                <motion.div
+                    initial={{y: 300, opacity: 0}}
+                    whileInView={{y: 0, opacity: 1}}
+                    viewport={{ once:true, amount: 0.1}}
+                    transition={{ duration: 0.3}}
+                    className="w-1/3">
                     <ExpenseTracker />
-                </div>
-                <div className="w-1/3">
-                    Code Coming Soon...
-                 </div>
+                </motion.div>
+                <motion.div 
+                    initial={{x: 300, opacity: 0}}
+                    whileInView={{x: 0, opacity: 1}}
+                    viewport={{ once:true, amount: 0.1}}
+                    transition={{ duration: 0.3}}
+                    className="w-1/3 flex justify-center items-center font-inter font-bold text-purple-700">
+                        Code Coming Soon...
+                 </motion.div>
             </div>
         </div>
     )

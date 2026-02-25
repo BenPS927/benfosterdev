@@ -1,11 +1,8 @@
 'use client';
 
 import Box from '@mui/material/Box';
-import MenuIcon from '@mui/icons-material/Menu';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
-import { useState } from 'react';
-
 
 export default function HomePageDesktop() {
   return (
@@ -23,11 +20,29 @@ export default function HomePageDesktop() {
             <div className="h-24 border-l-2 border-orange-300"></div>
             <div className="w-16 h-16 lg:w-24 lg:h-24 flex-shrink-0 rounded-full bg-white shadow-lg border-1 border-gray-200 flex items-center
                  justify-center hover:scale-110 cursor-pointer transition">
-              <LinkedInIcon sx={{ fontSize: 60, color: '#0A66C2', '&:hover': { color: '#004182' }, cursor: 'pointer', transition: 'color 0.3s' }} />
+              <a 
+                href="https://www.linkedin.com/in/ben-foster-94394135a/"
+                target="_blank"
+                rel="noopener noreferrer">
+                  <LinkedInIcon sx={{ 
+                    fontSize: 60, 
+                    color: '#0A66C2', '&:hover': { color: '#004182' }, 
+                    cursor: 'pointer', 
+                    transition: 'color 0.3s' }} />
+              </a>
             </div>
             <div className="w-16 h-16 lg:w-24 lg:h-24 flex-shrink-0 rounded-full bg-white shadow-lg border-1 border-gray-200 flex items-center
                  justify-center hover:scale-110 cursor-pointer transition">
-              <GitHubIcon sx={{ fontSize: 60, color: '#181717', '&:hover': { color: '#e5e0ed' }, cursor: 'pointer', transition: 'color 0.3s' }} />
+                  <a 
+                    href="https://github.com/BenPS927"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                      <GitHubIcon sx={{ 
+                        fontSize: 60, 
+                        color: '#181717', '&:hover': { color: '#e5e0ed' }, 
+                        cursor: 'pointer', 
+                        transition: 'color 0.3s' }} />
+                    </a>
             </div>
           </div>
         </div>
