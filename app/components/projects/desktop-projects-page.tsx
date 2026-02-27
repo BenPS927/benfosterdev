@@ -28,11 +28,11 @@ export default function DesktoprojectsPage() {
                     whileInView={{x: 0, opacity: 1}}
                     viewport={{ once:true, amount: 0.1}}
                     transition={{ duration: 0.3}}
-                    className="w-1/3 p-4 font-inter leading-[3]">
+                    className="w-1/3 p-4 font-inter leading-[2]">
                         <p>This is my expense tracker project. </p>
-                        <p>It might seem simple, but this requires logic and interactivity, fundamental concepts for me to grasp.</p>
-                        <p>Currently, there is only the 'add an item' button to bring up input forms.</p>
-                        <p>the next step for me to do to learn this is learn how to crate forms, then i can move onto the logic.</p>
+                        <p>It might seem simple, but it requires logic and interactivity, fundamental concepts for me to grasp.</p>
+                        <p>So far I've only done the add an item function, so I need to now code into that a form submission.</p>
+                        <p>I'll then have to connect that with data and logic to create a list of items and calculate the figures on the left.</p>
                 </motion.div>
                 <motion.div
                     initial={{y: 300, opacity: 0}}

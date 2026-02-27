@@ -8,71 +8,78 @@ export default function BlogPage() {
     const [isHovered, setIsHovered] = useState(false)
     
     return (
-        <div className="mx-auto max-w-full p-4 lg:p-8 bg-gradient-to-b from-white to-gray-100">
-            <h1 className="font-inter text-3xl text-center p-4 lg:p-8">BFBlog</h1>
-            <p className="text-xl text-center">AI, Web Dev, and IT insights</p>
-            <main className="flex flex-col lg:flex-row p-4 lg:p-8 gap-none lg:gap-16">
-             <motion.div
-                initial={{x: 0, opacity: 0}}
-                animate={{x: 0}}
-                whileInView={{opacity: 1}}
-                transition={{duration: 0.4}}
-                className="w-full lg:w-1/3 border-r p-4 lg:p-8 leading-relaxed lg:h-[50vh] space-y-4">
-                    <p className="font-inter ">Welcome to my blog. Here, you'll find my posts on AI and web development, and anything tech/IT.</p>
-                    <p className="font-inter">I'm interested in how AI is changing the IT world, as well as IT itself.</p>
-            </motion.div>
-
-            <motion.div    
-                initial={{x: 0, opacity: 0}}
-                animate={{x: 0}}
-                whileInView={{opacity: 1}}
-                transition={{duration: 0.4}}>
-   
-                <div className="p-2 lg:p-16">
-                    
-                        <motion.div 
-                            layout
-                            onMouseEnter={() => setIsHovered(true)}
-                            onMouseLeave={() => setIsHovered(false)}
-                            className="relative bg-white lg:w-2/3 p-2 lg:p-8 rounded-lg shadow-md hover:shadow-lg flex flex-col justify-center items-center min-h-[200px]">
-                            <Link href="/aienhance">
-                            <div className="absolute inset-0 flex items-center justify-center z-0">
-                                <SmartToyIcon sx={{ 
-                                    fontSize: 180, 
-                                    color: 'orange',
-                                    opacity: 0.2
-                                }} />
-                            </div>
-                            <p className="relative z-10 font-inter text-center text-lg mb-0 lg:mb-16 hover:text-orange-700 hover:scale-110">How to Use AI to Enhance Your Skills</p>
-                            <p className="block lg:hidden font-inter text-center text-sm">
-                                We are in the AI goldrush. <br /> Read this article to find out how <br /> to make the most of it! <br /> Feb 25, 2026 · 8 min read
-                            </p>
-                            <AnimatePresence>
-                            {isHovered && 
-                                <motion.p layout
-                                    initial={{y: -50, opacity: 0}}
-                                    animate={{y: 0, opacity: 1}}
-                                    transition={{duration: 0.2}}
-                                    className="font-inter text-center text-sm">
-                                        We are in the AI goldrush. 
-                                        <br /> Read this article to find out how
-                                         <br /> to make the most of it! 
-                                         <br /> Feb 25, 2026 · 8 min read
-                                </motion.p>
-                            }
-                            </AnimatePresence>
-                        
-                    </Link>
+        <>
+            <div className="fixed top-0 left-0 w-full h-full pointer-events-none z-0">
+                <img 
+                    src="/bg1.png" 
+                    alt="background" 
+                    className="w-full h-full object-cover opacity-20"
+                />
+            </div>
+            <div className="relative mx-auto max-w-full p-4 lg:p-8  relative min-h-screen z-10">
+                <h1 className="font-inter text-3xl text-center p-4 lg:p-8">BFBlog</h1>
+                <p className="text-xl text-center">AI, Web Dev, and IT insights</p>
+                <main className="flex flex-col lg:flex-row p-4 lg:p-8 gap-none lg:gap-16 ">
+                    <motion.div
+                        initial={{x: 0, opacity: 0}}
+                        animate={{x: 0}}
+                        whileInView={{opacity: 1}}
+                        transition={{duration: 0.4}}
+                        className="w-full lg:w-1/3 border-r p-4 lg:p-8 leading-relaxed lg:h-[50vh] space-y-4 ">
+                        <p className="text-xl font-inter ">Welcome to my blog. </p>
+                        <p className="font-inter">I'm interested in how AI is changing the tech world, and I'll be exploring how we can take advantage of the
+                            available AI tools as developers. AI chatbots and agents are a particular interest of mine.
+                        </p>
                     </motion.div>
-                </div>
-            </motion.div>
 
-            </main>
+                    <motion.div    
+                        initial={{x: 0, opacity: 0}}
+                        animate={{x: 0}}
+                        whileInView={{opacity: 1}}
+                        transition={{duration: 0.4}}>
+                        <div className="p-2 lg:p-16 ">
+                            <motion.div 
+                                layout
+                                onMouseEnter={() => setIsHovered(true)}
+                                onMouseLeave={() => setIsHovered(false)}
+                                className=" relative bg-white lg:w-2/3 p-2 lg:p-8 rounded-lg shadow-md hover:shadow-lg flex flex-col justify-center items-center min-h-[200px]">
+                                <Link href="/aienhance">
+                                    <div className="absolute inset-0 flex items-center justify-center z-0">
+                                        <SmartToyIcon sx={{ 
+                                            fontSize: 180, 
+                                            color: 'orange',
+                                            opacity: 0.2
+                                        }} />
+                                    </div>
+                                    <p className="relative z-10 font-inter text-center text-lg mb-0 lg:mb-16 hover:text-orange-700 hover:scale-110">How to Use AI to Enhance Your Skills</p>
+                                    <p className="block lg:hidden font-inter text-center text-sm">
+                                        We are in the AI goldrush. <br /> Read this article to find out how <br /> to make the most of it! <br /> Feb 25, 2026 · 8 min read
+                                    </p>
+                                    <AnimatePresence>
+                                        {isHovered && 
+                                            <motion.p layout
+                                                initial={{y: -50, opacity: 0}}
+                                                animate={{y: 0, opacity: 1}}
+                                                transition={{duration: 0.2}}
+                                                className="font-inter text-center text-sm">
+                                                We are in the AI goldrush. 
+                                                <br /> Read this article to find out how
+                                                <br /> to make the most of it! 
+                                                <br /> Feb 25, 2026 · 8 min read
+                                            </motion.p>
+                                        }
+                                    </AnimatePresence>
+                                </Link>
+                            </motion.div>
+                        </div>
+                    </motion.div>
+                </main>
 
-            <footer className="bg-gray-200 flex justify-between items-center p-4 lg:p-8 gap-8 -mx-8">
-                <img src="/logo.png" alt="Logo" className="w-16 lg:w-32 h-6 lg:h-12 ml-6 lg:ml-12" />
-                <p className="font-inter text-sm lg:text-normal text-orange-700">&copy; 2026 Ben Foster. All rights reserved.</p>
-            </footer>
-        </div>
+                <footer className="absolute bottom-0 bg-gray-200 flex justify-between items-center p-4 lg:p-8 gap-8 -mx-8 w-full">
+                    <img src="/logo.png" alt="Logo" className="w-16 lg:w-32 h-6 lg:h-12 ml-6 lg:ml-12" />
+                    <p className="font-inter text-sm lg:text-normal text-orange-700">&copy; 2026 Ben Foster. All rights reserved.</p>
+                </footer>
+            </div>
+        </>
     )
-};
+}

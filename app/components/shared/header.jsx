@@ -3,6 +3,8 @@
 import MenuIcon from '@mui/icons-material/Menu'; 
 import { useState } from 'react';
 import { motion, AnimatePresence } from "framer-motion"
+import Link from 'next/link';
+import { usePathname } from 'next/navigation'
  
  export function Header () {
 
@@ -13,10 +15,21 @@ import { motion, AnimatePresence } from "framer-motion"
       setIsMenuOpen(false);
     };
 
+const pathname = usePathname()
+
+  
+
     return (
  
       <header className="sticky top-0 z-10 bg-gray-100 lg:bg-gray-100 flex justify-between items-center rounded-t-md z-100 shadow-md">
-        <img src="/logo.png" alt="Logo" className="w-16 lg:w-32 h-6 lg:h-12 ml-6 lg:ml-12" />
+        {pathname === '/' ? (
+          <a href="#home" onClick={(event) => handleNavClick(event, 'home')}>
+          <img src="/logo.png" alt="Logo" className="w-16 lg:w-32 h-6 lg:h-12 ml-6 lg:ml-12" />
+        </a> ) : (
+        <Link href="/">
+          <img src="/logo.png" alt="Logo" className="w-16 lg:w-32 h-6 lg:h-12 ml-6 lg:ml-12" />
+        </Link> )
+        }
         <MenuIcon 
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           className="mr-6"

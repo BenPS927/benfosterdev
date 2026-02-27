@@ -19,6 +19,7 @@ export function AboutMePage() {
             initial={{ opacity: 0 }}
             animate={{ opacity: isInView ? 1 : 0 }}
             transition={{ duration: 1.2 }}
+            
         >
             <div className="hidden lg:block">
                 <AboutMeDesktop />

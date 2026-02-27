@@ -10,9 +10,13 @@ export default function HomePageDesktop() {
     
       <main className="flex flex-col lg:flex-row p-0 lg:p-4 gap-4 rounded-b-md">
         <div className="p-0 lg:p-4 flex-1 min-w-0">
-          <h1 className="px-4 lg:p-4 text-4xl md:text-6xl lg:text-8xl font-bebas mt-8 lg:mt-32 font-bold tracking-wide drop-shadow-md">React Developer</h1>
+          <h1 className="px-4 lg:p-4 text-4xl md:text-6xl lg:text-8xl font-bebas mt-8 lg:mt-32 font-bold tracking-wide drop-shadow-md">Web Developer</h1>
           <p className="px-4 lg:p-4 mt-4 lg:mt-4 text-lg lg:text-xl text-stone-500 font-oswald drop-shadow-md">Hi, I'm Ben, a passionate React developer and IT manager based in Bristol, England.<br />
-           Managing IT systems by day, building projects by night. </p>
+           Managing IT systems by day, building projects by night. 
+           <br />
+           <br />
+           Learning to build chatbots and integrate them into my work.
+           </p>
            <div className="h-12 w-16 lg:h-32 lg:w-32"></div>
 
           <div className="flex flex-wrap p-4 mt-24 lg:mt-28 gap-4 lg:gap-8 items-center scale-50 lg:scale-100 origin-left">
