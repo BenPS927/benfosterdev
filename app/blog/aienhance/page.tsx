@@ -1,0 +1,46 @@
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import Link from 'next/link'
+
+export default function Aienhance () {
+    return (
+        <div className=" relative p-4">
+           <div className="w-full flex flex-col lg:flex-row gap-0 lg:gap-24 p-2 lg:p-4   ">
+            <div className=" fixed top-0 left-0 w-full h-full pointer-events-none z-0">
+                <img 
+                    src="/bg1.png" 
+                    alt="background" 
+                    className="w-full h-full object-cover opacity-20"
+                />
+                </div>
+                
+                <div className="hidden lg:block flex justify-center w-1/3 p-2 lg:p-8 ">
+                    <Link href="/blog">
+                        <ArrowBackIcon sx={{ 
+                            fontSize: 60,
+                            color: 'orange' }} />
+                    </Link>
+                </div>
+                <h1 className="w-full lg:w-1/3 text-center font-inter font-bold [text-shadow:0_2px_6px_rgba(0,0,0,0.4)] text-3xl lg:text-6xl p-6">
+                    <Link href="/blog" className="inline-block">
+                        <span className="text-black">BF</span>
+                        <span className="text-orange-500">Blogs</span>
+                    </Link>
+                </h1>
+                <div className="w-1/3 "></div>
+           </div>
+            <div className=" flex flex-col justify-center items-center p-2 lg:p-6 bg-gray-100">
+                <div className=" w-full lg:w-2/3 h-screen max-w-3xl mx-auto pl-4 pr-4 bg-white z-50"> 
+                    <div className="text-center">Author <br /> date <br /> title </div>
+                    <p></p>
+                </div>
+            </div>
+            <footer className="absolute bottom-0 bg-gray-100 flex justify-between items-center p-4 lg:p-8 gap-8 -mx-8 w-full z-60">
+                <img src="/logo.png" alt="Logo" className="w-16 lg:w-32 h-6 lg:h-12 ml-6 lg:ml-12" />
+                <p className="font-inter text-sm lg:text-normal text-orange-700">&copy; 2026 Ben Foster. All rights reserved.</p>
+            </footer>
+           
+            
+            
+        </div>
+    );
+}
