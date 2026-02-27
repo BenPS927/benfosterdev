@@ -1,6 +1,6 @@
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import Link from 'next/link'
-import AIEnhance from "@/app/blog/blogs/aienhance";
+import AIEnhance from "@/app/blog/blogs/how-to-use-ai-to-enhance-your-skills";
 
 export default function Aienhance () {
     return (
