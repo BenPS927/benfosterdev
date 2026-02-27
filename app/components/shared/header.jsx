@@ -30,6 +30,8 @@ const pathname = usePathname()
           <img src="/logo.png" alt="Logo" className="w-16 lg:w-32 h-6 lg:h-12 ml-6 lg:ml-12" />
         </Link> )
         }
+        {!pathname.startsWith('/blog') && (
+          <>
         <MenuIcon 
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           className="mr-6"
@@ -50,18 +52,11 @@ const pathname = usePathname()
                                   initial={{ x: 200 }}
                                   animate={{ x: 0 }}
                                   exit={{ x: 200 }}
-                                  transition={{ type: "tween", duration: 0.2, delay: 0 }}>
+                                  transition={{ type: "tween", duration: 0.2, delay: 0.3}}>
                                   <a href="#home" onClick={(event) => handleNavClick(event, 'home')} 
                                     className="block p-2 hover:text-orange-400 hover:scale-110 cursor-pointer transition text-normal lg:text-xl text-stone-500 font-oswald">Home</a>
                           </motion.div>
-                          <motion.div
-                            initial={{ x: 200 }}
-                                  animate={{ x: 0 }}
-                                  exit={{ x: 200 }}
-                                  transition={{ type: "tween", duration: 0.2, delay: 0.1 }}>
-                                  <a href="#about" onClick={(event) => handleNavClick(event, 'about')} 
-                                    className="block p-2 hover:text-orange-400 hover:scale-110 cursor-pointer transition text-normal lg:text-xl text-stone-500 font-oswald">About</a>
-                          </motion.div>
+                          
                           <motion.div
                                   initial={{ x: 200 }}
                                   animate={{ x: 0 }}
@@ -74,7 +69,15 @@ const pathname = usePathname()
                             initial={{ x: 200 }}
                                   animate={{ x: 0 }}
                                   exit={{ x: 200 }}
-                                  transition={{ type: "tween", duration: 0.2, delay: 0.3 }}>
+                                  transition={{ type: "tween", duration: 0.2, delay: 0.1 }}>
+                                  <a href="#about" onClick={(event) => handleNavClick(event, 'about')} 
+                                    className="block p-2 hover:text-orange-400 hover:scale-110 cursor-pointer transition text-normal lg:text-xl text-stone-500 font-oswald">About</a>
+                          </motion.div>
+                          <motion.div
+                            initial={{ x: 200 }}
+                                  animate={{ x: 0 }}
+                                  exit={{ x: 200 }}
+                                  transition={{ type: "tween", duration: 0.2, delay: 0 }}>
 
                           <a href="#contact" onClick={(event) => handleNavClick(event, 'contact')} 
                             className="block p-2 hover:text-orange-400 hover:scale-110 cursor-pointer transition text-normal lg:text-xl text-stone-500 font-oswald">Contact</a>
@@ -84,7 +87,9 @@ const pathname = usePathname()
                         //these links are hardcoded and can be refactored
                   
                       )}
-            </AnimatePresence>      
+            </AnimatePresence>   
+          </>   
+        )}
 </header> 
         
 )}

@@ -1,19 +1,20 @@
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import Link from 'next/link'
+import AIEnhance from "@/app/blog/blogs/aienhance";
 
 export default function Aienhance () {
     return (
-        <div className=" relative p-4">
-           <div className="w-full flex flex-col lg:flex-row gap-0 lg:gap-24 p-2 lg:p-4   ">
-            <div className=" fixed top-0 left-0 w-full h-full pointer-events-none z-0">
-                <img 
-                    src="/bg1.png" 
-                    alt="background" 
-                    className="w-full h-full object-cover opacity-20"
-                />
+        <div className="relative p-4">
+           <div className="w-full flex flex-col lg:flex-row gap-0 lg:gap-24 p-2 lg:p-4">
+                <div className="fixed top-0 left-0 w-full h-full pointer-events-none z-0">
+                    <img 
+                        src="/bg1.png" 
+                        alt="background" 
+                        className="w-full h-full object-cover opacity-20"
+                    />
                 </div>
                 
-                <div className="hidden lg:block flex justify-center w-1/3 p-2 lg:p-8 ">
+                <div className="hidden lg:block flex justify-center w-1/3 p-2 lg:p-8">
                     <Link href="/blog">
                         <ArrowBackIcon sx={{ 
                             fontSize: 60,
@@ -26,21 +27,25 @@ export default function Aienhance () {
                         <span className="text-orange-500">Blogs</span>
                     </Link>
                 </h1>
-                <div className="w-1/3 "></div>
+                <div className="w-1/3"></div>
            </div>
-            <div className=" flex flex-col justify-center items-center p-2 lg:p-6 bg-gray-100">
-                <div className=" w-full lg:w-2/3 h-screen max-w-3xl mx-auto pl-4 pr-4 bg-white z-50"> 
-                    <div className="text-center">Author <br /> date <br /> title </div>
-                    <p></p>
+            <main className="flex flex-col justify-center items-center p-2 lg:p-6 bg-gray-100">
+                <div className="w-full max-w-3xl mx-auto px-4 py-10 bg-white relative z-50 min-h-screen">
+                    <div className="text-center font-inter">
+                        <h1 className="text-xl font-bold">How to Use AI to Enhance Your Skills</h1>
+                        <br />
+                        <p>Ben Foster</p>
+                        <p>27th February 2026</p>
+                        <p>7 min read</p>
+                        <br />
+                        <AIEnhance />
+                    </div>
                 </div>
-            </div>
-            <footer className="absolute bottom-0 bg-gray-100 flex justify-between items-center p-4 lg:p-8 gap-8 -mx-8 w-full z-60">
+            </main>
+            <footer className="relative bg-gray-100 flex justify-between items-center p-4 lg:p-8 gap-8 w-full mt-8">
                 <img src="/logo.png" alt="Logo" className="w-16 lg:w-32 h-6 lg:h-12 ml-6 lg:ml-12" />
                 <p className="font-inter text-sm lg:text-normal text-orange-700">&copy; 2026 Ben Foster. All rights reserved.</p>
             </footer>
-           
-            
-            
         </div>
     );
 }

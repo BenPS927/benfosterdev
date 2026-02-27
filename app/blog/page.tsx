@@ -53,7 +53,7 @@ export default function BlogPage() {
                                     </div>
                                     <p className="relative z-10 font-inter text-center text-lg mb-0 lg:mb-16 hover:text-orange-700 hover:scale-110">How to Use AI to Enhance Your Skills</p>
                                     <p className="block lg:hidden font-inter text-center text-sm">
-                                        We are in the AI goldrush. <br /> Read this article to find out how <br /> to make the most of it! <br /> Feb 25, 2026 · 8 min read
+                                        We are in the AI goldrush. <br /> Read this article to find out how to make <br />the most of it! <br /> Feb 25, 2026 · 8 min read
                                     </p>
                                     <AnimatePresence>
                                         {isHovered && 
