@@ -1,32 +1,38 @@
 //this file has lifted state because the state is needed in multiple child components
 //props passed from this file to child
 
-'use client'
-import { motion, useInView } from 'framer-motion'
-import { useRef } from 'react'
-import AboutMeDesktop from './desktop-about-me';
-import AboutMeMobile from './mobile-about-me';
+
+
+import JsonLd from "../shared/jsonld"
+import type { Metadata } from "next"
+import ContentAboutMe from './contentaboutme';
+
+export const metadata: Metadata = {
+  title: "About",
+  description: "Learn more about Ben Foster, a React developer specializing in AI chatbot development.",
+}
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "mainEntity": {
+    "@type": "Person",
+    "name": "Ben Foster",
+    "url": "https://benfosterdev.com",
+    "jobTitle": "React Developer & AI Chatbot Specialist",
+    "description": "Self-taught React developer from Bristol, specialising in AI chatbot development for small businesses.",
+    "sameAs": [
+      "https://www.linkedin.com/in/ben-foster-94394135a/",
+      "https://github.com/BenPS927"
+    ]
+  }
+}
 
 export function AboutMePage() {
-    const sectionRef = useRef(null)
-    const isInView = useInView(sectionRef, { once: false, amount: 0.2 })
-
-    return (
-        <motion.div
-            id="about"
-            ref={sectionRef}
-            className="mx-auto"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: isInView ? 1 : 0 }}
-            transition={{ duration: 1.2 }}
-            
-        >
-            <div className="hidden lg:block">
-                <AboutMeDesktop />
-            </div>
-            <div className="block lg:hidden">
-                <AboutMeMobile />
-            </div>
-        </motion.div>
-    )
+  return ( 
+    <div>
+      <JsonLd schema={schema} />
+      <ContentAboutMe />
+    </div>
+  )
 }

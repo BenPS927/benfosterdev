@@ -23,9 +23,9 @@ export default function AboutMeDesktop() {
                         viewport={{once: true, amount: 0.1}}
                         onMouseEnter={() => setHoveredBox(box.id)}
                         onMouseLeave={() => setHoveredBox(null)}
-                        >
+                    >
                         <AboutMeBoxDesktop text={box.text} />
-                                                
+                                            
                     </motion.div>
                 ))}
                 

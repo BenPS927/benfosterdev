@@ -6,13 +6,13 @@ import { AnimatePresence, motion } from "framer-motion";
 
 export default function MobileProjectsPage() {
     return (
-        <div className="flex flex-col items-center p-4 space-y-8 bg-gradient-to-b from-white to-purple-100 ">
+        <div className="flex flex-col items-center p-4 space-y-8 bg-gradient-to-b from-white to-orange-100 ">
             <motion.h1 
                 initial={{x: -200, opacity: 0}}
                 whileInView={{x: 0, opacity: 1}}
                 viewport={{ once:false, amount: 0.1}}
                 transition={{ duration: 0.2}}
-                className="text-4xl font-bebas text-stone-500 mb-8">Projects
+                className="text-4xl font-bebas mb-8">Projects
             </motion.h1>
             <motion.h2 
                 initial={{x: 200, opacity: 0}}

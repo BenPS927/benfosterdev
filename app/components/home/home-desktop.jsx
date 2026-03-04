@@ -9,7 +9,7 @@ export default function HomePageDesktop() {
     <div id="home" className="relative mx-auto ml-0 lg:ml-2 mr-0 lg:mr-2 mt-0 lg:mt-4 bg-gradient-to-b from-white to-gray-200">
     
       <main className="flex flex-col lg:flex-row p-0 lg:p-4 gap-4 rounded-b-md">
-        <div className="p-0 lg:p-4 flex-1 min-w-0">
+        <section className="p-0 lg:p-4 flex-1 min-w-0">
           <h1 className="px-4 lg:p-4 text-4xl md:text-6xl lg:text-8xl font-bebas mt-8 lg:mt-32 font-bold tracking-wide drop-shadow-md">Web Developer</h1>
           <p className="px-4 lg:p-4 mt-4 lg:mt-4 text-lg lg:text-xl text-stone-500 font-oswald drop-shadow-md">Hi, I'm Ben, a passionate React developer and IT manager based in Bristol, England.<br />
            Managing IT systems by day, building projects by night. 
@@ -49,19 +49,19 @@ export default function HomePageDesktop() {
                     </a>
             </div>
           </div>
-        </div>
-        <div className="order-first lg:order-last flex-shrink-0 w-fit p-2 lg:p-8 mt-8 lg:mt-4 mr-8">
+        </section>
+        <section className="order-first lg:order-last flex-shrink-0 w-fit p-2 lg:p-8 mt-8 lg:mt-4 mr-8">
             <Box 
               component="img"
               src="/profilephoto2.png"
-              alt="Ben Foster"
+              alt="Ben Foster - React Developer and AI Chatbot Specialist"
               sx={{ 
                 width: { xs: '50vw', lg: 500 }, 
                 height: { xs: '50vw', lg: 500 }, 
                 borderRadius: '50%', 
                 borderColor: 'white'
               }}/>
-        </div>
+        </section>
         <div className="absolute bottom-20 left-10 w-48 h-48 border border-orange-200 -z-10 opacity-100" />
       </main>
     </div>

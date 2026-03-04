@@ -6,21 +6,21 @@ import { motion } from 'framer-motion';
 
 export default function DesktoprojectsPage() {
     return ( 
-        <div id="projects" className="mx-auto space-y-32 bg-gradient-to-b from-white to-purple-100 p-4">
+        <div id="projects" className="mx-auto space-y-32 bg-gradient-to-b from-white to-orange-100 p-4">
             <div>
                 <motion.h1 
                     initial={{x: -600, opacity: 0}}
                     whileInView={{x: 0, opacity: 1}}
                     viewport={{ once:true, amount: 0.1}}
                     transition={{ duration: 0.3}}
-                    className="text-8xl font-bebas flex justify-center font-bold mb-16 text-purple-800">Projects</motion.h1>
+                    className="text-8xl font-bebas flex justify-center font-bold mb-16">Projects</motion.h1>
                 <motion.h2 
                     initial={{x: 600, opacity: 0}}
                     whileInView={{x: 0, opacity: 1}}
                     viewport={{ once:true, amount: 0.1}}
                     transition={{ duration: 0.3}}
                     className="text-normal lg:text-xl font-oswald flex justify-center text-stone-500 mb-8">
-                        This is where you'll find the project I'm currently working on, and the ones I've compeleted</motion.h2>
+                        This is where you'll find the project I'm currently working on, and the ones I've completed</motion.h2>
             </div>
             <div className="flex p-4 mt-8 gap-8">
                 <motion.div 
@@ -47,7 +47,7 @@ export default function DesktoprojectsPage() {
                     whileInView={{x: 0, opacity: 1}}
                     viewport={{ once:true, amount: 0.1}}
                     transition={{ duration: 0.3}}
-                    className="w-1/3 flex justify-center items-center font-inter font-bold text-purple-700">
+                    className="w-1/3 flex justify-center items-center font-inter font-bold text-orange-600">
                         Code Coming Soon...
                  </motion.div>
             </div>
