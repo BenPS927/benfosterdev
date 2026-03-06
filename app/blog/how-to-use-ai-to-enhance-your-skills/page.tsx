@@ -1,4 +1,5 @@
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import type { Metadata } from "next"
 import Link from 'next/link'
 import AIEnhance from "@/app/components/blogs/how-to-use-ai-to-enhance-your-skills";
 import type { Metadata } from "next";
@@ -20,6 +21,11 @@ const schema = {
     "name": "Ben Foster",
     "url": "https://benfosterdev.com"
   }
+}
+
+export const metadata: Metadata = {
+  title: "How to Use AI to Enhance Your Skills",
+  description: "Learn how to leverage AI tools to improve your professional skills.",
 }
 
 export default function Aienhance () {
