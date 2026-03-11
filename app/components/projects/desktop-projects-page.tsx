@@ -2,7 +2,7 @@
 
 import { CodeExpenseTracker } from "./code-expense-tracker"
 import { motion } from 'framer-motion'
-import { ETDesc, ETCode, ShopLink, ShopDesc } from "./new-projects/components"
+import { ETDesc, ETCode, ShopLink, ShopDesc } from "./components"
 import { ExpenseTracker } from "./expense-tracker"
 import { useState } from 'react'
 import KeyboardDoubleArrowLeftIcon from '@mui/icons-material/KeyboardDoubleArrowLeft';
