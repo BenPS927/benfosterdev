@@ -2,13 +2,14 @@
 
 import { CodeExpenseTracker } from "./code-expense-tracker"
 import { motion } from 'framer-motion'
-import { ETDesc, ETCode, ShopLink, ShopDesc } from "./new-projects/components"
-import { ExpenseTracker } from "./expense-tracker"
+import { ETDesc } from "./components"
+import { ETCode } from "./components"
+import { ExpenseTracker } from "../expense-tracker"
+import { ShopLink } from "./components"
+import { ShopDesc } from "./components"
 import { useState } from 'react'
-import KeyboardDoubleArrowLeftIcon from '@mui/icons-material/KeyboardDoubleArrowLeft';
-import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight';
 
-export default function DesktopProjectsPage() {
+export function NewProjects() {
     const [panel, setPanel] = useState(0)
 
     return (
@@ -41,22 +42,16 @@ export default function DesktopProjectsPage() {
                 <div className="flex justify-center items-center gap-4">
                     <button
                         onClick={() => setPanel(Math.max(panel - 1, 0))}
-                        className=" p-6 h-24 w-24 rounded-md shadow-lg bg-white hover:scale-110 transition-transform flex justify-center items-center"
+                        className="border p-6 h-24 w-24 rounded-md shadow-lg bg-white hover:scale-110 transition-transform"
                     >
-                        <KeyboardDoubleArrowLeftIcon sx={{ 
-                        color: "orange",
-                        fontSize: 64
-                     }}/>
+                        Left
                     </button>
 
                     <button
                         onClick={() => setPanel(Math.min(panel + 1, 1))}
-                        className=" p-6 h-24 w-24 rounded-md shadow-lg bg-white hover:scale-110 transition-transform flex justify-center items-center"
+                        className="border p-6 h-24 w-24 rounded-md shadow-lg bg-white hover:scale-110 transition-transform"
                     >
-                        <KeyboardDoubleArrowRightIcon sx={{ 
-                        color: "orange",
-                        fontSize: 64
-                     }}/>
+                        Right
                     </button>
                 </div>
             </div>

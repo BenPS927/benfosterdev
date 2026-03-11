@@ -11,13 +11,16 @@ type Expense = {
 }
 
 export function ExpenseTracker() {
-    const remaining = 10
-    const totalSpent = 5
-    const budget = 20
+    
+    const budget = 500
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [price,setPrice] = useState("0")
     const [name,setName] = useState("")
     const [expenses, setExpenses] = useState<Expense[]>([])
+    const totalSpent = expenses.reduce((sum, expense) => sum + expense.price, 0)
+    const remaining = (budget - totalSpent)
+    console.log(expenses)
+
         
     function handleSubmit(event: FormEvent<HTMLFormElement>) {
         event.preventDefault()
