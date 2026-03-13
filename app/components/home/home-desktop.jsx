@@ -10,13 +10,13 @@ export default function HomePageDesktop() {
     
       <main className="flex flex-col lg:flex-row p-0 lg:p-4 gap-4 rounded-b-md">
         <section className="p-0 lg:p-4 flex-1 min-w-0">
-          <h1 className="px-4 lg:p-4 text-4xl md:text-6xl lg:text-8xl font-bebas mt-8 lg:mt-32 font-bold tracking-wide drop-shadow-md">Web Developer</h1>
-          <p className="px-4 lg:p-4 mt-4 lg:mt-4 text-lg lg:text-xl text-stone-500 font-oswald drop-shadow-md">Hi, I'm Ben, a passionate React developer and IT manager based in Bristol, England.<br />
-           Managing IT systems by day, building projects by night. 
+          <h1 className="px-4 lg:p-4 text-4xl md:text-6xl lg:text-8xl font-bebas mt-8 lg:mt-32 font-bold tracking-wide drop-shadow-md">Building AI Enhanced Business Systems</h1>
+          <p className="px-4 lg:p-4 mt-4 lg:mt-4 text-lg lg:text-xl text-stone-500 font-oswald drop-shadow-md">Hi, I'm Ben, a web developer and IT manager based in Bristol </p>
+          <p className="px-4 lg:p-4 mt-4 lg:mt-4 text-lg lg:text-xl text-stone-500 font-oswald drop-shadow-md"> By day I manage IT infrastructure. </p>
+          <p className="px-4 lg:p-4 mt-4 lg:mt-4 text-lg lg:text-xl text-stone-500 font-oswald drop-shadow-md"> By night I build modern web systems that integrate automation and AIB
            <br />
            <br />
-           Learning to build chatbots and integrate them into my work.
-           </p>
+           I'm not just interested in flashy designs - I'm here to build systems and solutions that integrate AI and automation. I'm currently working on a full stack E-commerce store. Scroll down to explore the project.</p>
            <div className="h-12 w-16 lg:h-32 lg:w-32"></div>
 
           <div className="flex flex-wrap p-4 mt-24 lg:mt-28 gap-4 lg:gap-8 items-center scale-50 lg:scale-100 origin-left">

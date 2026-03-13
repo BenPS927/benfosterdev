@@ -9,7 +9,7 @@ import KeyboardDoubleArrowLeftIcon from '@mui/icons-material/KeyboardDoubleArrow
 import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight';
 
 export default function DesktopProjectsPage() {
-    const [panel, setPanel] = useState(0)
+    const [panel, setPanel] = useState(1)
 
     return (
         <div className="mx-auto bg-gradient-to-b from-white to-orange-100 p-4">
@@ -35,7 +35,7 @@ export default function DesktopProjectsPage() {
                 </motion.h2>
 
                 <p className="font-oswald text-normal lg:text-xl text-stone-500 text-center">
-                    Click the buttons below to see what I've done
+                    Click the buttons below to scroll my projects
                 </p>
 
                 <div className="flex justify-center items-center gap-4">

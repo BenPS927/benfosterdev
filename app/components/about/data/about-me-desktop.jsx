@@ -51,7 +51,7 @@ export const aboutMeDesktop = [
   {
     id: 5,
     text:
-      "I've worked with marketers to build CRM automations, made countless projects in Power Automate, built python code for SEO purposes. Now, it seems like the right thing to do is get into software development, and I'm enjoying it!",
+      "I've worked with marketers to build CRM automations, made countless projects in Power Automate, built python code for SEO purposes. I'm now learning web development, with a focus on building systems rather than just lines of code. Soon, I'll learn to integrate AI.",
     images: ["/react.png"],
     position: 'col-start-5 col-span-3 row-start-7 row-span-4 z-10',
     startX: -500,

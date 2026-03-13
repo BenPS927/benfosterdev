@@ -6,9 +6,9 @@ export function ETDesc() {
         
         <div className="p-4 font-inter leading-[2]">
             <p>This is my expense tracker project. </p>
-            <p>It might seem simple, but it requires logic and interactivity, fundamental concepts for me to grasp.</p>
-            <p>So far I've only done the add an item function, so I need to now code into that a form submission.</p>
-            <p>I'll then have to connect that with data and logic to create a list of items and calculate the figures on the left.</p>
+            <p>This was my first project after building this site.</p>
+            <p>It includes a form submission, click and submission handlers, animations and calculation logic.</p>
+            <p>This was the perfect project for introducing me to the more complex side of React JS involving interactivity and function.</p>
         </div>
 
     )
@@ -26,10 +26,15 @@ export function ShopDesc() {
     return (
         
         <div className="p-4 font-inter leading-[2]">
-            <p>This is my shop project. </p>
-            <p>This will be an online store interface, where you can place 'orders'. It might seem simple,
-            but this invovles a lot going on behind the scenes. It will also include a backend, and workflow
-            automations, so it will be my first full stack project</p>
+            <p>This is BFShop. </p>
+            <br />
+            <p>This will be my first full-stack project, and an entire business system. </p>
+            <br />
+            <p>There will be two interfaces - the customer interface, where orders can be placed, with an AI chatbot for making queries.</p>
+            <br />
+            <p> And the merchant interface, where orders will be logged and stock will be inventoried. Automated workflows utilising AI will work
+                with the backend to make this a fully functioning system.
+            </p>
         </div>
 
     )
