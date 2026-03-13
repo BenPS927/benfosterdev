@@ -12,7 +12,7 @@ import { Menu } from './menu'
 
     const [isMenuOpen,setIsMenuOpen] = useState(false)   //creates state, stored in a variable, for if menu is open or closed
     const pathname = usePathname()   //react inbuilt function to evaluate what page user is on 
-    const isBlockedPage = pathname === '/blog' || pathname === '/shop';
+    const isBlockedPage = pathname === '/blog' || pathname === '/shop' || pathname === 'how-to-use-ai-to-enhance-your-skills';
     const handleNavClick = (event: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
       event.preventDefault();
       document.getElementById(targetId)?.scrollIntoView({ behavior: 'smooth' });
@@ -21,7 +21,7 @@ import { Menu } from './menu'
 
      return (
      
-        <header className="sticky top-0 z-10 bg-gray-100 lg:bg-gray-100 flex justify-between items-center rounded-t-md z-100 shadow-md">
+        <header className="relative sticky top-0 z-10 bg-gray-100 lg:bg-gray-100 flex justify-between items-center rounded-t-md z-100 shadow-md">
             {pathname === '/' ? (
               <a href="#home" onClick={(event) => handleNavClick(event, 'home')}>
               <img src="/logo.png" alt="Logo" className="w-16 lg:w-32 h-6 lg:h-12 ml-6 lg:ml-12" />
@@ -30,43 +30,41 @@ import { Menu } from './menu'
               <img src="/logo.png" alt="Logo" className="w-16 lg:w-32 h-6 lg:h-12 ml-6 lg:ml-12" />
             </Link> )
             }
-            {/* Hide menu icon and nav links on blog pages */}
+            {/* Right-side icon and dropdown are anchored together */}
             {!pathname.startsWith('/blog') && !pathname.startsWith('/shop') && (
-              <>
-            <MenuIcon 
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="mr-6"
-              sx={{ 
-                fontSize: { xs: 42, sm: 42, md: 60 },
-                color: 'orange',
-                cursor: 'pointer',
-                transition: 'all 0.3s',
-                '&:hover': {
-                color: 'orange',
-                transform: 'scale(1.1)',
-                  } 
-                }} />
-                </>
+              <div className="relative mr-6">
+                <MenuIcon 
+                  onClick={() => setIsMenuOpen(!isMenuOpen)}
+                  sx={{ 
+                    fontSize: { xs: 42, sm: 42, md: 60 },
+                    color: 'orange',
+                    cursor: 'pointer',
+                    transition: 'all 0.3s',
+                    '&:hover': {
+                      color: 'orange',
+                      transform: 'scale(1.1)',
+                    } 
+                  }} />
+
+                <AnimatePresence>
+                  {isMenuOpen && !isBlockedPage && (
+                    <div className="absolute top-full right-0 mt-2 z-[9999] flex flex-col gap-2 rounded-md bg-gray-100/95 p-2 shadow-md lg:top-1/2 lg:right-full lg:mr-3 lg:mt-0 lg:-translate-y-1/2 lg:flex-row lg:gap-4 lg:bg-transparent lg:p-0 lg:shadow-none">
+                      {MenuItems.map((item) => 
+                        <Menu 
+                          key={item.id}
+                          link={item.link}
+                          text={item.text}
+                          startOpacity={item.startOpacity}
+                          animateOpacity={item.animateOpacity}
+                          duration={item.duration}
+                          delay={item.delay}
+                        />
+                      )}
+                    </div>
+                  )}
+                </AnimatePresence>
+              </div>
             )}
-            <AnimatePresence>
-                                 {isMenuOpen && !isBlockedPage && (
-                                    <div className="flex gap-2 lg:gap-4 absolute top-0 lg:top-4 right-16 lg:right-24 z-50"> 
-                                        {MenuItems.map((item) => 
-                                            <Menu 
-                                                key={item.id}
-                                                link={item.link}
-                                                text={item.text}
-                                                startOpacity={item.startOpacity}
-                                                animateOpacity={item.animateOpacity}
-                                                duration={item.duration}
-                                                delay={item.delay}
-                                            />
-                                        )}
-                                    </div>
-
-                                 )}
-
-            </AnimatePresence>
                                 
             
         </header>

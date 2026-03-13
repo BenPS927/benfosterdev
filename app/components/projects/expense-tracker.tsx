@@ -19,7 +19,7 @@ export function ExpenseTracker() {
     const [expenses, setExpenses] = useState<Expense[]>([])
     const totalSpent = expenses.reduce((sum, expense) => sum + expense.price, 0)
     const remaining = (budget - totalSpent)
-    console.log(expenses)
+    
 
         
     function handleSubmit(event: FormEvent<HTMLFormElement>) {
@@ -34,6 +34,8 @@ export function ExpenseTracker() {
             id: crypto.randomUUID(),
             name:name.trim(),
             price: Number(price)
+
+        
         }
         // set the expense variable by adding old expenses variable to above made new
         setExpenses([...expenses, newExpense])
@@ -41,40 +43,49 @@ export function ExpenseTracker() {
         // set the name and price fields back to empty
         setName("")
         setPrice("")
+
+        setIsMenuOpen(false)
         }
+        
     
     return (
-        <div className="relative">
+        <div className="relative ">
             <AnimatePresence>
                 {isMenuOpen && (
                     <motion.div 
                         initial={{ x: 100, opacity: 0 }}
                         animate={{ x: 0, opacity: 1 }}
                         exit={{ x: 100, opacity: 0 }}
-                        transition={{ type: "tween", duration: 0.2 }}className="absolute top-18 right-3 lg:right-12 w-30 lg:w-60 space-y-2 lg:space-y-4">
-                        <Input price={price} setPrice={setPrice} name={name} setName={setName} handleSubmit={handleSubmit} expenses={expenses} />
-                    
+                        transition={{ type: "tween", duration: 0.2 }}className=" absolute right-4 gap-2 flex flex-col items-center justify-center w-1/3 lg:w-1/2 top-12 right-8">
+                            <Input price={price} setPrice={setPrice} name={name} setName={setName} handleSubmit={handleSubmit} expenses={expenses} />
+                        <motion.button 
+                        initial={{ x: 100, opacity: 0 }}
+                        animate={{ x: 0, opacity: 1 }}
+                        exit={{ x: 100, opacity: 0 }}
+                        type="submit"
+                        form="expense-form"
+                        className=" rounded-md w-1/2 font-inter text-orange-600 bg-white shadow-lg cursor-pointer ">
+                            Submit
+                        </motion.button>
                     </motion.div>
-                        )
-                    }
+                )}
+                       
+            
             </AnimatePresence>
             <div className="w-full h-full p-1 lg:p-2 bg-white rounded-md">
                 <div className="p-1 lg:p-2 space-y-2 lg:space-y-4">
                 <div className="p-1 lg:p-2 mx-auto w-fit space-y-2 lg:space-y-4 text-center">
                     <h1 className="p-2 lg:p-4 font-sora text-2xl text-orange-600">Expense Tracker</h1>
                     <motion.button
-                        type="submit"
-                        form="expense-form"
+                        
                         className="p-2 lg:p-4 rounded-lg text-orange-600 hover:scale-110 cursor-pointer transition shadow-lg bg-orange-100 font-bold"
                         onClick={() => setIsMenuOpen(!isMenuOpen)}
                         animate={{
                             x: isMenuOpen ? -100 : 0
                         }}
                         transition={{ duration: 0.2}}>
-                        {isMenuOpen === false && (<p className="font-inter font-bold">Add an item</p>)} 
-                        {isMenuOpen && (
-                            <p className="font-inter font-bold">Submit</p>
-                        )}
+                        <p className="font-inter font-bold">Add an item</p>
+                       
                         
                     
                     </motion.button>
