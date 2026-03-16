@@ -11,7 +11,7 @@ export function ContentContact() {
     const [query, setQuery] = useState('')
     const [email, setEmail] = useState('')
 
-    const handleSubmit = async (e) => {
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();  // stops page reload on form submit
 
         const response = await fetch("/api/contact", {
