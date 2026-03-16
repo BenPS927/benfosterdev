@@ -3,19 +3,41 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import { motion } from 'framer-motion';
 import type { Metadata } from "next";
-import JsonLd from "../shared/jsonld"
+import JsonLd from "../shared/jsonld";
+import { useState } from 'react'
 
 export function ContentContact() {
+
+    const [query, setQuery] = useState('')
+    const [email, setEmail] = useState('')
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();  // stops page reload on form submit
+
+        const response = await fetch("/api/contact", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ query, email }),
+        });
+
+        if (response.ok) {
+            // show success message
+        } else {
+        // show error message
+        }
+        ;}
+
+
     return (
-        <div id="contact" className="mx-auto bg-gradient-to-b from-orange-100 to-white max-w-full">
+        <div id="contact" className=" mx-auto bg-gradient-to-b from-orange-100 to-white max-w-full">
             <motion.div
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once:true}}
                 transition={{ duration: 1.2 }}
-                className="flex flex-col items-center space-y-16 p-4 lg:p-8"
+                className=" flex flex-col items-center space-y-16 p-4 lg:p-8"
             >
-                <h1 className="font-oswald text-4xl lg:text-6xl mt-8text-center">Get in touch</h1>
+                <h1 className="font-bebas text-4xl lg:text-6xl mt-8 text-center">Get in touch</h1>
                 
                 <motion.h2
                     initial={{ opacity: 0 }}
@@ -27,17 +49,47 @@ export function ContentContact() {
                     Interested in working together? Reach out
                 </motion.h2>
                 
-                <main className="p-2 lg:p-4">
+                <main className=" p-2 lg:p-4">
                     <motion.div
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once:true}}
                         transition={{ duration: 1.2, delay: 0.4 }}
                         className="flex gap-8 space-y-8 lg:space-y-16 p-2 lg:p-8"
-                    >
-                        <div className="w-1/3"></div>
-                        <p className="flex justify-center p-8 w-1/3 font-inter cursor-pointer text-xl text-slate-600">benfoster935@gmail.com</p>
-                        <div className="w-1/3"></div>
+                    >   <div className=" w-full flex justify-center items-center">
+                        <form 
+                            id="contact-form"
+                            onSubmit={handleSubmit}
+                            >
+                                <div className=" p-2 flex ">
+                                    <div className=" p-2">
+                                        <p className="font-oswald text-xl lg:text-2xl text-center text-stone-500"> Query:</p>
+                                    </div>
+                                    <input 
+                                        className=" min-w-[100px] lg:min-w-[500px] min-h-[100] lg:min-h-[200px] bg-white rounded-md shadow-lg"
+                                        type="text"
+                                        value={query}
+                                        onChange={e => setQuery(e.target.value)}/>
+                                        
+                                    
+                                </div>
+                                <div className=" p-2 flex">
+                                    <div className=" p-2">
+                                        <p className="font-oswald text-xl lg:text-2xl text-center text-stone-500 "> Email:</p>
+                                    </div>
+                                    <input 
+                                        className=" min-w-[100px] lg:min-w-[500px] min-h-[50px] bg-white rounded-md shadow-lg"
+                                        type="text"
+                                        value={email}
+                                        onChange={e => setEmail(e.target.value)}/>
+                                </div>
+                                <button 
+                                    type="submit"
+                                    className=" p-2 rounded-md w-full  ">
+                                        <p className="font-inter text-center rounded-md bg-orange-300 cursor-pointer active:scale-95 transition-transform duration-200">Send</p>
+                                    </button>
+                        </form>
+                        </div>
                     </motion.div>
                     
                     <motion.div

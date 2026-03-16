@@ -7,7 +7,8 @@ type MenuProps = {
   startOpacity: number;
   animateOpacity: number;
   duration: number;
-  delay: number;
+  openDelay: number;
+  closeDelay: number;
     onItemClick?: () => void;
 };
 
@@ -18,7 +19,8 @@ export function Menu({
     startOpacity,
     animateOpacity,
     duration,
-    delay,
+    openDelay,
+    closeDelay,
     onItemClick,
 }: MenuProps) {
     return(
@@ -26,7 +28,8 @@ export function Menu({
         <motion.div
             initial = {{ opacity: startOpacity }}
             animate = {{ opacity: animateOpacity }}
-            transition={{ duration: duration, delay: delay }}
+            transition={{ duration: duration, delay: openDelay }}
+            exit={{ opacity: 0, transition: { delay: closeDelay, duration}}}
             className="font-oswald text-sm lg:text-xl text-stone-500 hover:scale-110 transition-transform cursor-pointer duration-300 hover:text-orange-500">
             
                 {text}

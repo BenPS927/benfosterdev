@@ -26,12 +26,9 @@ export function ShopDesc() {
     return (
         
         <div className="p-4 font-inter leading-[2]">
-            <p>This is BFShop. </p>
-            <br />
+            <p>This is BFshop. </p>
             <p>This will be my first full-stack project, and an entire business system. </p>
-            <br />
             <p>There will be two interfaces - the customer interface, where orders can be placed, with an AI chatbot for making queries.</p>
-            <br />
             <p> And the merchant interface, where orders will be logged and stock will be inventoried. Automated workflows utilising AI will work
                 with the backend to make this a fully functioning system.
             </p>

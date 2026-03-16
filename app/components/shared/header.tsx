@@ -12,6 +12,7 @@ import { Menu } from './menu'
 
     const [isMenuOpen,setIsMenuOpen] = useState(false)   //creates state, stored in a variable, for if menu is open or closed
     const pathname = usePathname()   //react inbuilt function to evaluate what page user is on 
+    const gap = 0.06
     const isBlockedPage = pathname === '/blog' || pathname === '/shop' || pathname === 'how-to-use-ai-to-enhance-your-skills';
     const handleNavClick = (event: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
       event.preventDefault();
@@ -49,7 +50,11 @@ import { Menu } from './menu'
                 <AnimatePresence>
                   {isMenuOpen && !isBlockedPage && (
                     <div className="absolute top-full right-0 mt-2 z-[9999] flex flex-col gap-2 rounded-md bg-gray-100/95 p-2 shadow-md lg:top-1/2 lg:right-full lg:mr-3 lg:mt-0 lg:-translate-y-1/2 lg:flex-row lg:gap-4 lg:bg-transparent lg:p-0 lg:shadow-none">
-                      {MenuItems.map((item) => 
+                      {MenuItems.map((item, index) => {
+                        const closeDelay = index * gap;
+                        const openDelay = (MenuItems.length - 1 - index) * (gap*2); 
+
+                        return (
                         <Menu 
                           key={item.id}
                           link={item.link}
@@ -57,9 +62,10 @@ import { Menu } from './menu'
                           startOpacity={item.startOpacity}
                           animateOpacity={item.animateOpacity}
                           duration={item.duration}
-                          delay={item.delay}
+                          openDelay={openDelay}
+                          closeDelay={closeDelay}
                         />
-                      )}
+                      );})}
                     </div>
                   )}
                 </AnimatePresence>

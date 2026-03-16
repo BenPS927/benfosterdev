@@ -4,7 +4,7 @@ export const MenuItems = [
     text: 'Home',
     link: '#home',
     startOpacity: 0,
-    duration: 1,
+    duration: 0.5,
     delay: 0.5,
     animateOpacity: 1
     

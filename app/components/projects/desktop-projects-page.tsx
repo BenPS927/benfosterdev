@@ -41,7 +41,7 @@ export default function DesktopProjectsPage() {
                 <div className="flex justify-center items-center gap-4">
                     <button
                         onClick={() => setPanel(Math.max(panel - 1, 0))}
-                        className=" p-6 h-24 w-24 rounded-md shadow-lg bg-white hover:scale-110 transition-transform flex justify-center items-center"
+                        className=" p-6 h-24 w-24 rounded-md shadow-lg bg-white transition-transform flex justify-center items-center active:scale-95  duration-200"
                     >
                         <KeyboardDoubleArrowLeftIcon sx={{ 
                         color: "orange",
@@ -51,7 +51,7 @@ export default function DesktopProjectsPage() {
 
                     <button
                         onClick={() => setPanel(Math.min(panel + 1, 1))}
-                        className=" p-6 h-24 w-24 rounded-md shadow-lg bg-white hover:scale-110 transition-transform flex justify-center items-center"
+                        className=" p-6 h-24 w-24 rounded-md shadow-lg bg-white transition-transform flex justify-center items-center active:scale-95  duration-200"
                     >
                         <KeyboardDoubleArrowRightIcon sx={{ 
                         color: "orange",
