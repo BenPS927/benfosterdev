@@ -20,34 +20,22 @@ export function ExpenseTracker() {
     const totalSpent = expenses.reduce((sum, expense) => sum + expense.price, 0)
     const remaining = (budget - totalSpent)
     
-
-        
     function handleSubmit(event: FormEvent<HTMLFormElement>) {
         event.preventDefault()
-    
-        // validation by checking if the entry is empty space, and if price numbers or not 
         if (!name.trim() || isNaN(Number(price))) {
             return
             }
-        // create function for adding a new expense
         const newExpense = { 
             id: crypto.randomUUID(),
             name:name.trim(),
             price: Number(price)
-
-        
         }
-        // set the expense variable by adding old expenses variable to above made new
         setExpenses([...expenses, newExpense])
-        
-        // set the name and price fields back to empty
         setName("")
         setPrice("")
-
         setIsMenuOpen(false)
         }
         
-    
     return (
         <div className="relative ">
             <AnimatePresence>
@@ -56,15 +44,18 @@ export function ExpenseTracker() {
                         initial={{ x: 100, opacity: 0 }}
                         animate={{ x: 0, opacity: 1 }}
                         exit={{ x: 100, opacity: 0 }}
-                        transition={{ type: "tween", duration: 0.2 }}className=" absolute right-4 gap-2 flex flex-col items-center justify-center w-1/3 lg:w-1/2 top-12 right-8">
-                            <Input price={price} setPrice={setPrice} name={name} setName={setName} handleSubmit={handleSubmit} expenses={expenses} />
+                        transition={{ type: "tween", duration: 0.2 }}className=" absolute right-4 gap-2 flex 
+                        flex-col items-center justify-center w-1/3 lg:w-1/2 top-12 right-8">
+                            <Input price={price} setPrice={setPrice} name={name} setName={setName} 
+                            handleSubmit={handleSubmit} expenses={expenses} />
                         <motion.button 
                         initial={{ x: 100, opacity: 0 }}
                         animate={{ x: 0, opacity: 1 }}
                         exit={{ x: 100, opacity: 0 }}
                         type="submit"
                         form="expense-form"
-                        className=" rounded-md w-1/2 font-inter text-orange-600 bg-white shadow-lg cursor-pointer ">
+                        className=" rounded-md w-1/2 font-inter text-orange-600 bg-white shadow-lg 
+                        cursor-pointer ">
                             Submit
                         </motion.button>
                     </motion.div>
@@ -78,7 +69,8 @@ export function ExpenseTracker() {
                     <h1 className="p-2 lg:p-4 font-sora text-2xl text-orange-600">Expense Tracker</h1>
                     <motion.button
                         
-                        className="p-2 lg:p-4 rounded-lg text-orange-600 hover:scale-110 cursor-pointer transition shadow-lg bg-orange-100 font-bold"
+                        className="p-2 lg:p-4 rounded-lg text-orange-600 hover:scale-110 cursor-pointer 
+                        transition shadow-lg bg-orange-100 font-bold"
                         onClick={() => setIsMenuOpen(!isMenuOpen)}
                         animate={{
                             x: isMenuOpen ? -100 : 0
@@ -92,9 +84,12 @@ export function ExpenseTracker() {
                 </div>
                 <div className="flex p-1 lg:p-2 gap-2 lg:gap-2">
                     <div className="p-1 lg:p-2 space-y-2 lg:space-y-4 w-1/2">
-                        <div className="p-2 lg:p-4 font-inter font-bold text-lg lg:text-xl text-orange-600 rounded-lg shadow-lg bg-orange-100">Left to spend: {remaining} </div>
-                        <div className="p-2 lg:p-4 font-inter font-bold text-lg lg:text-xl text-orange-600 rounded-md shadow-lg bg-orange-100">Total Expenses: {totalSpent} </div>
-                        <div className="p-2 lg:p-4 font-inter font-bold text-lg lg:text-xl text-orange-600 rounded-md shadow-lg bg-orange-100">Budget: {budget} </div>
+                        <div className="p-2 lg:p-4 font-inter font-bold text-lg lg:text-xl text-orange-600
+                         rounded-lg shadow-lg bg-orange-100">Left to spend: {remaining} </div>
+                        <div className="p-2 lg:p-4 font-inter font-bold text-lg lg:text-xl text-orange-600
+                         rounded-md shadow-lg bg-orange-100">Total Expenses: {totalSpent} </div>
+                        <div className="p-2 lg:p-4 font-inter font-bold text-lg lg:text-xl text-orange-600
+                         rounded-md shadow-lg bg-orange-100">Budget: {budget} </div>
                     </div>
                     <div className="p-2 lg:p-2 grid  w-1/2 font-inter text-orange-600 flex flex-col">
                         <AnimatePresence>
@@ -104,7 +99,8 @@ export function ExpenseTracker() {
                                 animate={{ x: 0, opacity: 1 }}
                                 exit={{ x: 100, opacity: 0 }}
                                 key={entry.id}
-                                className="w-full rounded-md p-2 font-inter font-bold text-orange-600 shadow-lg bg-orange-100 w-fit h-fit">
+                                className="w-full rounded-md p-2 font-inter font-bold text-orange-600 shadow-lg
+                                 bg-orange-100 w-fit h-fit">
                             <div>Purchase: {entry.name}</div>
                             <div>Cost: {entry.price}</div>
                             </motion.div>

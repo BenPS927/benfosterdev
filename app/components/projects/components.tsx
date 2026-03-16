@@ -16,9 +16,10 @@ export function ETDesc() {
 
 export function ETCode() {
     return (
-        <div className="font-inter font-bold text-orange-600">
-            Code Coming Soon...
-        </div>
+        <Link href="/trackercode" className=" font-inter text-orange-600 bg-white p-16 w-64 h-64 flex flex-col items-center justify-center rounded-md shadow-lg">
+           <p className="font-inter font-bold text-orange-600 mb-4">Code and notes</p>
+           <p className="font-inter text-orange-600">Click here to see the code for this project and some notes on how it works</p>
+        </Link>
     )
 }
 

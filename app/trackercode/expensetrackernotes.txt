@@ -1,0 +1,20 @@
+'use client' tells Next.js to use client side rendering, which is necessary for files using state.
+
+Inputs:
+useState must be imported as this file uses state.
+FormEvent must be imported for use in the event handler as this is a typescript file.
+motion and AnimatePresence are necessary for the animations I used.
+
+The type Expense block defines a TypeScript type for one expense object. It says every expense must have id and it must be a string, and so on.
+
+Next are the constants. The first is a hardcoded budget which will be used for the calulcations. The next establishes the state 
+for if the input form is open. This should be called isFormOpen, not isMenuOpen. It's named this way because I copy and pasted it from a similar component.
+The price and name state lines establish the state for tracking the user input into the form, and give it default values.
+the expenses line is the state that will store the inputted items, to be mapped onto the screen.
+totalSpent calulcates the total from the expenses array using the reduce function, and in the next line this is used to calculate the remaining budget.
+
+The next part is the function handler. This is where the submission of the form is dealt with; event.preventDefault stops the page refreshing on submission
+(which would clear the state). 
+Next is the validation part of the handler. if(!name.trim() removes empty spaces on either end of the inputs, also functioning to remove fully empty submissions.
+isNaN checks if price is a number. Entries that don't meet these requirements are filtered out by a return function which goes nowhere. This part I struggled with
+due to the confusing syntax. 

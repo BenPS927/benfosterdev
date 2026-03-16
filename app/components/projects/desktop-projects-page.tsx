@@ -96,7 +96,7 @@ export default function DesktopProjectsPage() {
                         </div>
 
                         <div className="w-1/3 text-center flex justify-center items-center">
-                            <ETCode />
+                            Code coming soon
                         </div>
                     </div>
                 </div>
