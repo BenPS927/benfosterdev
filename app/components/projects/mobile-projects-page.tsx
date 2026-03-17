@@ -1,7 +1,6 @@
 'use client'
 
 import { ExpenseTracker } from "./expense-tracker";
-import { CodeExpenseTracker } from "./code-expense-tracker"
 import { AnimatePresence, motion } from "framer-motion";
 import KeyboardDoubleArrowLeftIcon from '@mui/icons-material/KeyboardDoubleArrowLeft';
 import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight';
