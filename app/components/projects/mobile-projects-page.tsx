@@ -67,7 +67,7 @@ export default function MobileProjectsPage() {
                             <br />
                             <p className="text-center font-inter leading-[2] mb-4">When complete, BFShop will be an entire business system with an AI chatbot for customers, and automation-driven workflows controlling the merchant interface</p>
                         </div>
-                        <div className="flex flex-col items-center justify-center mt-24 ">
+                        <div className="flex flex-col items-center justify-center mt-24 z-50">
                             <ShopLink />
                         </div>
                     </div>

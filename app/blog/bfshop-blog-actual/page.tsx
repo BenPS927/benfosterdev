@@ -1,7 +1,7 @@
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import type { Metadata } from "next"
 import Link from 'next/link'
-import AIEnhance from "@/app/components/blogs/how-to-use-ai-to-enhance-your-skills";
+import BFShopBlogPost from "@/app/components/blogs/bfshop-blog-post";
 import JsonLd from "@/app/components/shared/jsonld"
 
 export const metadata: Metadata = {
@@ -22,7 +22,7 @@ const schema = {
   }
 }
 
-export default function Aienhance () {
+export default function BFShopBlogActual () {
     return (
         <div className="relative p-4">
         <JsonLd schema={schema} />
@@ -36,7 +36,7 @@ export default function Aienhance () {
                 </div>
                 
                 <div className="hidden lg:block flex justify-center w-1/3 p-2 lg:p-8">
-                    <Link href="/blog">
+                    <Link href="/blog/bfshop-blog-home">
                         <ArrowBackIcon sx={{ 
                             fontSize: 60,
                             color: 'orange' }} />
@@ -45,7 +45,7 @@ export default function Aienhance () {
                 <h1 className="w-full lg:w-1/3 text-center font-inter font-bold [text-shadow:0_2px_6px_rgba(0,0,0,0.4)] text-3xl lg:text-6xl p-6">
                     <Link href="/blog" className="inline-block">
                         <span className="text-black">BF</span>
-                        <span className="text-orange-500">Blog</span>
+                        <span className="text-orange-500">blog</span>
                     </Link>
                 </h1>
                 <div className="w-1/3"></div>
@@ -53,13 +53,15 @@ export default function Aienhance () {
             <main className="flex flex-col justify-center items-center p-2 lg:p-6 bg-gray-100">
                 <div className="w-full max-w-3xl mx-auto px-4 py-10 bg-white relative z-50 min-h-screen">
                     <div className="text-center font-inter">
-                        <h1 className="text-xl font-bold">How to Use AI to Enhance Your Skills</h1>
+                        <h1 className="text-xl font-bold">Structure</h1>
+                        <br />
+                        <p> In this article I lay the groundworks for my BF shop project, focusing on macro structure and the role AI will play.</p>
                         <br />
                         <p>Ben Foster</p>
                         <p>27th February 2026</p>
-                        <p>7 min read</p>
+                        <p>2 min read</p>
                         <br />
-                        <AIEnhance />
+                        <BFShopBlogPost />
                     </div>
                 </div>
             </main>

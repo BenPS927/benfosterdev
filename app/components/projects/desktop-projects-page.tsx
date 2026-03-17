@@ -1,6 +1,5 @@
 'use client'
 
-import { CodeExpenseTracker } from "./code-expense-tracker"
 import { motion } from 'framer-motion'
 import { ETDesc, ETCode, ShopLink, ShopDesc } from "./components"
 import { ExpenseTracker } from "./expense-tracker"
@@ -91,7 +90,7 @@ export default function DesktopProjectsPage() {
                             <ShopDesc />
                         </div>
 
-                        <div className="w-1/3 flex justify-center items-center">
+                        <div className="w-1/3 flex justify-center items-center ">
                             <ShopLink />
                         </div>
 
