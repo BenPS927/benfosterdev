@@ -21,11 +21,12 @@ export default function BFShopBlog() {
             <div className="relative mx-auto max-w-full p-4 lg:p-8  relative min-h-screen z-10 ">
                 <div className="font-inter text-3xl text-center p-4 lg:p-8  flex items-center justify-center gap-4">
                     <h1 className=" w-full lg:w-1/3 text-center font-inter font-bold [text-shadow:0_2px_6px_rgba(0,0,0,0.4)] text-3xl lg:text-6xl p-6">
-                    <Link href="/blog" className="inline-block">
-                        <span className="text-black">BF</span>
-                        <span className="text-orange-500">blog</span>
-                    </Link>
-                </h1></div>
+                        <Link href="/blog" className="inline-block">
+                            <span className="text-black">BF</span>
+                            <span className="text-orange-500">blog</span>
+                        </Link>
+                    </h1>
+                </div>
                 <div className="hidden lg:block flex justify-center w-1/3 p-2 lg:p-8">
                     <Link href="/blog">
                         <ArrowBackIcon sx={{ 
