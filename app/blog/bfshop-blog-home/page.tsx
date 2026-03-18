@@ -49,37 +49,67 @@ export default function BFShopBlog() {
                         </p>
                     </motion.div>
                     <motion.div 
-                                layout
-                                onMouseEnter={() => setIsHovered(true)}
-                                onMouseLeave={() => setIsHovered(false)}
-                                className="  relative bg-white w-full md:w-1/2 lg:w-1/5 lg:h-1/5  p-2 lg:p-8 rounded-lg shadow-md hover:shadow-lg flex flex-col justify-center items-center min-h-[200px] mt-4">
-                                <Link href="/blog/bfshop-blog-actual">
-                                    <div className="absolute inset-0 flex items-center justify-center z-0">
-                                        <SmartToyIcon sx={{ 
-                                            fontSize: 180, 
-                                            color: 'orange',
-                                            opacity: 0.2
-                                        }} />
-                                    </div>
-                                    <p className=" relative z-10 font-inter text-center text-lg mb-0 lg:mb-16 hover:text-orange-700 hover:scale-110">1. Structure</p>
-                                    <p className="block lg:hidden font-inter text-center text-sm">
-                                        The structure of BFshop and how I plan to implement AI. March 17th, 2026 · 8 min read
-                                    </p>
-                                    <AnimatePresence>
-                                        {isHovered && 
-                                            <motion.p layout
-                                                initial={{y: -50, opacity: 0}}
-                                                animate={{y: 0, opacity: 1}}
-                                                transition={{duration: 0.2}}
-                                                className="font-inter text-center text-sm">
-                                                The structure of BFshop and how I plan to implement AI.
-                                                
-                                                <br /> March 17th, 2026 · 8 min read
-                                            </motion.p>
-                                        }
-                                    </AnimatePresence>
-                                </Link>
-                            </motion.div>
+                        layout
+                        onMouseEnter={() => setIsHovered(true)}
+                        onMouseLeave={() => setIsHovered(false)}
+                        className="  relative bg-white w-full md:w-1/2 lg:w-1/5 lg:h-1/5  p-2 lg:p-8 rounded-lg shadow-md hover:shadow-lg flex flex-col justify-center items-center min-h-[200px] mt-4">
+                        <Link href="/blog/bfshop-blog-actual">
+                            <div className="absolute inset-0 flex items-center justify-center z-0">
+                                <SmartToyIcon sx={{ 
+                                    fontSize: 180, 
+                                    color: 'orange',
+                                    opacity: 0.2
+                                }} />
+                            </div>
+                            <p className=" relative z-10 font-inter text-center text-lg mb-0 lg:mb-16 hover:text-orange-700 hover:scale-110">1. Structure</p>
+                            <p className="block lg:hidden font-inter text-center text-sm">
+                                The structure of BFshop and how I plan to implement AI. March 17th, 2026 · 8 min read
+                            </p>
+                            <AnimatePresence>
+                                {isHovered && 
+                                    <motion.p layout
+                                        initial={{y: -50, opacity: 0}}
+                                        animate={{y: 0, opacity: 1}}
+                                        transition={{duration: 0.2}}
+                                        className="font-inter text-center text-sm">
+                                        The structure of BFshop and how I plan to implement AI.
+                                        <br /> March 17th, 2026 · 8 min read
+                                    </motion.p>
+                                }
+                            </AnimatePresence>
+                        </Link>
+                    </motion.div>
+                    <motion.div 
+                        layout
+                        onMouseEnter={() => setIsHovered(true)}
+                        onMouseLeave={() => setIsHovered(false)}
+                        className="  relative bg-white w-full md:w-1/2 lg:w-1/5 lg:h-1/5  p-2 lg:p-8 rounded-lg shadow-md hover:shadow-lg flex flex-col justify-center items-center min-h-[200px] mt-4">
+                        <Link href="/blog/bfshop-project-spec">
+                            <div className="absolute inset-0 flex items-center justify-center z-0">
+                                <SmartToyIcon sx={{ 
+                                    fontSize: 180, 
+                                    color: 'orange',
+                                    opacity: 0.2
+                                }} />
+                            </div>
+                            <p className=" relative z-10 font-inter text-center text-lg mb-0 lg:mb-16 hover:text-orange-700 hover:scale-110">2. Project Specifications</p>
+                            <p className="block lg:hidden font-inter text-center text-sm">
+                                Project structure, dependencies, and next steps. March 18th, 2026 · 6 min read
+                            </p>
+                            <AnimatePresence>
+                                {isHovered && 
+                                    <motion.p layout
+                                        initial={{y: -50, opacity: 0}}
+                                        animate={{y: 0, opacity: 1}}
+                                        transition={{duration: 0.2}}
+                                        className="font-inter text-center text-sm">
+                                        Project structure, dependencies, and next steps.
+                                        <br /> March 18th, 2026 · 6 min read
+                                    </motion.p>
+                                }
+                            </AnimatePresence>
+                        </Link>
+                    </motion.div>
 
                     </main>
 

@@ -1,52 +1,69 @@
-'use client' tells Next.js to use client side rendering, which is necessary for files using state.
+// 'use client' tells Next.js to use client-side rendering, which is necessary for files using state.
 
-Inputs:
-useState must be imported as this file uses state.
-FormEvent must be imported for use in the event handler as this is a typescript file.
-motion and AnimatePresence are necessary for the animations I used.
+// Inputs:
+// - useState must be imported, as this file uses state.
+// - FormEvent must be imported for use in the event handler, since this is a TypeScript file.
+// - motion and AnimatePresence are necessary for the animations used.
 
-The type Expense block defines a TypeScript type for one expense object. It says every expense must have id and it must be a string, and so on.
-
-Next are the constants. The first is a hardcoded budget which will be used for the calulcations. The next establishes the state for if the input form is open or not. This should be called isFormOpen, not isMenuOpen. It's named this way because I copy and pasted it from a similar component.
-The price and name state lines establish the state for tracking the user input into the form, and give it default values.
-the expenses line is the state that will store the inputted items, to be mapped onto the screen.
-totalSpent calulcates the total from the expenses array using the reduce function, and in the next line this is used to calculate the remaining budget.
-
-Function handler
-The function handler takes deals with the input from the form submission later in the code.
-The first two parts deal with validation:
-
-event.preventDefault()
-Stops the form’s normal submit behavior (page refresh), so your React handler can control the process.
-
-if (!name.trim() || isNaN(Number(price))) { return }
-This is the gatekeeper check:
-
-!name.trim() means the name is empty or only spaces
-isNaN(Number(price)) means price is not a valid number
-If either is true, return exits early, so no bad expense gets created.
-
-Then const newExpense only runs if validation passes; each item gets a new value, text is trimmed from empty spaces at either end, and price is stored as a number ready to be used in calculations.
-The next part is where the expenses array has the previously made newExpense added to it, with name and price both set to empty spaces after, ready for the next submission. isMenuOpen is also set to false, triggering the input form to close.
-
-Now is the main return function of the expense tracker.
-
-Here, the Input component from the next file is rendered ready to accept the variables and functions as props. 
-It accepts price, setPrice, name, setName, handleSubmit and expenses because those are defined as its props when it was made.
-This means the structure in its origin file is filled out with the values and functions from this file when it is rendered. 
-The reason it was done like this was because it seemed tidier to store the input form separately.
-{isMenuOpen && assesses the isMenuOpen constant, and if its true it renders the input form. Animation props control its movement on and off screen. 
-Becausew there is a handleSubmit prop accepted, the Input component uses the earler made function handler.
+// The type Expense block defines a TypeScript type for one expense object. Each expense must have an id (string), and other properties as defined in the code.
 
 
 
 
 
 
+// Next are the constants:
+// - The first is a hardcoded budget, used for calculations.
+// - The next establishes the state for whether the input form is open or not. This should be called isFormOpen, not isMenuOpen (it's named this way because it was copy-pasted from a similar component).
+// - The price and name state lines establish the state for tracking user input into the form, and give them default values.
+// - The expenses line is the state that will store the inputted items, to be mapped onto the screen.
+// - totalSpent calculates the total from the expenses array using the reduce function, and the next line uses this to calculate the remaining budget.
+
+
+// Function handler:
+// The function handler deals with the input from the form submission later in the code.
+// The first two parts deal with validation:
+//   event.preventDefault() stops the form’s normal submit behavior (page refresh), so your React handler can control the process.
+//   if (!name.trim() || isNaN(Number(price))) { return } is the gatekeeper check:
+//     - !name.trim() means the name is empty or only spaces
+//     - isNaN(Number(price)) means price is not a valid number
+//     - If either is true, return exits early, so no bad expense gets created.
+// If validation passes, const newExpense runs; each item gets a new value, text is trimmed from empty spaces at either end, and price is stored as a number ready to be used in calculations.
+// The next part adds the newExpense to the expenses array, then resets name and price to empty strings for the next submission. isMenuOpen is also set to false, triggering the input form to close.
 
 
 
 
 
-The next part is the interactive section native to the expense tracker (as opposed to the interactive part rendered above, which is the form, created elsewhere and imported).
-Here is the button to bring up the form, which uses onClick to toggle menu state on and off, thereby rendering the form as seen above. 
+// Main return function of the expense tracker:
+// Here, the Input component from the next file is rendered, ready to accept the variables and functions as props.
+// It accepts price, setPrice, name, setName, handleSubmit, and expenses because those are defined as its props when it was made.
+// This means the structure in its origin file is filled out with the values and functions from this file when it is rendered.
+// The reason it was done like this was because it seemed tidier to store the input form separately.
+// {isMenuOpen && ...} assesses the isMenuOpen constant, and if it's true, it renders the input form. Animation props control its movement on and off screen.
+// Because there is a handleSubmit prop accepted, the Input component uses the earlier-made function handler.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// The next part is the interactive section native to the expense tracker (as opposed to the interactive part rendered above, which is the form, created elsewhere and imported).
+// Here is the button to bring up the form, which uses onClick to toggle menu state on and off, thereby rendering the form as seen above.
+
+// This part does two things: calculates totals using the constants declared earlier, and maps the expenses array onto the component.
+// This was my first experience with mapping from arrays, and it's helped me to think in a data-first way.
+// In expenses.map, entry.name and entry.price are used to access the price and name properties of the expenses array, which are determined in previous code.
