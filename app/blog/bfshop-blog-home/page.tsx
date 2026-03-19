@@ -4,9 +4,10 @@ import Link from 'next/link';
 import { useState } from 'react';
 import SmartToyIcon from '@mui/icons-material/SmartToy';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import { GitHub } from '@mui/icons-material';
 
 export default function BFShopBlog() {
-    const [isHovered, setIsHovered] = useState(false)
+    const [hoveredBox, setHoveredBox] = useState(0)
     
     return (
         <>
@@ -50,8 +51,41 @@ export default function BFShopBlog() {
                     </motion.div>
                     <motion.div 
                         layout
-                        onMouseEnter={() => setIsHovered(true)}
-                        onMouseLeave={() => setIsHovered(false)}
+                        onMouseEnter={() => setHoveredBox(1)}
+                        onMouseLeave={() => setHoveredBox(0)}
+                        className="  relative bg-white w-full md:w-1/2 lg:w-1/5 lg:h-1/5  p-2 lg:p-8 rounded-lg shadow-md hover:shadow-lg flex flex-col justify-center items-center min-h-[200px] mt-4">
+                        <a 
+                        href="https://github.com/BenPS927/BFshop"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                            <div className="absolute inset-0 flex items-center justify-center z-0">
+                                <GitHub sx={{ 
+                                    fontSize: 180, 
+                                    color: 'orange',
+                                    opacity: 0.2
+                                }} />
+                            </div>
+                            <p className=" relative z-10 font-inter text-center text-lg mb-0 lg:mb-16 hover:text-orange-700 hover:scale-110">Project</p>
+                            <p className="block lg:hidden font-inter text-center text-sm">
+                                Take a look at the code on my GitHub
+                            </p>
+                            <AnimatePresence>
+                                {hoveredBox === 1 && 
+                                    <motion.p layout
+                                        initial={{y: -50, opacity: 0}}
+                                        animate={{y: 0, opacity: 1}}
+                                        transition={{duration: 0.2}}
+                                        className="font-inter text-center text-sm">
+                                        Take a look at the code on my GitHub
+                                    </motion.p>
+                                }
+                            </AnimatePresence>
+                        </a>
+                    </motion.div>
+                    <motion.div 
+                        layout
+                        onMouseEnter={() => setHoveredBox(2)}
+                        onMouseLeave={() => setHoveredBox(0)}
                         className="  relative bg-white w-full md:w-1/2 lg:w-1/5 lg:h-1/5  p-2 lg:p-8 rounded-lg shadow-md hover:shadow-lg flex flex-col justify-center items-center min-h-[200px] mt-4">
                         <Link href="/blog/bfshop-blog-actual">
                             <div className="absolute inset-0 flex items-center justify-center z-0">
@@ -66,7 +100,7 @@ export default function BFShopBlog() {
                                 The structure of BFshop and how I plan to implement AI. March 17th, 2026 · 8 min read
                             </p>
                             <AnimatePresence>
-                                {isHovered && 
+                                {hoveredBox === 2 && 
                                     <motion.p layout
                                         initial={{y: -50, opacity: 0}}
                                         animate={{y: 0, opacity: 1}}
@@ -81,8 +115,8 @@ export default function BFShopBlog() {
                     </motion.div>
                     <motion.div 
                         layout
-                        onMouseEnter={() => setIsHovered(true)}
-                        onMouseLeave={() => setIsHovered(false)}
+                        onMouseEnter={() => setHoveredBox(3)}
+                        onMouseLeave={() => setHoveredBox(0)}
                         className="  relative bg-white w-full md:w-1/2 lg:w-1/5 lg:h-1/5  p-2 lg:p-8 rounded-lg shadow-md hover:shadow-lg flex flex-col justify-center items-center min-h-[200px] mt-4">
                         <Link href="/blog/bfshop-project-spec">
                             <div className="absolute inset-0 flex items-center justify-center z-0">
@@ -97,7 +131,7 @@ export default function BFShopBlog() {
                                 Project structure, dependencies, and next steps. March 18th, 2026 · 6 min read
                             </p>
                             <AnimatePresence>
-                                {isHovered && 
+                                {hoveredBox === 3 && 
                                     <motion.p layout
                                         initial={{y: -50, opacity: 0}}
                                         animate={{y: 0, opacity: 1}}

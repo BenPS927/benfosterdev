@@ -11,14 +11,39 @@ export const metadata: Metadata = {
 
 const schema = {
   "@context": "https://schema.org",
-  "@type": "Blog",
-  "name": "Ben Foster | Blog",
-  "url": "https://benfosterdev.com/blog",
-  "description": "Thoughts and insights on React development, AI chatbots, and the journey to freelance.",
+  "@type": "BlogPosting",
+  "headline": "Project Specifications | BFshop Blog",
+  "name": "Project Specifications | BFshop Blog",
+  "description": "Project structure, dependencies, and next steps for BFshop.",
+  "url": "https://benfosterdev.com/blog/bfshop-project-spec", // update to your actual URL
+  "datePublished": "2026-03-19", // update to your actual publish date
   "author": {
     "@type": "Person",
     "name": "Ben Foster",
     "url": "https://benfosterdev.com"
+  },
+  "isPartOf": {
+    "@type": "Blog",
+    "name": "BFshop Blog",
+    "url": "https://benfosterdev.com/blog/bfshop-blog-home"
+  },
+  "mainEntityOfPage": "https://benfosterdev.com/blog/bfshop-project-spec", // update to your actual URL
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "BFshop Blog",
+        "item": "https://benfosterdev.com/blog/bfshop-blog-home"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Project Specifications",
+        "item": "https://benfosterdev.com/blog/bfshop-project-spec"
+      }
+    ]
   }
 }
 

@@ -11,14 +11,39 @@ export const metadata: Metadata = {
 
 const schema = {
   "@context": "https://schema.org",
-  "@type": "Blog",
-  "name": "Ben Foster | Blog",
-  "url": "https://benfosterdev.com/blog",
-  "description": "Thoughts and insights on React development, AI chatbots, and the journey to freelance.",
+  "@type": "BlogPosting",
+  "headline": "How to Use AI to Enhance Your Skills",
+  "name": "How to Use AI to Enhance Your Skills",
+  "description": "Learn how to leverage AI tools to improve your skills and productivity in various domains.",
+  "url": "https://benfosterdev.com/blog/how-to-use-ai-to-enhance-your-skills",
+  "datePublished": "2026-02-27",
   "author": {
     "@type": "Person",
     "name": "Ben Foster",
     "url": "https://benfosterdev.com"
+  },
+  "isPartOf": {
+    "@type": "Blog",
+    "name": "Ben Foster | Blog",
+    "url": "https://benfosterdev.com/blog"
+  },
+  "mainEntityOfPage": "https://benfosterdev.com/blog/how-to-use-ai-to-enhance-your-skills",
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "BF Blog",
+        "item": "https://benfosterdev.com/blog"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "How to Use AI to Enhance Your Skills",
+        "item": "https://benfosterdev.com/blog/how-to-use-ai-to-enhance-your-skills"
+      }
+    ]
   }
 }
 

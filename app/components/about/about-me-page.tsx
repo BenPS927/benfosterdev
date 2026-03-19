@@ -9,7 +9,7 @@ import ContentAboutMe from './contentaboutme';
 
 export const metadata: Metadata = {
   title: "About",
-  description: "Learn more about Ben Foster, a React developer specializing in AI chatbot development.",
+  description: "Learn more about Ben Foster, a web developer specializing in AI and automation.",
 }
 
 const schema = {
@@ -19,12 +19,16 @@ const schema = {
     "@type": "Person",
     "name": "Ben Foster",
     "url": "https://benfosterdev.com",
-    "jobTitle": "React Developer & AI Chatbot Specialist",
-    "description": "Self-taught React developer from Bristol, specialising in AI chatbot development for small businesses.",
+    "jobTitle": "Web Developer and AI Builder",
+    "description": "Self-taught web developer from Bristol, specialising in AI and automation for small businesses.",
     "sameAs": [
       "https://www.linkedin.com/in/ben-foster-94394135a/",
       "https://github.com/BenPS927"
-    ]
+    ],
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "University of Bristol"
+    }
   }
 }
 

@@ -39,10 +39,10 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "Ben Foster | React Developer & AI Chatbot Specialist",
+    default: "Ben Foster | React Developer & AI Builder",
     template: "%s | Ben Foster Dev",
   },
-  description: "Bristol-based React developer specialising in AI chatbot development for small businesses. Building intelligent, automated web experiences with React and n8n.",
+  description: "Bristol-based web developer building AI enhanced business systems.",
 };
 
 const schema = {
@@ -50,7 +50,7 @@ const schema = {
   "@type": "Person",
   "name": "Ben Foster",
   "url": "https://benfosterdev.com",
-  "jobTitle": "React Developer & AI Chatbot Specialist",
+  "jobTitle": "Web Developer and AI Builder",
   "worksFor": {
     "@type": "Organization",
     "name": "Freelance"
@@ -73,6 +73,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-8W26X8ZXWK"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-8W26X8ZXWK');
+            `,
+          }}
+        />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${bebasNeue.variable} ${oswald.variable} ${inter.variable} antialiased`}
       >

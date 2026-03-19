@@ -7,21 +7,45 @@ import JsonLd from "@/app/components/shared/jsonld"
 export const metadata: Metadata = {
   title: "How to Use AI to Enhance Your Skills | Ben Foster's Blog",
   description: "Learn how to leverage AI tools to improve your skills and productivity in various domains.",
-}
+};
 
 const schema = {
   "@context": "https://schema.org",
-  "@type": "Blog",
-  "name": "Ben Foster | Blog",
-  "url": "https://benfosterdev.com/blog",
-  "description": "Thoughts and insights on React development, AI chatbots, and the journey to freelance.",
+  "@type": "BlogPosting",
+  "headline": "Structure | BFshop Blog",
+  "name": "Structure | BFshop Blog",
+  "description": "The first blog post on the BFshop project, laying out the basic concepts.",
+  "url": "https://benfosterdev.com/blog/bfshop-blog-actual",
+  "datePublished": "2026-02-27",
   "author": {
     "@type": "Person",
     "name": "Ben Foster",
     "url": "https://benfosterdev.com"
+  },
+  "isPartOf": {
+    "@type": "Blog",
+    "name": "BFshop Blog",
+    "url": "https://benfosterdev.com/blog/bfshop-blog-home"
+  },
+  "mainEntityOfPage": "https://benfosterdev.com/blog/bfshop-blog-actual",
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "BFshop Blog",
+        "item": "https://benfosterdev.com/blog/bfshop-blog-home"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Structure",
+        "item": "https://benfosterdev.com/blog/bfshop-blog-actual"
+      }
+    ]
   }
 }
-
 export default function BFShopBlogActual () {
     return (
         <div className="relative p-4">

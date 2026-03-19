@@ -5,12 +5,49 @@ import { useState, useEffect } from 'react'
 import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
 import AddIcon from '@mui/icons-material/Add';
 import { Add } from '@mui/icons-material';
+import JsonLd from "../components/shared/jsonld"
+import { Metadata } from 'next';
 
 type Product = {
     thumbnail?: string
     name?: string
     title?: string
     price?: number
+}
+
+export const metadata: Metadata = {
+  title: "BFshop",
+  description: "This is the customer end of BFshop, an under construction AI enhanced business system.",
+}
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "BFshop",
+  "description": "End-to-end e-commerce platform with customer and merchant interfaces, workflow automation, and AI enhancement.",
+  "url": "https://benfosterdev.com/shop",
+  "applicationCategory": "ShoppingApplication",
+  "operatingSystem": "Web",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "GBP"
+  },
+  "author": {
+    "@type": "Person",
+    "name": "Ben Foster",
+    "url": "https://benfosterdev.com"
+  },
+  "hasPart": {
+    "@type": "WebApplication",
+    "name": "BFshop Merchant",
+    "url": "https://bfmerchant.benfosterdev.com"
+  },
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Ben Foster Dev",
+    "url": "https://benfosterdev.com"
+  }
 }
 
 export default function BFShop(){
@@ -32,6 +69,7 @@ export default function BFShop(){
 
     return (
         <div className="min-h-screen flex flex-col items-center p-2 lg:space-y-16">
+            <JsonLd schema={schema} />
             <div className=" min-w-screen flex flex-col justify-center items-center p-8 lg:p-16 space-y-16">
                 <h1 className="font-bebas text-4xl lg:text-9xl  text-center p-2 lg:p-8 border-b border-orange-500">BFShop</h1>
                     <h2 className="font-inter text-lg lg:text-2xl text-left md:text-center lg:text-center p-2 lg:p-8">Welcome to BFShop! This is my first full stack project. Currently under construction. When it is complete

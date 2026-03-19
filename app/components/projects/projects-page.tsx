@@ -5,27 +5,59 @@ import MobileProjectsPage from "@/app/components/projects/mobile-projects-page"
 
 export const metadata: Metadata = {
   title: "Projects",
-  description: "Showcasing my projects in AI, Web Development, and IT.",
+  description: "Showcasing my progress as I learn to build AI enhanced business systems.",
 }
 
 const schema = {
   "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": "Expense Tracker",
-  "description": "React and AI chatbot projects by Ben Foster, Bristol-based freelance developer. Built to solve real business problems.",
-  "url": "https://benfosterdev.com/projects",
-  "author": {
-    "@type": "Person",
-    "name": "Ben Foster",
-    "url": "https://benfosterdev.com"
-  },
-  "applicationCategory": "FinanceApplication",
-  "operatingSystem": "Web",
-  "offers": {
-    "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "GBP"
-  }
+  "@type": "ItemList",
+  "name": "Ben Foster's Projects",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "item": {
+        "@type": "SoftwareApplication",
+        "name": "Expense Tracker",
+        "description": "AI enhanced web project for tracking expenses.",
+        "url": "https://benfosterdev.com/projects/expense-tracker",
+        "author": {
+          "@type": "Person",
+          "name": "Ben Foster",
+          "url": "https://benfosterdev.com"
+        },
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "Web",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "GBP"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "item": {
+        "@type": "SoftwareApplication",
+        "name": "BFshop",
+        "description": "An online store featuring a customer and merchant interface, fully integrating AI and automation.",
+        "url": "https://benfosterdev.com/projects/bfshop",
+        "author": {
+          "@type": "Person",
+          "name": "Ben Foster",
+          "url": "https://benfosterdev.com"
+        },
+        "applicationCategory": "ECommerceApplication",
+        "operatingSystem": "Web",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "GBP"
+        }
+      }
+    }
+  ]
 }
 
 export default function ProjectsPage() {
