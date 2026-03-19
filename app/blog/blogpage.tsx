@@ -89,7 +89,7 @@ export default function BlogPageContent() {
                                 onMouseEnter={() => setIsHovered(true)}
                                 onMouseLeave={() => setIsHovered(false)}
                                 className="  relative bg-white lg:w-2/3 p-2 lg:p-8 rounded-lg shadow-md hover:shadow-lg flex flex-col justify-center items-center min-h-[200px]">
-                                <Link href="/blog/bfshop-blog-home">
+                                <Link href="/blog/blog-bfshop">
                                     <div className="absolute inset-0 flex items-center justify-center z-0">
                                         <SmartToyIcon sx={{ 
                                             fontSize: 180, 

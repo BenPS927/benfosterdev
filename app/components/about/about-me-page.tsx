@@ -27,7 +27,7 @@ const schema = {
     ],
     "alumniOf": {
       "@type": "CollegeOrUniversity",
-      "name": "University of Bristol"
+      "name": "Cardiff Metropolitan University"
     }
   }
 }

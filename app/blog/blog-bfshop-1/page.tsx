@@ -1,22 +1,22 @@
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import type { Metadata } from "next"
 import Link from 'next/link'
-import BFShopProjectSpec from "@/app/components/blogs/bfshop-project-spec";
+import BFShopBlogPost from "@/app/components/blogs/bfshop-blog-post";
 import JsonLd from "@/app/components/shared/jsonld"
 
 export const metadata: Metadata = {
-  title: "Project Specifications | Ben Foster's Blog",
-  description: "Project structure, dependencies, and next steps for BFshop.",
-}
+  title: "How to Use AI to Enhance Your Skills | Ben Foster's Blog",
+  description: "Learn how to leverage AI tools to improve your skills and productivity in various domains.",
+};
 
 const schema = {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "Project Specifications | BFshop Blog",
-  "name": "Project Specifications | BFshop Blog",
-  "description": "Project structure, dependencies, and next steps for BFshop.",
-  "url": "https://benfosterdev.com/blog/bfshop-project-spec", // update to your actual URL
-  "datePublished": "2026-03-19", // update to your actual publish date
+  "headline": "Structure | BFshop Blog",
+  "name": "Structure | BFshop Blog",
+  "description": "The first blog post on the BFshop project, laying out the basic concepts.",
+  "url": "https://benfosterdev.com/blog/blog-bfshop-1",
+  "datePublished": "2026-02-27",
   "author": {
     "@type": "Person",
     "name": "Ben Foster",
@@ -27,7 +27,7 @@ const schema = {
     "name": "BFshop Blog",
     "url": "https://benfosterdev.com/blog/bfshop-blog-home"
   },
-  "mainEntityOfPage": "https://benfosterdev.com/blog/bfshop-project-spec", // update to your actual URL
+  "mainEntityOfPage": "https://benfosterdev.com/blog/blog-bfshop-1",
   "breadcrumb": {
     "@type": "BreadcrumbList",
     "itemListElement": [
@@ -40,14 +40,13 @@ const schema = {
       {
         "@type": "ListItem",
         "position": 2,
-        "name": "Project Specifications",
-        "item": "https://benfosterdev.com/blog/bfshop-project-spec"
+        "name": "Structure",
+        "item": "https://benfosterdev.com/blog/blog-bfshop-1"
       }
     ]
   }
 }
-
-export default function BFShopProjectSpecPage () {
+export default function BFShopBlog1 () {
     return (
         <div className="relative p-4">
         <JsonLd schema={schema} />
@@ -61,7 +60,7 @@ export default function BFShopProjectSpecPage () {
                 </div>
                 
                 <div className="hidden lg:block flex justify-center w-1/3 p-2 lg:p-8">
-                    <Link href="/blog/bfshop-blog-home">
+                    <Link href="/blog/blog-bfshop">
                         <ArrowBackIcon sx={{ 
                             fontSize: 60,
                             color: 'orange' }} />
@@ -78,15 +77,15 @@ export default function BFShopProjectSpecPage () {
             <main className="flex flex-col justify-center items-center p-2 lg:p-6 bg-gray-100">
                 <div className="w-full max-w-3xl mx-auto px-4 py-10 bg-white relative z-50 min-h-screen">
                     <div className="text-center font-inter">
-                        <h1 className="text-xl font-bold">Project Specifications</h1>
+                        <h1 className="text-xl font-bold">Structure</h1>
                         <br />
-                        <p> Details on the structure, dependencies, and next steps for BFshop.</p>
+                        <p> In this article I lay the groundworks for my BF shop project, focusing on macro structure and the role AI will play.</p>
                         <br />
                         <p>Ben Foster</p>
-                        <p>March 18th, 2026</p>
-                        <p>1 min read</p>
+                        <p>27th February 2026</p>
+                        <p>2 min read</p>
                         <br />
-                        <BFShopProjectSpec />
+                        <BFShopBlogPost />
                     </div>
                 </div>
             </main>

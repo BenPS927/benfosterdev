@@ -6,15 +6,17 @@ import SmartToyIcon from '@mui/icons-material/SmartToy';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import { GitHub } from '@mui/icons-material';
 
-export default function BFShopBlog() {
+
+export default function BFShopBlogContent() {
     const [hoveredBox, setHoveredBox] = useState(0)
     
     return (
         <>
             <div className="fixed top-0 left-0 w-full h-full pointer-events-none z-0">
+                
                 <img 
                     src="/bg1.png" 
-                    alt="background" 
+                    alt="background image for bfshop-blog-home" 
                     className="w-full h-full object-cover opacity-20"
                 />
             </div>
@@ -65,7 +67,7 @@ export default function BFShopBlog() {
                                     opacity: 0.2
                                 }} />
                             </div>
-                            <p className=" relative z-10 font-inter text-center text-lg mb-0 lg:mb-16 hover:text-orange-700 hover:scale-110">Project</p>
+                            <p className=" relative z-10 font-inter text-center text-lg mb-0 lg:mb-16 hover:text-orange-700 hover:scale-110">Project Code</p>
                             <p className="block lg:hidden font-inter text-center text-sm">
                                 Take a look at the code on my GitHub
                             </p>
@@ -87,7 +89,7 @@ export default function BFShopBlog() {
                         onMouseEnter={() => setHoveredBox(2)}
                         onMouseLeave={() => setHoveredBox(0)}
                         className="  relative bg-white w-full md:w-1/2 lg:w-1/5 lg:h-1/5  p-2 lg:p-8 rounded-lg shadow-md hover:shadow-lg flex flex-col justify-center items-center min-h-[200px] mt-4">
-                        <Link href="/blog/bfshop-blog-actual">
+                        <Link href="/blog/blog-bfshop-1">
                             <div className="absolute inset-0 flex items-center justify-center z-0">
                                 <SmartToyIcon sx={{ 
                                     fontSize: 180, 
@@ -118,7 +120,7 @@ export default function BFShopBlog() {
                         onMouseEnter={() => setHoveredBox(3)}
                         onMouseLeave={() => setHoveredBox(0)}
                         className="  relative bg-white w-full md:w-1/2 lg:w-1/5 lg:h-1/5  p-2 lg:p-8 rounded-lg shadow-md hover:shadow-lg flex flex-col justify-center items-center min-h-[200px] mt-4">
-                        <Link href="/blog/bfshop-project-spec">
+                        <Link href="/blog/blog-bfshop-2">
                             <div className="absolute inset-0 flex items-center justify-center z-0">
                                 <SmartToyIcon sx={{ 
                                     fontSize: 180, 
