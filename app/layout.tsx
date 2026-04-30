@@ -8,7 +8,8 @@ import { Geist, Geist_Mono, Bebas_Neue, Oswald, Inter } from "next/font/google";
 import "./globals.css";
 import { Header } from "./components/shared/header";
 import JsonLd from "./components/shared/jsonld";
-import { Analytics } from "@vercel/analytics/next"
+import { Analytics } from "@vercel/analytics/next";
+import { Footer } from "./components/footer/footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -93,6 +94,7 @@ export default function RootLayout({
       <JsonLd schema={schema} />
         <Header />      
         {children}
+        <Footer />
         <Analytics />
       </body>
     </html>

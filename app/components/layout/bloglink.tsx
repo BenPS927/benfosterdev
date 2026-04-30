@@ -12,7 +12,7 @@ export function BlogLink() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, ease: "easeOut" }}
                 viewport={{ once: false, amount: 1 }}
-                className="flex flex-col lg:flex-row justify-center items-center p-2 lg:p-8 space-y-8 mt-24">
+                className="flex flex-col lg:flex-row justify-center items-center p-2 lg:p-8 space-y-8">
                 <p className="font-bebas text-3xl lg:text-6xl w-full lg:w-1/3 font-bold text-orange-600">I also write blogs...</p>
                 
                 <div className="w-full lg:w-auto flex justify-center">

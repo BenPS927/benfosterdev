@@ -5,7 +5,7 @@ import { BlogLink } from './bloglink';
 export function Divider1() {
     
     return (
-        <div className="bg-gradient-to-b from-orange-100 to-white h-[75vh] p-2 lg:p-16 w-full overflow-hidden">
+        <div className="bg-gradient-to-b from-orange-100 to-white h-[75vh] p-2 lg:p-16 w-full overflow-hidden border">
            
             <BlogLink />
            

@@ -9,7 +9,8 @@ export const aboutMeDesktop = [
     duration: 1,
     inView: 0,
     viewPort: 0.5,
-    delay: 0
+    delay: 0,
+    imPosition: 'col-start-8 col-end-9 row-start-1 row-end-2'
     
   },
   {

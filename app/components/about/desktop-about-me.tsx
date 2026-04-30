@@ -5,7 +5,7 @@
 import { useState } from 'react'
 import { AboutMeBoxDesktop } from "./desktop-box-about-me";
 import { aboutMeDesktop } from "./data/about-me-desktop"
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 
 export default function AboutMeDesktop() {
     const [hoveredBox, setHoveredBox] = useState<number | null>(null)
@@ -25,10 +25,10 @@ export default function AboutMeDesktop() {
                         onMouseLeave={() => setHoveredBox(null)}
                     >
                         <AboutMeBoxDesktop text={box.text} />
+                        
                                             
                     </motion.div>
                 ))}
-                
-        </div>
+                 </div>
     )
 }

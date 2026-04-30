@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import Box from '@mui/material/Box';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
@@ -17,6 +18,14 @@ export default function HomePageDesktop() {
            <br />
            <br />
            I'm not just interested in flashy designs - I'm here to build systems and solutions that integrate AI and automation. I've built a simple expense tracker and am now working on a full stack E-commerce store. Scroll down to explore the projects.</p>
+          <div className="px-4 lg:px-4 mt-8">
+            <Link
+              href="/playground"
+              className="inline-flex items-center rounded-full border border-orange-400 bg-white px-6 py-3 font-oswald text-sm uppercase tracking-[0.2em] text-stone-700 shadow-sm transition hover:-translate-y-0.5 hover:bg-orange-50"
+            >
+              Open playground
+            </Link>
+          </div>
            <div className="h-12 w-16 lg:h-32 lg:w-32"></div>
 
           <div className="flex flex-wrap p-4 mt-24 lg:mt-28 gap-4 lg:gap-8 items-center scale-50 lg:scale-100 origin-left">

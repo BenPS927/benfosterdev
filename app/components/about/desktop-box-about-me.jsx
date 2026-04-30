@@ -12,8 +12,11 @@ export function AboutMeBoxDesktop (props) {
             viewport={{amount: props.viewPort}}
             className="bg-white rounded-md p-6 mt-4 hover:scale-110 transition hover:z-100 shadow-xl">
             {props.text}
+            {props.images}
             
         </motion.div>
     )
     
 }
+
+
