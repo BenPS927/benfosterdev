@@ -29,109 +29,88 @@ export function ContentContact() {
 
 
     return (
-        <div id="contact" className=" mx-auto bg-gradient-to-b from-orange-100 to-white max-w-full ">
+        <div id="contact" className="mx-auto bg-[linear-gradient(180deg,#f5f5f5_0%,#ececec_100%)] max-w-full">
             <motion.div
-                initial={{ opacity: 0 }}
+                initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once:true}}
-                transition={{ duration: 1.2 }}
-                className=" flex flex-col items-center space-y-16 p-4 lg:p-8 "
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+                className="mx-auto flex max-w-7xl flex-col items-center space-y-8 p-4 lg:p-12"
             >
-                <h1 className="font-bebas text-4xl lg:text-6xl mt-8 text-center">Get in touch</h1>
-                
-                <motion.h2
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once:true}}
-                    transition={{ duration: 1.2, delay: 0.2 }}
-                    className="font-oswald text-xl lg:text-2xl text-center text-stone-500"
-                >
-                    Interested in working together? Reach out
-                </motion.h2>
-                
-                <main className=" p-2 lg:p-4 ">
+                <div className="space-y-4 text-center">
+                    <h1 className="font-bebas text-5xl leading-[0.92] tracking-wide text-neutral-900 md:text-6xl lg:text-7xl">Get in touch</h1>
+                    <p className="mx-auto max-w-xl font-inter text-base leading-relaxed text-gray-600 md:text-lg">
+                        Interested in working together? Reach out via the form or find me on socials.
+                    </p>
+                </div>
+
+                <main className="w-full max-w-2xl">
                     <motion.div
-                        initial={{ opacity: 0 }}
+                        initial={{ opacity: 0, y: 16 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once:true}}
-                        transition={{ duration: 1.2, delay: 0.4 }}
-                        className="flex gap-8 space-y-8 lg:space-y-16 p-2 md:p-4 lg:p-8 "
-                    >   <div className=" w-full flex justify-center items-center ">
-                        <form 
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.8, delay: 0.2 }}
+                    >
+                        <form
                             id="contact-form"
                             onSubmit={handleSubmit}
+                            className="space-y-4"
+                        >
+                            <div className="flex flex-col gap-1">
+                                <label className="font-inter text-sm font-medium text-gray-600">Query</label>
+                                <textarea
+                                    className="min-h-[140px] w-full rounded-xl border border-neutral-900/10 bg-white px-4 py-3 font-inter text-sm text-neutral-900 shadow-sm outline-none transition focus:border-orange-300 focus:ring-1 focus:ring-orange-200"
+                                    value={query}
+                                    onChange={e => setQuery(e.target.value)}
+                                />
+                            </div>
+                            <div className="flex flex-col gap-1">
+                                <label className="font-inter text-sm font-medium text-gray-600">Email</label>
+                                <input
+                                    className="w-full rounded-xl border border-neutral-900/10 bg-white px-4 py-3 font-inter text-sm text-neutral-900 shadow-sm outline-none transition focus:border-orange-300 focus:ring-1 focus:ring-orange-200"
+                                    type="email"
+                                    value={email}
+                                    onChange={e => setEmail(e.target.value)}
+                                />
+                            </div>
+                            <button
+                                type="submit"
+                                className="w-full rounded-full bg-orange-600 px-6 py-3 font-inter text-sm font-semibold text-white shadow-sm transition hover:bg-orange-700 active:scale-95"
                             >
-                                <div className=" p-2 flex ">
-                                    <div className=" p-2">
-                                        <p className="font-oswald text-xl lg:text-2xl text-center text-stone-500"> Query:</p>
-                                    </div>
-                                    <input 
-                                        className=" min-w-[200px] md:min-w-[200px] lg:min-w-[500px] min-h-[100px] lg:min-h-[200px] bg-white rounded-md shadow-lg"
-                                        type="text"
-                                        value={query}
-                                        onChange={e => setQuery(e.target.value)}/>
-                                        
-                                    
-                                </div>
-                                <div className=" p-2 flex">
-                                    <div className=" p-2">
-                                        <p className="font-oswald text-xl lg:text-2xl text-center text-stone-500 "> Email:</p>
-                                    </div>
-                                    <input 
-                                        className=" min-w-[200px] lg:min-w-[500px] min-h-[50px] bg-white rounded-md shadow-lg"
-                                        type="text"
-                                        value={email}
-                                        onChange={e => setEmail(e.target.value)}/>
-                                </div>
-                                <button 
-                                    type="submit"
-                                    className=" p-2 rounded-md w-full  ">
-                                        <p className="font-inter text-center rounded-md bg-orange-300 cursor-pointer active:scale-95 transition-transform duration-200">Send</p>
-                                    </button>
+                                Send
+                            </button>
                         </form>
-                        </div>
                     </motion.div>
-                    
+
                     <motion.div
-                        initial={{ opacity: 0 }}
+                        initial={{ opacity: 0, y: 16 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once:true}}
-                        transition={{ duration: 1.4, delay: 0.5 }}
-                        className="flex flex-wrap justify-center p-2 lg:p-4"
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.8, delay: 0.4 }}
+                        className="mt-8 flex justify-center gap-6"
                     >
-                        <div className="gap-8 lg:gap-128 flex flex-row">
-                            <div className="justify-center">
-                                <a 
-                                    href="https://www.linkedin.com/in/ben-foster-94394135a/"
-                                    target="_blank"
-                                    rel="noopener noreferrer">
-                                    <LinkedInIcon sx={{ 
-                                        fontSize: { xs: 60, lg: 120 }, 
-                                        color: '#0A66C2', '&:hover': { color: '#004182',
-                                        transform: 'scale(1.1)' },
-                                        cursor: 'pointer',
-                                        transition: 'color 0.7s, transform 0.4s' }} />
-                                </a>
-                            </div>
-                            <div>
-                                 <a 
-                                    href="https://github.com/BenPS927"
-                                    target="_blank"
-                                    rel="noopener noreferrer">
-                                    <GitHubIcon sx={{ 
-                                    fontSize: { xs: 60, lg: 120 }, 
-                                    color: '#181717', '&:hover': { color: '#e5e0ed',
-                                    transform: 'scale(1.1)' }, 
-                                    cursor: 'pointer', 
-                                    transition: 'color 0.7s, transform 0.4s' }} />
-                                    </a>
-                            </div>
-                        </div>
+                        <a
+                            href="https://www.linkedin.com/in/ben-foster-94394135a/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-2 rounded-full border border-neutral-900/15 px-4 py-2 font-inter text-sm text-gray-600 transition hover:border-[#0A66C2]/40 hover:text-[#0A66C2]"
+                        >
+                            <LinkedInIcon sx={{ fontSize: 18 }} />
+                            LinkedIn
+                        </a>
+                        <a
+                            href="https://github.com/BenPS927"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-2 rounded-full border border-neutral-900/15 px-4 py-2 font-inter text-sm text-gray-600 transition hover:border-neutral-900/40 hover:text-neutral-950"
+                        >
+                            <GitHubIcon sx={{ fontSize: 18 }} />
+                            GitHub
+                        </a>
                     </motion.div>
                 </main>
-                
-              
+
             </motion.div>
         </div>
-        )
+        );
         };

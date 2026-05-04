@@ -9,7 +9,6 @@ import { Divider1 } from '@/app/components/layout/section-dividers';
 import { Divider2 } from '@/app/components/layout/section-dividers';
 import { Divider3 } from '@/app/components/layout/section-dividers';
 import { ContactPage } from '@/app/components/contact/contact-page';
-import { Footer } from '@/app/components/footer/footer'
 
 
 // ...existing code...
@@ -21,9 +20,7 @@ export default function Home() {
       <ProjectsPage />
       <Divider1 />
       <AboutMePage />
-      <Divider3 />
       <ContactPage />
-      <Footer />
     </main>
   );
 }

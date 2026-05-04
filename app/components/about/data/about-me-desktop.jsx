@@ -2,7 +2,7 @@ export const aboutMeDesktop = [
   {
     id: 1,
     text:
-      "I spent my early 20s traveling and making memories. Realizing I needed to get serious, I started learning IT from the ground up. After a year, I landed a job as IT manager at Gibson Watts, where I am now. Now, I'm learning front-end development on the side.",
+      "I spent my early 20s traveling and making memories. Realizing I needed to get serious, I started learning IT from the ground up. After a year, I landed a job as IT manager at Gibson Watts. I'm no longer at Gibson Watts and am learning to build systems and software.",
     images: ["/greece.png", "/beach.png", "/thailand.png"],
     position: 'col-start-1 col-span-3 row-start-3 row-span-4 z-50',
     startX: -300,

@@ -37,8 +37,7 @@ export function ExpenseTracker() {
         }
         
     return (
-        <div className="relative ">
-            <AnimatePresence>
+        <div className="relative min-h-[200px]">            <AnimatePresence>
                 {isMenuOpen && (
                     <motion.div 
                         initial={{ x: 100, opacity: 0 }}
@@ -63,35 +62,35 @@ export function ExpenseTracker() {
                        
             
             </AnimatePresence>
-            <div className="w-full h-full p-1 lg:p-2 bg-white rounded-md">
-                <div className="p-1 lg:p-2 space-y-2 lg:space-y-4">
-                <div className="p-1 lg:p-2 mx-auto w-fit space-y-2 lg:space-y-4 text-center">
-                    <h1 className="p-2 lg:p-4 font-sora text-2xl text-orange-600">Expense Tracker</h1>
+            <div className="w-full h-full p-1 pb-10 rounded-2xl border border-neutral-900/15 bg-white">
+                <div className="p-1 space-y-1">
+                <div className="p-1 mx-auto w-fit space-y-1 text-center">
+                    <h1 className="p-1 font-sora text-sm font-semibold text-orange-600">Expense Tracker</h1>
                     <motion.button
                         
-                        className="p-2 lg:p-4 rounded-lg text-orange-600 hover:scale-110 cursor-pointer 
-                        transition shadow-lg bg-orange-100 font-bold"
+                        className="px-3 py-1 rounded-lg text-orange-600 hover:scale-110 cursor-pointer 
+                        transition shadow bg-orange-100"
                         onClick={() => setIsMenuOpen(!isMenuOpen)}
                         animate={{
                             x: isMenuOpen ? -100 : 0
                         }}
                         transition={{ duration: 0.2}}>
-                        <p className="font-inter font-bold">Add an item</p>
+                        <p className="font-inter text-xs font-semibold">Add an item</p>
                        
                         
                     
                     </motion.button>
                 </div>
-                <div className="flex p-1 lg:p-2 gap-2 lg:gap-2">
-                    <div className="p-1 lg:p-2 space-y-2 lg:space-y-4 w-1/2">
-                        <div className="p-2 lg:p-4 font-inter font-bold text-lg lg:text-xl text-orange-600
-                         rounded-lg shadow-lg bg-orange-100">Left to spend: {remaining} </div>
-                        <div className="p-2 lg:p-4 font-inter font-bold text-lg lg:text-xl text-orange-600
-                         rounded-md shadow-lg bg-orange-100">Total Expenses: {totalSpent} </div>
-                        <div className="p-2 lg:p-4 font-inter font-bold text-lg lg:text-xl text-orange-600
-                         rounded-md shadow-lg bg-orange-100">Budget: {budget} </div>
+                <div className="flex p-1 gap-2">
+                    <div className="p-1 space-y-1 w-1/2">
+                        <div className="px-2 py-1 font-inter font-semibold text-xs text-orange-600
+                         rounded-lg shadow bg-orange-100">Left: {remaining}</div>
+                        <div className="px-2 py-1 font-inter font-semibold text-xs text-orange-600
+                         rounded-md shadow bg-orange-100">Spent: {totalSpent}</div>
+                        <div className="px-2 py-1 font-inter font-semibold text-xs text-orange-600
+                         rounded-md shadow bg-orange-100">Budget: {budget}</div>
                     </div>
-                    <div className="p-2 lg:p-2 grid  w-1/2 font-inter text-orange-600 flex flex-col">
+                    <div className="p-1 grid w-1/2 font-inter text-orange-600 flex flex-col">
                         <AnimatePresence>
                             {expenses.map((entry) => (
                             <motion.div
@@ -99,8 +98,8 @@ export function ExpenseTracker() {
                                 animate={{ x: 0, opacity: 1 }}
                                 exit={{ x: 100, opacity: 0 }}
                                 key={entry.id}
-                                className="w-full rounded-md p-2 font-inter font-bold text-orange-600 shadow-lg
-                                 bg-orange-100 w-fit h-fit">
+                                className="w-full rounded-md px-2 py-1 font-inter font-semibold text-xs text-orange-600 shadow
+                                 bg-orange-100 h-fit">
                             <div>Purchase: {entry.name}</div>
                             <div>Cost: {entry.price}</div>
                             </motion.div>

@@ -42,8 +42,8 @@ export const MenuItems = [
 
   {
     id: 5,
-    text: 'About',
-    link: '#about',
+    text: 'Playground',
+    link: '/playground',
     startOpacity: 0,
     duration: 0.5,
     delay: 0.1,
@@ -53,6 +53,17 @@ export const MenuItems = [
 
   {
     id: 6,
+    text: 'About',
+    link: '#about',
+    startOpacity: 0,
+    duration: 0.5,
+    delay: 0.05,
+    animateOpacity: 1
+    
+  },
+
+  {
+    id: 7,
     text: 'Contact',
     link: '#contact',
     startOpacity: 0,

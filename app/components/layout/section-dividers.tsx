@@ -5,7 +5,7 @@ import { BlogLink } from './bloglink';
 export function Divider1() {
     
     return (
-        <div className="bg-gradient-to-b from-orange-100 to-white h-[75vh] p-2 lg:p-16 w-full overflow-hidden border">
+        <div className="bg-[linear-gradient(180deg,#ececec_0%,#f5f5f5_100%)] h-[75vh] p-2 lg:p-16 w-full overflow-hidden">
            
             <BlogLink />
            
@@ -17,7 +17,7 @@ export function Divider1() {
 
 export function Divider2() {
     return (
-        <div className= "bg-gradient-to-b from-gray-200 to-white h-[25vh]">
+        <div className="bg-[linear-gradient(180deg,#ececec_0%,#f5f5f5_100%)] h-[25vh]">
            
         </div>
     );
@@ -25,7 +25,7 @@ export function Divider2() {
 
 export function Divider3() {
     return (
-        <div className="bg-gradient-to-b from-gray-200 to-orange-100 h-[25vh]">
+        <div className="bg-[linear-gradient(180deg,#ececec_0%,#f5f5f5_100%)] h-[25vh]">
         
         </div>
     );

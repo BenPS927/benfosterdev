@@ -10,7 +10,7 @@ export function AboutMeBoxDesktop (props) {
             whileInview={{x: props.inView}}
             transition={{ duration: props.duration, delay: props.delay }}
             viewport={{amount: props.viewPort}}
-            className="bg-white rounded-md p-6 mt-4 hover:scale-110 transition hover:z-100 shadow-xl">
+            className="mt-4 rounded-xl border border-neutral-900/10 bg-white/90 p-6 text-gray-700 shadow-sm transition duration-200 hover:z-100 hover:-translate-y-0.5 hover:scale-[1.02] hover:shadow-md lg:p-7">
             {props.text}
             {props.images}
             

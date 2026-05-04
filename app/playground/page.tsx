@@ -4,21 +4,16 @@ export default function GatewayPage() {
   return (
     <main className="min-h-screen bg-neutral-100 px-4 py-6 text-neutral-950 md:px-6 md:py-8 lg:px-8 lg:py-12">
       <section className="mx-auto flex max-w-7xl flex-col items-center space-y-6 text-center md:space-y-8 lg:space-y-12">
-        {/* Header */}
         <div className="max-w-2xl">
-          
-
           <h1 className="mb-4 font-bebas text-4xl leading-tight tracking-wide md:mb-6 md:text-5xl lg:text-6xl">
-            BF<span className="text-[orange]">SHOP</span>
+            Design <span className="text-[orange]">Playground</span>
           </h1>
 
           <p className="font-inter text-base leading-relaxed text-gray-600 md:text-lg">
-            Welcome to BFShop, my first AI enhanced business system. The two panels below link to either end of BFShop. Both ends share the same 
-            backend, so you can see orders you place in the customer side appear in the merchant side.
+            This page is your draft space for design and layout experiments. Use the cards below to open sandbox pages and iterate quickly.
           </p>
         </div>
 
-        {/* Cards */}
         <div className="grid w-full gap-4 md:grid-cols-2 md:gap-6 lg:gap-8">
           <Link
             href="/playground/page-one"
@@ -29,16 +24,16 @@ export default function GatewayPage() {
                
 
                 <h3 className="mb-3 font-inter text-xl font-semibold leading-snug text-[orange] md:mb-4 md:text-2xl lg:text-3xl">
-                  Customer 
+                  Draft One
                 </h3>
 
                 <p className="font-inter text-sm leading-relaxed text-gray-500 md:text-base">
-                  Click here for the customer end of BFshop where you can place orders.
+                  Open your first draft page for testing components and layout ideas.
                 </p>
               </div>
 
               <span className="mt-4 font-inter text-sm font-medium text-gray-500 transition group-hover:text-neutral-950 md:text-base">
-                Enter -&gt;
+                Open -&gt;
               </span>
             </div>
           </Link>
@@ -52,16 +47,16 @@ export default function GatewayPage() {
                 
 
                 <h3 className="mb-3 font-inter text-xl font-semibold leading-snug text-[orange] md:mb-4 md:text-2xl lg:text-3xl">
-                  Merchant
+                  Draft Two
                 </h3>
 
                 <p className="font-inter text-sm leading-relaxed text-gray-500 md:text-base">
-                  This will link to the merchant end of BFshop, which is yet to be built.
+                  Open your second draft page for alternate concepts and experiments.
                 </p>
               </div>
 
               <span className="mt-4 font-inter text-sm font-medium text-gray-500 transition group-hover:text-neutral-950 md:text-base">
-                Enter -&gt;
+                Open -&gt;
               </span>
             </div>
           </Link>

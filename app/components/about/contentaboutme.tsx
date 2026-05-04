@@ -12,14 +12,10 @@ export default function ContentAboutMe() {
 
     return (
     
-            <motion.div
+            <div
                 id="about"
                 ref={sectionRef}
                 className="mx-auto"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: isInView ? 1 : 0 }}
-                transition={{ duration: 1.2 }}
-            
             >
             <div className="hidden lg:block">
                     <AboutMeDesktop />
@@ -27,7 +23,7 @@ export default function ContentAboutMe() {
             <div className="block lg:hidden">
                 <AboutMeMobile />
             </div>
-            </motion.div>
+            </div>
 
 )
 }
