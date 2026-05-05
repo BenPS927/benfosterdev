@@ -1,7 +1,6 @@
 import type { Metadata } from "next"
 import DesktopProjectsPage from "@/app/components/projects/desktop-projects-page"
 import JsonLd from "../shared/jsonld"
-import MobileProjectsPage from "@/app/components/projects/mobile-projects-page"
 
 export const metadata: Metadata = {
   title: "Projects",
@@ -64,12 +63,7 @@ export default function ProjectsPage() {
     return (
         <div id="projects">
             <JsonLd schema={schema} />
-            <div className="hidden lg:block">
-                <DesktopProjectsPage />
-            </div>
-            <div className="block lg:hidden">
-                <MobileProjectsPage />
-            </div>
+      <DesktopProjectsPage />
         </div>
         
     )

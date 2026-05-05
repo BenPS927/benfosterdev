@@ -6,7 +6,7 @@ export default function AboutMeMobile() {
 
 
     return (
-        <div className="p-2 mt-4 bg-gradient-to-b from-white to-gray-200">
+        <div className="bg-[linear-gradient(180deg,#f2f2f2_0%,#f8f8f8_100%)] p-2">
             <h1 className="w-full p-4 flex justify-center mb-8 font-oswald text-2xl text-[#FFA500]">A bit about me...</h1>
             <div>
                 <div className="text-sm mb-8 font-inter">

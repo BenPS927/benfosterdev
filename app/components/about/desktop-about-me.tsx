@@ -15,7 +15,7 @@ export default function AboutMeDesktop() {
     const fourthStoryImages = ['/server.jpg', '/download.webp']
 
      return (
-         <div className="grid min-h-screen w-full grid-cols-12 grid-rows-12 gap-5 bg-[linear-gradient(180deg,#ececec_0%,#f5f5f5_100%)] p-12 lg:p-16">
+         <div className="grid min-h-screen w-full grid-cols-12 grid-rows-12 gap-5 bg-[linear-gradient(180deg,#f2f2f2_0%,#f8f8f8_100%)] p-12 lg:p-16">
                 <h1 className="col-start-1 row-start-1 row-span-2 col-span-4 font-oswald text-4xl tracking-wide text-[#FFA500] lg:text-5xl">A bit about me...</h1>
                 {aboutMeDesktop.map((box) => (
                     <motion.div 

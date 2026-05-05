@@ -29,7 +29,7 @@ export function ContentContact() {
 
 
     return (
-        <div id="contact" className="mx-auto bg-[linear-gradient(180deg,#f5f5f5_0%,#ececec_100%)] max-w-full">
+        <div id="contact" className="mx-auto bg-[linear-gradient(180deg,#f8f8f8_0%,#ececec_100%)] max-w-full">
             <motion.div
                 initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
