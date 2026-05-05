@@ -16,7 +16,7 @@ export default function AboutMeDesktop() {
 
      return (
          <div className="grid min-h-screen w-full grid-cols-12 grid-rows-12 gap-5 bg-[linear-gradient(180deg,#ececec_0%,#f5f5f5_100%)] p-12 lg:p-16">
-                <h1 className="col-start-1 row-start-1 row-span-2 col-span-4 font-oswald text-4xl tracking-wide text-orange-600 lg:text-5xl">A bit about me...</h1>
+                <h1 className="col-start-1 row-start-1 row-span-2 col-span-4 font-oswald text-4xl tracking-wide text-[#FFA500] lg:text-5xl">A bit about me...</h1>
                 {aboutMeDesktop.map((box) => (
                     <motion.div 
                         key={box.id} 
@@ -39,7 +39,7 @@ export default function AboutMeDesktop() {
                             key={image}
                             className={`${index === 2 ? 'col-span-2 mx-auto w-2/3' : ''} ${index === 0 ? '-rotate-2' : index === 1 ? 'rotate-2' : '-rotate-1'}`}
                             animate={{
-                                opacity: hoveredBox === 1 ? 0.95 : 0.25,
+                                opacity: hoveredBox === 1 ? 0.95 : 0.07,
                                 scale: hoveredBox === 1 ? 1 : 0.78,
                                 y: hoveredBox === 1 ? 0 : 12
                             }}
@@ -60,7 +60,7 @@ export default function AboutMeDesktop() {
                             key={image}
                             className={index === 0 ? '-rotate-1' : 'rotate-2'}
                             animate={{
-                                opacity: hoveredBox === 2 ? 0.95 : 0.22,
+                                opacity: hoveredBox === 2 ? 0.95 : 0.07,
                                 scale: hoveredBox === 2 ? 1 : 0.78,
                                 y: hoveredBox === 2 ? 0 : 12
                             }}
@@ -81,7 +81,7 @@ export default function AboutMeDesktop() {
                             key={image}
                             className="-rotate-2"
                             animate={{
-                                opacity: hoveredBox === 3 ? 0.95 : 0.22,
+                                opacity: hoveredBox === 3 ? 0.95 : 0.07,
                                 scale: hoveredBox === 3 ? 1 : 0.78,
                                 y: hoveredBox === 3 ? 0 : 12
                             }}
@@ -102,7 +102,7 @@ export default function AboutMeDesktop() {
                             key={image}
                             className={index === 0 ? '-rotate-1' : 'rotate-1'}
                             animate={{
-                                opacity: hoveredBox === 4 ? 0.95 : 0.22,
+                                opacity: hoveredBox === 4 ? 0.95 : 0.07,
                                 scale: hoveredBox === 4 ? 1 : 0.78,
                                 y: hoveredBox === 4 ? 0 : 12
                             }}

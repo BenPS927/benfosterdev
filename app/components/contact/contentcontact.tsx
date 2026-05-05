@@ -59,7 +59,7 @@ export function ContentContact() {
                             <div className="flex flex-col gap-1">
                                 <label className="font-inter text-sm font-medium text-gray-600">Query</label>
                                 <textarea
-                                    className="min-h-[140px] w-full rounded-xl border border-neutral-900/10 bg-white px-4 py-3 font-inter text-sm text-neutral-900 shadow-sm outline-none transition focus:border-orange-300 focus:ring-1 focus:ring-orange-200"
+                                    className="min-h-[140px] w-full rounded-xl border border-neutral-900/10 bg-white px-4 py-3 font-inter text-sm text-neutral-900 shadow-sm outline-none transition focus:border-orange-600 focus:ring-1 focus:ring-orange-600/30"
                                     value={query}
                                     onChange={e => setQuery(e.target.value)}
                                 />
@@ -67,7 +67,7 @@ export function ContentContact() {
                             <div className="flex flex-col gap-1">
                                 <label className="font-inter text-sm font-medium text-gray-600">Email</label>
                                 <input
-                                    className="w-full rounded-xl border border-neutral-900/10 bg-white px-4 py-3 font-inter text-sm text-neutral-900 shadow-sm outline-none transition focus:border-orange-300 focus:ring-1 focus:ring-orange-200"
+                                    className="w-full rounded-xl border border-neutral-900/10 bg-white px-4 py-3 font-inter text-sm text-neutral-900 shadow-sm outline-none transition focus:border-orange-600 focus:ring-1 focus:ring-orange-600/30"
                                     type="email"
                                     value={email}
                                     onChange={e => setEmail(e.target.value)}
@@ -75,7 +75,7 @@ export function ContentContact() {
                             </div>
                             <button
                                 type="submit"
-                                className="w-full rounded-full bg-orange-600 px-6 py-3 font-inter text-sm font-semibold text-white shadow-sm transition hover:bg-orange-700 active:scale-95"
+                                className="w-full rounded-full bg-[#FFA500] px-6 py-3 font-inter text-sm font-semibold text-white shadow-sm transition hover:bg-orange-600 active:scale-95"
                             >
                                 Send
                             </button>

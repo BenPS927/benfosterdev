@@ -3,7 +3,6 @@ import { motion, AnimatePresence }  from 'framer-motion';
 import Link from 'next/link';
 import { useState } from 'react';
 import SmartToyIcon from '@mui/icons-material/SmartToy';
-import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import { GitHub } from '@mui/icons-material';
 
 
@@ -21,21 +20,23 @@ export default function BFShopBlogContent() {
                 />
             </div>
             
-            <div className="relative mx-auto max-w-full p-4 lg:p-8  relative min-h-screen z-10 ">
-                <div className="font-inter text-3xl text-center p-4 lg:p-8  flex items-center justify-center gap-4">
-                    <h1 className=" w-full lg:w-1/3 text-center font-inter font-bold [text-shadow:0_2px_6px_rgba(0,0,0,0.4)] text-3xl lg:text-6xl p-6">
+            <div className="relative mx-auto min-h-screen max-w-full px-4 pb-20 pt-2 lg:px-8 lg:pb-24 lg:pt-4 z-10 ">
+                <div className="mx-auto flex w-full max-w-7xl items-center justify-start">
+                    <Link
+                        href="/blog"
+                        className="inline-flex items-center rounded-full border border-neutral-900/15 bg-white px-4 py-2 font-inter text-sm font-semibold text-[#FFA500] shadow-sm transition hover:-translate-y-0.5 hover:border-orange-600 hover:text-orange-600"
+                    >
+                        Back
+                    </Link>
+                </div>
+
+                <div className="font-inter text-3xl text-center p-2 lg:p-4 flex items-center justify-center gap-4">
+                    <h1 className="w-full lg:w-1/3 p-2 text-center font-bebas text-5xl leading-[0.92] tracking-wide text-neutral-900 md:text-6xl lg:text-7xl">
                         <Link href="/blog" className="inline-block">
                             <span className="text-black">BF</span>
-                            <span className="text-orange-500">blog</span>
+                            <span className="text-[#FFA500]">blog</span>
                         </Link>
                     </h1>
-                </div>
-                <div className="hidden lg:block flex justify-center w-1/3 p-2 lg:p-8">
-                    <Link href="/blog">
-                        <ArrowBackIcon sx={{ 
-                            fontSize: 60,
-                            color: 'orange' }} />
-                    </Link>
                 </div>
                 <main className="flex flex-col lg:flex-row p-4 lg:p-16 gap-none lg:gap-16 ">
                     <motion.div
@@ -46,7 +47,7 @@ export default function BFShopBlogContent() {
                         className="w-full lg:w-1/3 border-r p-4 lg:p-8 leading-relaxed lg:h-[50vh] space-y-4 ">
                         
                         <p className="font-inter leading-loose">
-                            As BF shop is an extensive project, I decided to put give its notes and discussion its own blog section. <br />
+                            BF shop is an extensive project so its notes and discussions have their own blog section.<br />
                             Here you'll be able to follow along with its progress as a full business system, and mine as a developer.
                             The goal: Build an end to end e-commerce store, with customer and merchant interfaces, a backend, workflow autoamtion, and AI enhancement.
                         </p>
@@ -155,11 +156,7 @@ export default function BFShopBlogContent() {
                    
                
 
-                <footer className="absolute bottom-0 bg-gray-200 flex justify-between items-center p-4 lg:p-8 gap-8 -mx-8 w-full">
-                    <img src="/logo.png" alt="Logo" className="w-16 lg:w-32 h-6 lg:h-12 ml-6 lg:ml-12" />
-                    <p className="font-inter text-sm lg:text-normal text-orange-700">&copy; 2026 Ben Foster. All rights reserved.</p>
-                </footer>
-            
+
         </>
     )
 }

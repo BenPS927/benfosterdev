@@ -30,7 +30,7 @@ export default function HomePageDesktop() {
           </div>
 
           <div className="mt-8 flex flex-wrap items-center gap-3 md:gap-4">
-            <span className="rounded-full border border-orange-300/70 bg-orange-50 px-4 py-2 font-inter text-sm font-medium text-orange-800">
+            <span className="rounded-full border border-[#FFA500]/45 bg-[#FFA500]/10 px-4 py-2 font-inter text-sm font-medium text-[#FFA500]">
               Passionate about tech
             </span>
 

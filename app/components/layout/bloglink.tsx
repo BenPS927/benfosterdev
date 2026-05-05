@@ -12,8 +12,9 @@ export function BlogLink() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, ease: "easeOut" }}
                 viewport={{ once: false, amount: 1 }}
+                id="blog-link"
                 className="mx-auto flex w-full max-w-6xl flex-col items-center justify-center gap-8 p-3 lg:flex-row lg:justify-between lg:gap-10 lg:p-8">
-                <p className="w-full lg:w-1/3 font-bebas text-4xl leading-[0.95] tracking-wide text-orange-600 lg:text-6xl">I also write blogs...</p>
+                <p className="w-full lg:w-1/3 font-bebas text-4xl leading-[0.95] tracking-wide text-[#FFA500] lg:text-6xl">I also write blogs...</p>
                 
                 <div className="w-full lg:w-auto flex justify-center">
                     <motion.div 

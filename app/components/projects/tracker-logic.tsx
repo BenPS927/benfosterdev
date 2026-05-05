@@ -24,13 +24,13 @@ export function Input( { price ,setPrice,name,setName,handleSubmit,expenses }: I
         <div id="tracker-logic">
             <form id="expense-form" onSubmit={handleSubmit} className="flex flex-col items-center justify-center p-4 space-y-4 min-w-[200px]">
             <input 
-                className="bg-white p-1 lg:p-2 rounded-md font-inter text-orange-600 shadow-lg w-1/2"
+                className="bg-white p-1 lg:p-2 rounded-md font-inter text-[#FFA500] shadow-lg w-1/2"
                 type="number"
                 value={price}
                 onChange={(event) => setPrice(event.target.value)}
             />
              <input
-                className="bg-white p-1 lg:p-2 rounded-md font-inter text-orange-600 shadow-lg w-1/2"
+                className="bg-white p-1 lg:p-2 rounded-md font-inter text-[#FFA500] shadow-lg w-1/2"
                 type="text"
                 value={name}
                 onChange={(event) => setName(event.target.value)}

@@ -15,8 +15,8 @@ export function ETDesc() {
 
 export function ETCode() {
     return (
-        <Link href="/trackercode" className="flex w-full min-h-[220px] items-center justify-center rounded-2xl border border-neutral-900/15 bg-white p-6 transition duration-200 hover:-translate-y-0.5 hover:border-orange-300">
-            <p className="font-inter text-sm font-semibold text-orange-600">Code and notes</p>
+        <Link href="/trackercode" className="flex w-full min-h-[220px] items-center justify-center rounded-2xl border border-neutral-900/15 bg-white p-6 transition duration-200 hover:-translate-y-0.5 hover:border-orange-600">
+            <p className="font-inter text-sm font-semibold text-[#FFA500]">Code and notes</p>
         </Link>
     )
 }
@@ -42,9 +42,9 @@ export function ShopLink(){
             href="https://bfshop.benfosterdev.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="group w-full max-w-sm rounded-2xl border border-neutral-900/15 bg-white p-6 transition duration-200 hover:-translate-y-0.5 hover:border-orange-300"
+            className="group w-full max-w-sm rounded-2xl border border-neutral-900/15 bg-white p-6 transition duration-200 hover:-translate-y-0.5 hover:border-orange-600"
         >
-            <div className="mb-4 inline-flex rounded-full border border-orange-300/70 bg-orange-50 px-3 py-1 font-inter text-xs font-medium uppercase tracking-[0.14em] text-orange-700">
+            <div className="mb-4 inline-flex rounded-full border border-[#FFA500]/45 bg-[#FFA500]/10 px-3 py-1 font-inter text-xs font-medium uppercase tracking-[0.14em] text-[#FFA500]">
                 Live project
             </div>
 
@@ -56,7 +56,7 @@ export function ShopLink(){
                 Visit the store build and explore the first release of the full-stack business platform.
             </p>
 
-            <span className="mt-6 inline-flex items-center font-inter text-sm font-semibold text-orange-700 transition group-hover:text-orange-800">
+            <span className="mt-6 inline-flex items-center font-inter text-sm font-semibold text-[#FFA500] transition group-hover:text-orange-600">
                 Open project
                 <span className="ml-2 transition group-hover:translate-x-1">-&gt;</span>
             </span>

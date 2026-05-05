@@ -13,7 +13,7 @@ export default function MobileProjectsPage() {
     const [panel, setPanel] = useState(1)
 
     return (
-        <div className="flex flex-col overflow-x-hidden items-center space-y-8 bg-gradient-to-b from-white to-orange-100 ">
+        <div className="flex flex-col overflow-x-hidden items-center space-y-8 bg-gradient-to-b from-white to-[#FFA500]/12 ">
             <motion.h1 
                 initial={{x: -200, opacity: 0}}
                 whileInView={{x: 0, opacity: 1}}

@@ -16,7 +16,7 @@ export const aboutMeDesktop = [
   {
     id: 2,
     text:
-      "I started by learning how tech works. Binary. Hardware. The internet.Then I moved onto studying for qualifications. I wrote my own textbooks to help me learn. I built countless networkign simulations to understand data transfer. Did countless practice exams.",
+      "I started my IT journey by learning how tech works. Binary. Hardware. The internet.Then I moved onto studying for qualifications. I wrote my own textbooks to help me learn. I built countless networking simulations to understand data transfer. Took countless practice exams.",
     images: ["/lab.jpg", "/PT.jpg"],
     position: 'col-start-2 col-span-3 row-start-4 row-span-4 z-40',
     startX: -400,
@@ -52,7 +52,7 @@ export const aboutMeDesktop = [
   {
     id: 5,
     text:
-      "I've worked with marketers to build CRM automations, made countless projects in Power Automate, built python code for SEO purposes. I'm now learning web development, with a focus on building systems rather than just lines of code. Soon, I'll learn to integrate AI.",
+      "I've worked with marketers to build CRM automations, made countless projects in Power Automate, built python code for SEO purposes. I'm now building systems with react, one project at a time.",
     images: ["/react.png"],
     position: 'col-start-5 col-span-3 row-start-7 row-span-4 z-10',
     startX: -500,

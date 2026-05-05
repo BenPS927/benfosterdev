@@ -38,11 +38,11 @@ import { Menu } from './menu'
                   onClick={() => setIsMenuOpen(!isMenuOpen)}
                   sx={{ 
                     fontSize: { xs: 42, sm: 42, md: 60 },
-                    color: 'orange',
+                    color: '#FFA500',
                     cursor: 'pointer',
                     transition: 'all 0.3s',
                     '&:hover': {
-                      color: 'orange',
+                      color: '#EA580C',
                       transform: 'scale(1.1)',
                     } 
                   }} />

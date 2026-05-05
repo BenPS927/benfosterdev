@@ -30,7 +30,7 @@ export function Menu({
             animate = {{ opacity: animateOpacity }}
             transition={{ duration: duration, delay: openDelay }}
             exit={{ opacity: 0, transition: { delay: closeDelay, duration}}}
-            className="font-oswald text-sm lg:text-xl text-stone-500 hover:scale-110 transition-transform cursor-pointer duration-300 hover:text-orange-500">
+            className="font-oswald text-sm lg:text-xl text-stone-500 hover:scale-110 transition-transform cursor-pointer duration-300 hover:text-orange-600">
             
                 {text}
             

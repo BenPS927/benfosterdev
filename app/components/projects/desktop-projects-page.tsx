@@ -23,7 +23,7 @@ export default function DesktopProjectsPage() {
                 <div className="flex justify-center gap-3 md:gap-4">
                     <button
                         onClick={() => setPanel(Math.max(panel - 1, 0))}
-                        className="inline-flex h-14 w-14 items-center justify-center rounded-full border border-neutral-900/15 bg-white/80 text-orange-700 shadow-sm transition hover:-translate-y-0.5 hover:border-orange-300 hover:text-orange-800 disabled:cursor-not-allowed disabled:opacity-50 md:h-16 md:w-16"
+                        className="inline-flex h-14 w-14 items-center justify-center rounded-full border border-neutral-900/15 bg-white/80 text-[#FFA500] shadow-sm transition hover:-translate-y-0.5 hover:border-orange-600 hover:text-orange-600 disabled:cursor-not-allowed disabled:opacity-50 md:h-16 md:w-16"
                         aria-label="Show previous project panel"
                         disabled={panel === 0}
                     >
@@ -32,7 +32,7 @@ export default function DesktopProjectsPage() {
 
                     <button
                         onClick={() => setPanel(Math.min(panel + 1, 1))}
-                        className="inline-flex h-14 w-14 items-center justify-center rounded-full border border-neutral-900/15 bg-white/80 text-orange-700 shadow-sm transition hover:-translate-y-0.5 hover:border-orange-300 hover:text-orange-800 disabled:cursor-not-allowed disabled:opacity-50 md:h-16 md:w-16"
+                        className="inline-flex h-14 w-14 items-center justify-center rounded-full border border-neutral-900/15 bg-white/80 text-[#FFA500] shadow-sm transition hover:-translate-y-0.5 hover:border-orange-600 hover:text-orange-600 disabled:cursor-not-allowed disabled:opacity-50 md:h-16 md:w-16"
                         aria-label="Show next project panel"
                         disabled={panel === 1}
                     >
@@ -69,7 +69,7 @@ export default function DesktopProjectsPage() {
                             </article>
 
                             <article className="flex items-start justify-center p-4 pt-32 md:p-6 md:pt-36">
-                                <p className="font-inter text-lg font-semibold text-orange-700">Code coming soon</p>
+                                <p className="font-inter text-lg font-semibold text-[#FFA500]">Code coming soon</p>
                             </article>
                         </div>
                     </div>

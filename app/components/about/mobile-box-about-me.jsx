@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 export function AboutMeBoxMobile({ text, images, startX, viewport, duration, delay, inView, imgStartX, imgInView, imgviewPort, imgdelay, imgDuration }) {
     return (
         <div className="flex w-full gap-4">
-            <div className="p-2 w-2/3 font-geist-sans text-orange-700">
+            <div className="p-2 w-2/3 font-geist-sans text-[#FFA500]">
                 <motion.div
                 initial={{ x: startX }}
                 whileInView={{x: inView}}
