@@ -2,8 +2,7 @@ import Link from 'next/link'
 
 export function ETDesc() {
     return (
-        
-        <div className="p-4 font-inter text-sm leading-[2]">
+        <div className="h-full w-full p-4 font-inter text-sm leading-[2]">
             <p>This is my expense tracker project. </p>
             <p>This was my first project after building this site.</p>
             <p>It includes a form submission, click and submission handlers, animations and calculation logic.</p>
@@ -15,7 +14,7 @@ export function ETDesc() {
 
 export function ETCode() {
     return (
-        <Link href="/trackercode" className="flex w-full min-h-[220px] items-center justify-center rounded-2xl border border-neutral-900/15 bg-white p-6 transition duration-200 hover:-translate-y-0.5 hover:border-orange-600">
+        <Link href="/trackercode" className="flex w-full h-full max-w-sm items-center justify-center rounded-2xl border border-neutral-900/15 bg-white p-6 transition duration-200 hover:-translate-y-0.5 hover:border-orange-600">
             <p className="font-inter text-sm font-semibold text-[#FFA500]">Code and notes</p>
         </Link>
     )
@@ -23,8 +22,7 @@ export function ETCode() {
 
 export function ShopDesc() {
     return (
-        
-        <div className="p-4 font-inter text-sm leading-[2]">
+        <div className="h-full w-full p-4 font-inter text-sm leading-[2]">
             <p>This is BFshop. </p>
             <p>This will be my first full-stack project, and an entire business system. </p>
             <p>There will be two interfaces - the customer interface, where orders can be placed, with an AI chatbot for making queries.</p>
@@ -36,13 +34,21 @@ export function ShopDesc() {
     )
 }
 
+export function ShopBlog(){
+    return(
+        <Link href="/blog/blog-bfshop" className="flex w-full h-full max-w-sm self-stretch items-center justify-center rounded-2xl border border-neutral-900/15 bg-white p-6 transition duration-200 hover:-translate-y-0.5 hover:border-orange-600">
+            <p className="font-inter text-sm font-semibold text-[#FFA500]">Code and notes</p>
+        </Link>
+    )
+}
+
 export function ShopLink(){
     return(
         <Link
             href="https://bfshop.benfosterdev.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="group w-full max-w-sm rounded-2xl border border-neutral-900/15 bg-white p-6 transition duration-200 hover:-translate-y-0.5 hover:border-orange-600"
+            className="group w-full h-full max-w-sm rounded-2xl border border-neutral-900/15 bg-white p-6 transition duration-200 hover:-translate-y-0.5 hover:border-orange-600"
         >
             <div className="mb-4 inline-flex rounded-full border border-[#FFA500]/45 bg-[#FFA500]/10 px-3 py-1 font-inter text-xs font-medium uppercase tracking-[0.14em] text-[#FFA500]">
                 Live project

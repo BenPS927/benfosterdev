@@ -1,6 +1,6 @@
 'use client'
 
-import { ETDesc, ETCode, ShopLink, ShopDesc } from "./components"
+import { ETDesc, ETCode, ShopLink, ShopDesc, ShopBlog } from "./components"
 import { ExpenseTracker } from "./expense-tracker"
 import { useState } from 'react'
 import KeyboardDoubleArrowLeftIcon from '@mui/icons-material/KeyboardDoubleArrowLeft';
@@ -45,31 +45,31 @@ export default function DesktopProjectsPage() {
                         className="flex flex-row transition-transform duration-300"
                         style={{ transform: `translateX(-${panel * 100}%)` }}
                     >
-                        <div className="grid w-full min-w-full shrink-0 grid-cols-1 gap-4 sm:gap-5 lg:grid-cols-3 lg:gap-6">
-                            <article className="p-3 sm:p-4 md:p-6">
+                        <div className="grid w-full min-w-full shrink-0 grid-cols-1 items-stretch gap-4 sm:gap-5 lg:grid-cols-3 lg:gap-6">
+                            <article className="flex items-stretch p-3 sm:p-4 md:p-6">
                                 <ETDesc />
                             </article>
 
-                            <article className="p-2 pt-2 sm:p-3 sm:pt-4 md:p-3 md:pt-8 lg:pt-12">
+                            <article className="h-full p-3 pt-2 sm:p-4 sm:pt-4 md:p-6 md:pt-8 lg:pt-12">
                                 <ExpenseTracker />
                             </article>
 
-                            <article className="flex items-start justify-center p-3 pt-2 sm:p-4 sm:pt-4 md:p-6 md:pt-8 lg:pt-12">
+                            <article className="flex items-stretch justify-center p-3 pt-2 sm:p-4 sm:pt-4 md:p-6 md:pt-8 lg:pt-12">
                                 <ETCode />
                             </article>
                         </div>
 
-                        <div className="grid w-full min-w-full shrink-0 grid-cols-1 gap-4 sm:gap-5 lg:grid-cols-3 lg:gap-6">
-                            <article className="p-3 sm:p-4 md:p-6">
+                        <div className="grid w-full min-w-full shrink-0 grid-cols-1 items-stretch gap-4 sm:gap-5 lg:grid-cols-3 lg:gap-6">
+                            <article className="flex items-stretch p-3 sm:p-4 md:p-6">
                                 <ShopDesc />
                             </article>
 
-                            <article className="flex items-start justify-center p-3 pt-2 sm:p-4 sm:pt-4 md:p-6 md:pt-8 lg:pt-12">
+                            <article className="flex items-stretch justify-center p-3 pt-2 sm:p-4 sm:pt-4 md:p-6 md:pt-8 lg:pt-12">
                                 <ShopLink />
                             </article>
 
-                            <article className="flex items-start justify-center p-3 pt-2 sm:p-4 sm:pt-8 md:p-6 md:pt-12 lg:pt-36">
-                                <p className="font-inter text-base font-semibold text-[#FFA500] sm:text-lg">Code coming soon</p>
+                            <article className="flex items-stretch justify-center p-3 pt-2 sm:p-4 sm:pt-8 md:p-6 md:pt-12 lg:pt-12">
+                                <ShopBlog />
                             </article>
                         </div>
                     </div>

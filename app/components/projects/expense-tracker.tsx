@@ -37,7 +37,7 @@ export function ExpenseTracker() {
         }
         
     return (
-        <div className="relative min-h-[200px]">            <AnimatePresence>
+        <div className="relative h-full min-h-[200px]">            <AnimatePresence>
                 {isMenuOpen && (
                     <motion.div 
                         initial={{ x: 100, opacity: 0 }}
@@ -62,7 +62,7 @@ export function ExpenseTracker() {
                        
             
             </AnimatePresence>
-            <div className="w-full h-full p-1 pb-10 rounded-2xl border border-neutral-900/15 bg-white">
+            <div className="w-full h-full p-1 rounded-2xl border border-neutral-900/15 bg-white">
                 <div className="p-1 space-y-1">
                 <div className="p-1 mx-auto w-fit space-y-1 text-center">
                     <h1 className="p-1 font-sora text-sm font-semibold text-[#FFA500]">Expense Tracker</h1>
