@@ -32,7 +32,7 @@ export const MenuItems = [
   {
     id: 4,
     text: 'BFShop',
-    link: '/shop',
+    link: 'https://bfshop.benfosterdev.com/',
     startOpacity: 0,
     duration: 0.5,
     delay: 0.2,
@@ -42,17 +42,6 @@ export const MenuItems = [
 
   {
     id: 5,
-    text: 'Playground',
-    link: '/playground',
-    startOpacity: 0,
-    duration: 0.5,
-    delay: 0.1,
-    animateOpacity: 1
-    
-  },
-
-  {
-    id: 6,
     text: 'About',
     link: '#about',
     startOpacity: 0,
@@ -63,7 +52,7 @@ export const MenuItems = [
   },
 
   {
-    id: 7,
+    id: 6,
     text: 'Contact',
     link: '#contact',
     startOpacity: 0,

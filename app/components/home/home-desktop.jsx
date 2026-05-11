@@ -16,16 +16,9 @@ export default function HomePageDesktop() {
               Building AI Enhanced Business Systems
             </h1>
 
-            <div className="mt-6 space-y-4 font-inter text-base leading-relaxed text-gray-600 md:text-lg">
-              <p>Hi, I&apos;m Ben, a web developer and IT manager based in Bristol</p>
-              <p>By day I manage IT infrastructure.</p>
-              <p>By night I build modern web systems that integrate automation and AI</p>
-              <p>
-                I&apos;m not just interested in flashy designs - I&apos;m here to build systems
-                and solutions that integrate AI and automation. I&apos;ve built a simple
-                expense tracker and am now working on a full stack E-commerce store.
-                Scroll down to explore the projects.
-              </p>
+            <div className="mt-6 mb-10 space-y-4 font-inter text-base leading-relaxed text-gray-600 md:text-lg">
+              <p>I&apos;m a systems builder with experience in IT administration and web development.</p>
+              <p>Designing systems that integrate AI and make full use of its capabilities.</p>
             </div>
           </div>
 

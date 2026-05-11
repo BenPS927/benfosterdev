@@ -23,12 +23,14 @@ export function ETCode() {
 export function ShopDesc() {
     return (
         <div className="h-full w-full p-4 font-inter text-sm leading-[2]">
-            <p>This is BFshop. </p>
-            <p>This will be my first full-stack project, and an entire business system. </p>
-            <p>There will be two interfaces - the customer interface, where orders can be placed, with an AI chatbot for making queries.</p>
-            <p> And the merchant interface, where orders will be logged and stock will be inventoried. Automated workflows utilising AI will work
-                with the backend to make this a fully functioning system.
-            </p>
+            <p>BFShop is a full-stack system I’m building to handle orders, communication, and automation workflows in one place.</p>
+            <ul className="list-disc pl-5 space-y-1">
+                <li>Separate customer and merchant interfaces, both working off the same system</li>
+                <li>A shared backend and database managing all order data and state</li>
+                <li>AI chatbots for handling queries and assisting both sides</li>
+                <li>An AI Overwatch layer to monitor and control how AI is used across the system</li>
+            </ul>
+            
         </div>
 
     )
