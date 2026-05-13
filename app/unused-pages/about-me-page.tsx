@@ -3,9 +3,9 @@
 
 
 
-import JsonLd from "../shared/jsonld"
+import JsonLd from "../components/shared/jsonld"
 import type { Metadata } from "next"
-import ContentAboutMe from './contentaboutme';
+import ContentAboutMe from '../components/about/contentaboutme';
 
 export const metadata: Metadata = {
   title: "About",
