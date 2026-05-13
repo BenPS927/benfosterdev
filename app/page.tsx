@@ -4,13 +4,10 @@
 
 import HomePage from '@/app/components/home/home-page';
 import ProjectsPage from '@/app/components/projects/projects-page';
-import { AboutMePage } from '@/app/components/about/about-me-page';
-import { Divider1 } from '@/app/components/layout/section-dividers';
 import { Divider2 } from '@/app/components/layout/section-dividers';
-import { Divider3 } from '@/app/components/layout/section-dividers';
 import { ContactPage } from '@/app/components/contact/contact-page';
 import { Why } from '@/app/components/why/why-page'
-
+import { Blogs2Page } from '@/app/components/blogs2/blogs2-page';
 
 // ...existing code...
 export default function Home() {
@@ -20,8 +17,7 @@ export default function Home() {
       <Divider2 />
       <ProjectsPage />
       <Why />
-      <Divider1 />
-      <AboutMePage />
+      <Blogs2Page />
       <ContactPage />
     </main>
   );

@@ -37,7 +37,7 @@ export function ContentContact() {
                 transition={{ duration: 0.8 }}
                 className="mx-auto flex max-w-7xl flex-col items-center space-y-8 p-4 lg:p-12"
             >
-                <div className="space-y-4 text-center">
+                <div className="space-y-4 text-center md:mt-8 lg:mt-12">
                     <h1 className="font-bebas text-5xl leading-[0.92] tracking-wide text-neutral-900 md:text-6xl lg:text-7xl">Get in touch</h1>
                     <p className="mx-auto max-w-xl font-inter text-base leading-relaxed text-gray-600 md:text-lg">
                         Interested in working together? Reach out via the form or find me on socials.
