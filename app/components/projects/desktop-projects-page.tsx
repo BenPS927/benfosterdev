@@ -5,22 +5,31 @@ import { ExpenseTracker } from "./expense-tracker"
 import { useState } from 'react'
 import KeyboardDoubleArrowLeftIcon from '@mui/icons-material/KeyboardDoubleArrowLeft';
 import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight';
+import { motion } from 'framer-motion';
 
 export default function DesktopProjectsPage() {
     const [panel, setPanel] = useState(1)
 
     return (
-        <div className="mx-auto overflow-x-hidden bg-[linear-gradient(180deg,#f5f5f5_0%,#fafafa_55%,#ffffff_100%)] px-4 py-6 text-neutral-950 sm:px-5 md:px-6 md:py-8 lg:px-8">
+        <div className="mx-auto overflow-x-hidden bg-[linear-gradient(180deg,#f4f4f4_0%,#f8f8f8_55%,#ffffff_100%)] px-4 py-6 text-neutral-950 sm:px-5 md:px-6 md:py-8 lg:px-8">
             <div className="mx-auto w-full max-w-7xl space-y-6 md:space-y-8 lg:space-y-10">
                 <div className="space-y-5 text-center lg:space-y-6">
-                    <h1 className="font-bebas text-4xl leading-[0.92] tracking-wide sm:text-5xl md:text-6xl lg:text-7xl">Projects</h1>
-                    <p className="mx-auto max-w-3xl font-inter text-base leading-relaxed text-gray-600 md:text-lg">
+                    <motion.h1
+                        initial={{ opacity: 0.5, x: -192 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true, amount: 0.12 }}
+                        transition={{ duration: 0.16, ease: 'easeOut' }}
+                        className="font-bebas text-4xl leading-[0.92] tracking-wide drop-shadow-[0_1px_1px_rgba(0,0,0,0.08)] sm:text-5xl md:text-6xl lg:text-7xl"
+                    >
+                        Projects
+                    </motion.h1>
+                    <p className="hidden mx-auto max-w-3xl font-inter text-base leading-relaxed text-gray-600 md:text-lg">
                         This is where you&apos;ll find the project I&apos;m currently working on, and the ones I&apos;ve completed.
                     </p>
-                    <p className="font-inter text-sm leading-relaxed text-gray-500 md:text-base">Use the arrows to switch project panels.</p>
+                    <p className="hidden font-inter text-sm leading-relaxed text-gray-500 md:text-base">Use the arrows to switch project panels.</p>
                 </div>
 
-                <div className="flex justify-center gap-3 md:gap-4">
+                <div className="hidden flex justify-center gap-3 md:gap-4">
                     <button
                         onClick={() => setPanel(Math.max(panel - 1, 0))}
                         className="inline-flex h-12 w-12 items-center justify-center rounded-full border border-neutral-900/15 bg-white/80 text-[#FFA500] shadow-sm transition hover:-translate-y-0.5 hover:border-orange-600 hover:text-orange-600 disabled:cursor-not-allowed disabled:opacity-50 md:h-16 md:w-16"
@@ -40,7 +49,13 @@ export default function DesktopProjectsPage() {
                     </button>
                 </div>
 
-                <div className="overflow-hidden px-1 py-2 sm:px-2 md:px-6 md:py-4 lg:px-8 lg:py-6">
+                <motion.div
+                    initial={{ opacity: 0, y: 14 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.15 }}
+                    transition={{ duration: 0.45, ease: 'easeOut' }}
+                    className="overflow-hidden px-1 py-2 sm:px-2 md:px-6 md:py-4 lg:px-8 lg:py-6"
+                >
                     <div
                         className="flex flex-row transition-transform duration-300"
                         style={{ transform: `translateX(-${panel * 100}%)` }}
@@ -73,7 +88,7 @@ export default function DesktopProjectsPage() {
                             </article>
                         </div>
                     </div>
-                </div>
+                </motion.div>
             </div>
         </div>
     )

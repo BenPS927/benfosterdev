@@ -17,7 +17,7 @@ export function Divider1() {
 
 export function Divider2() {
     return (
-        <div className="bg-[linear-gradient(180deg,#ececec_0%,#f5f5f5_100%)] h-[25vh]">
+        <div className="bg-[linear-gradient(180deg,#f7f7f7_0%,#f4f4f4_100%)] h-[25vh]">
            
         </div>
     );
@@ -25,7 +25,7 @@ export function Divider2() {
 
 export function Divider3() {
     return (
-        <div className="bg-[linear-gradient(180deg,#ececec_0%,#f5f5f5_100%)] h-[25vh]">
+        <div className="bg-[linear-gradient(180deg,#f7f7f7_0%,#f4f4f4_100%)] h-[25vh]">
         
         </div>
     );

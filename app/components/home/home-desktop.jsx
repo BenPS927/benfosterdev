@@ -2,23 +2,30 @@
 
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import { motion } from 'framer-motion';
 
 export default function HomePageDesktop() {
   return (
     <main
       id="home"
-      className="min-h-screen bg-[linear-gradient(180deg,#f5f5f5_0%,#ececec_100%)] px-4 py-8 text-neutral-950 md:px-6 md:py-10 lg:px-8 lg:py-12"
+      className="min-h-screen bg-[linear-gradient(180deg,#ededed_0%,#f7f7f7_100%)] px-4 py-8 text-neutral-950 md:px-6 md:py-10 lg:px-8 lg:py-12"
     >
       <section className="mx-auto grid min-h-[calc(100vh-8rem)] max-w-7xl items-center gap-8 lg:grid-cols-[1.25fr_0.75fr] lg:gap-12">
-        <div className="order-last flex flex-col justify-center py-2 lg:order-first lg:py-6">
+        <motion.div
+          initial={{ opacity: 0, y: 14 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.15 }}
+          transition={{ duration: 0.45, ease: 'easeOut' }}
+          className="order-last flex flex-col justify-center py-2 lg:order-first lg:py-6"
+        >
           <div>
-            <h1 className="font-bebas text-4xl leading-[0.92] tracking-wide md:text-6xl lg:text-7xl">
+            <h1 className="font-bebas text-4xl leading-[0.92] tracking-wide drop-shadow-[0_1px_1px_rgba(0,0,0,0.08)] md:text-6xl lg:text-7xl">
               Building AI Enhanced Business Systems
             </h1>
 
             <div className="mt-6 mb-10 space-y-4 font-inter text-base leading-relaxed text-gray-600 md:text-lg">
               <p>I&apos;m a systems builder with experience in IT administration and web development.</p>
-              <p>Designing systems that integrate AI and make full use of its capabilities.</p>
+              <p>Designing systems that utilise AI to save you time and money.</p>
             </div>
           </div>
 
@@ -47,15 +54,21 @@ export default function HomePageDesktop() {
               GitHub
             </a>
           </div>
-        </div>
+        </motion.div>
 
-        <div className="order-first flex items-center justify-center p-2 md:p-4 lg:order-last lg:p-6">
+        <motion.div
+          initial={{ opacity: 0, y: 14 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.15 }}
+          transition={{ duration: 0.45, ease: 'easeOut', delay: 0.08 }}
+          className="order-first flex items-center justify-center p-2 md:p-4 lg:order-last lg:p-6"
+        >
           <img
             src="/profilephoto2.png"
             alt="Ben Foster - React Developer and AI Chatbot Specialist"
             className="h-56 w-56 rounded-[1.75rem] object-cover md:h-72 md:w-72 lg:h-[24rem] lg:w-[24rem]"
           />
-        </div>
+        </motion.div>
       </section>
     </main>
   )
