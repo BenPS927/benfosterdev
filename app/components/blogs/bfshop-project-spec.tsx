@@ -4,7 +4,7 @@ export default function BFShopProjectSpec() {
 			<h2 className="font-bold text-xl mb-2">Project Structure & Specifications</h2>
 			<br />
 
-			<p>The customer end of BFshop (BFcustomer) is part of my main website folder structure, as it started as a simple project. As the project grew, I decided to build the rest (BFmerchant) in a separate folder for better organization. BFshop will live on a subdomain, so it remains accessible from the main site.</p>
+			<p>BFshop is best thought of as a business simulation, where the frontend(s) are just one part. The project exists on a subdomain of my website, including the backend. The database is hosted on Neon so I don't have to learn mySQL. Automations will be done with n8n and this will facilitate integrations with other platforms including emails and word documents.</p>
 			<br />
 
 			<h3 className="font-bold">Dependencies</h3>
@@ -43,33 +43,14 @@ export default function BFShopProjectSpec() {
 				</div>
 			</div>
 
-			<h3 className="font-bold">API</h3>
-			<br />
-			<p>Both BFCustomer and BFmerchant will communicate with the database via the API in BFmerchant. This may not be perfect, but it’s a workable structure for now.</p>
-			<br />
-			<p>The APIs will enforce rules that govern communication between front and backend, and will be particularly relevant when it comes to oversight of AI activity</p>
-			<br />
+			
 
 			<h3 className="font-bold">AI Disclaimer</h3>
 			<br />
 			<p>I use AI as a mentor and assistant, especially for learning new concepts, repeated structures, and complex tasks. My goal is to learn and understand, not just copy-paste. I’ll also use AI to audit the project as I go.</p>
 			<br />
 
-			<h3 className="font-bold">Next Steps</h3>
-			<br />
-			<ul>
-				<li>Practice writing APIs</li>
-				<li>Deploy BFmerchant on a subdomain of benfosterdev.com</li>
-				<li>Wire up APIs to BFCustomer</li>
-			</ul>
-			<br />
-			<p>Planning the project like this is a big step for me. For my main website, I always rushed into building because I was excited to get going. 
-				The extent of my preparation was mapping out the intended structure of each page and how the divs would look, with minimal planning on what
-				styling options would be used to produce a cleaner and scalable design. I also gave no thought to the overall structure of the site and how each 
-				element would work together. This is partly because it was planned as a purely frontend project, so data was always an afterthought. Now, going into 
-				BFshop, the structure is clear in my head, meaning I can accurately map out each section's basic layout enough to give me 'wall sockets' where the 
-				API 'cables' will plug into. 
-			</p>
+			
 		</article>
 	);
 }

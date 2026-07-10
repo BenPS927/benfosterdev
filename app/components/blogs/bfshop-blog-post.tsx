@@ -1,99 +1,107 @@
 export default function BFShopBlogPost() {
 	return (
 		<article className="font-inter leading-relaxed text-left p-2 lg:p-4">
-			<p>I'm currently undertaking my first full stack project.</p>
+			<div className="text-center">
+				<h2 className="font-bold text-xl mb-2">Introduction to BFshop</h2>
+				<br />
+
+				<p>In this article I lay the groundworks for my BF shop project, focusing on its basic structure and purposes.</p>
+				<br />
+
+				<p>Ben Foster</p>
+				<p>5th July 2026</p>
+				<p>2 min read</p>
+				<br />
+			</div>
+
+			<h3 className="font-bold">What is BFshop?</h3>
 			<br />
 
-			<p>On my projects page, it's called BFshop. You'd be forgiven for thinking it's just another E-commerce project.</p>
+			<p>I'm currently building my first AI enhanced business system, BFshop.</p>
 			<br />
 
-			<p>Here's a basic rundown of the plans for BFshop:</p>
+			<p>At first glance, BFShop looks like another e-commerce project. It isn't.</p>
 			<br />
 
-			<ul>
-				<li>The customer storefront (currently live and under construction in the projects section) where orders can be placed</li>
-				<li>A merchant interface for tracking the orders which are placed</li>
-				<li>A backend database connected via API routes</li>
-				<li>Workflows handled by n8n</li>
-			</ul>
+			<p>BFShop is a full-stack e-commerce business simulation that I'm using to explore how AI and automation can be integrated into real business systems.</p>
 			<br />
 
-			<p>Sounds good right?</p>
+			<p>It is both purposeful and experimental.</p>
 			<br />
 
-			<p>But it's missing something...</p>
+			<p>The project will feature both the customer and merchant end of the same E-commerce store, allowing me to truly understand the architecture. There will be a shared database, onto which placed orders will be written, and from which received orders will be read.</p>
 			<br />
 
-			<p>What could it be missing?</p>
+			<p>This is what I'm calling an AI enhanced project; the first in a series of projects as I learn how to integrate AI enhancements to everyday systems.</p>
 			<br />
 
-			<p>What is the one essential ingredient in 2026?</p>
+			<h3 className="font-bold">Why am I building it?</h3>
 			<br />
 
-			<p>We all know what it is.</p>
+			<p>AI has moved faster than the world around it. We're playing catch up.</p>
 			<br />
 
-			<h2 className="font-bold">AI.</h2>
+			<p>There are many individual AI products out there, offered mostly to big business; I'm interested in how AI can improve complete business systems at a level that's available to the average person or small business.</p>
 			<br />
 
-			<p>How am I going to implement AI without it being AI for the sake of AI?</p>
+			<p>I want to experiment with where AI fits in with the day-to-day systems people use; the websites, the data connected to them, the admin work faced by people doing business, the chatbots that have replaced humans in customer service.</p>
 			<br />
 
-			<h3 className="font-bold">Think of BFshop as a two lane structure.</h3>
+			<p>I also haven't, prior to this project, delved into full stack software development, so it's an exciting way to learn.</p>
 			<br />
 
-			<ul>
-				<li>Lane 1: traditional interactivity connects frontend to backend; you click submit order, shipment ready, etc</li>
-				<li>Lane 2: the same connections are made, but by an AI at your request</li>
-			</ul>
+			<h2 className="font-bold text-xl mb-2">Core components</h2>
 			<br />
 
-			<ul>
-				<li>In the customer interface this will be an AI chatbot</li>
-				<li>In the merchant interface this will be an AI assistant</li>
-			</ul>
+			<h3 className="font-bold">Customer interface</h3>
 			<br />
 
-			<p>Why am I introducing this?</p>
+			<p>This is the E-commerce store where customers would place orders, featuring a chatbot for querying product, orders and business information. The idea is that the bot will be helpful and easy to use, drawing on live data.</p>
 			<br />
 
-			<p>Because it's the way of the future. SaaS is moving towards chat driven interfaces. AI is here to stay. As web developers, we're most at risk, but also with the biggest chance. I don't want to be drowned by the tide, I want to be surfing on its peak.</p>
+			<h3 className="font-bold">Merchant interface</h3>
 			<br />
 
-			<p>But that's not all.</p>
+			<p>This is where the merchant would view their orders, which will have arrived from the customer side. There will also be a chat interface here; I use the word chat interface and not chatbot because the idea here is rather than as a bot for the user to chat to, I'm viewing this as an experimentation with the gradual move from click based interactivity to the chat based interactivity that may be facilitated by AI.</p>
 			<br />
 
-			<p>We're still in AI's honeymoon phase. Its workplace implementation is still yet to be fully cemented as more than novelty. Its true place in the business world has yet to be found.</p>
+			<p>This chat interface will have access to everything the merchant needs to know about, as well as functionality; creating/cancelling/altering orders, interacting with other platforms.</p>
 			<br />
 
-			<p>Do I know what that will be?</p>
+			<h3 className="font-bold">Backend</h3>
 			<br />
 
-			<p>No.</p>
+			<p>The backend is the interesting part for me; as someone who has only worked with the frontend prior to this, it's quite a change to my concept of coding.</p>
 			<br />
 
-			<p>But what I do know is that control and oversight of AI systems will need to have their place.</p>
+			<p>The backend structure will be discussed in more depth in further articles, but it will basically function to share a database between the customer and merchant ends and facilitate the AI and automation integrations.</p>
 			<br />
 
-			<p>That's why I'm going to build AI Overwatch into BFshop.</p>
+			<h3 className="font-bold">Automation and Integration</h3>
+			<br />
+
+			<p>Modern systems are a web of interconnected platforms; Slack, Google Drive, Microsoft 365, CRMs, among others; BFshop will use n8n integrations to trigger relevant automations for the purpose of reducing work for the merchant and keeping the customer informed.</p>
 			<br />
 
 			<h3 className="font-bold">AI Overwatch</h3>
 			<br />
 
-			<p>AI Overwatch will be a control center for everything AI in the merchant app.</p>
+			<p>One concern with AI technology as time goes on is in its autonomy; as AI systems become capable of carrying out work on behalf of users, visibility into their actions becomes increasingly important.</p>
 			<br />
 
-			<p>Concerned your AI assistant changed something it shouldn't have? Check the activity logs.</p>
+			<p>That's why I'm building the feature AI Overwatch, which will display the AI's capabilities and actions clear for the user to see and interact with.</p>
 			<br />
 
-			<p>Want to make sure the AI doesn't have the ability to delete data? Check the Capability registry.</p>
+			<h2 className="font-bold text-xl mb-2">Final Thoughts</h2>
 			<br />
 
-			<p>And so on.</p>
+			<p>BFshop is a full business simulation that will develop as time goes on; features may be added, existing ones altered.</p>
 			<br />
 
-			<p>BFshop will fully enhance the incredible power of the modern day, without sacrificing safety, responsibility, or human control. Keep an eye out for the next blog to see it progress.</p>
+			<p>Rather than treating BFshop as a finished specification, I'm seeing it as an evolving engineering project. As I learn more, the system will evolve more.</p>
+			<br />
+
+			<p>It should be noted that while this is a business simulation some parts may be left out; financial information, legal detail.</p>
 		</article>
 	);
 }

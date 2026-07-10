@@ -98,9 +98,9 @@ export default function BFShopBlogContent() {
                                     opacity: 0.2
                                 }} />
                             </div>
-                            <p className=" relative z-10 font-inter text-center text-lg mb-0 lg:mb-16 hover:text-orange-700 hover:scale-110">1. Structure</p>
+                            <p className=" relative z-10 font-inter text-center text-lg mb-0 lg:mb-16 hover:text-orange-700 hover:scale-110">1. Introduction to BFshop</p>
                             <p className="block lg:hidden font-inter text-center text-sm">
-                                The structure of BFshop and how I plan to implement AI. March 17th, 2026 · 8 min read
+                                In this article I lay the groundworks for my BF shop project, focusing on its basic structure and purposes. 5th July 2026 · 2 min read
                             </p>
                             <AnimatePresence>
                                 {hoveredBox === 2 && 
@@ -109,8 +109,8 @@ export default function BFShopBlogContent() {
                                         animate={{y: 0, opacity: 1}}
                                         transition={{duration: 0.2}}
                                         className="font-inter text-center text-sm">
-                                        The structure of BFshop and how I plan to implement AI.
-                                        <br /> March 17th, 2026 · 8 min read
+                                        In this article I lay the groundworks for my BF shop project, focusing on its basic structure and purposes.
+                                        <br /> 5th July 2026 · 2 min read
                                     </motion.p>
                                 }
                             </AnimatePresence>
