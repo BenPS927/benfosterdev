@@ -12,8 +12,8 @@ export const metadata: Metadata = {
 const schema = {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "Introduction to BFshop | BFshop Blog",
-  "name": "Introduction to BFshop | BFshop Blog",
+  "headline": "Introduction to BFshop | BFshop Docs",
+  "name": "Introduction to BFshop | BFshop Docs",
   "description": "In this article I lay the groundworks for my BF shop project, focusing on its basic structure and purposes.",
   "url": "https://benfosterdev.com/blog/blog-bfshop-1",
   "datePublished": "2026-07-05",

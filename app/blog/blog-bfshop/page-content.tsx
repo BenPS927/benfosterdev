@@ -1,13 +1,38 @@
 'use client'
 import { motion, AnimatePresence }  from 'framer-motion';
 import Link from 'next/link';
-import { useState } from 'react';
 import SmartToyIcon from '@mui/icons-material/SmartToy';
 import { GitHub } from '@mui/icons-material';
+import ArticleIcon from '@mui/icons-material/Article';
 
 
 export default function BFShopBlogContent() {
-    const [hoveredBox, setHoveredBox] = useState(0)
+    const pages = [
+  {
+    title: "Vision"
+  },
+  {
+    title: "Architecture"
+  },
+  {
+    title: "Data Foundations"
+  },
+  {
+    title: "Vertical Slices"
+  },
+  {
+    title: "API"
+  },
+  {
+    title: "AI"
+  },
+  {
+    title: "Automation"
+  },
+  {
+    title: "Development Log"
+  }
+];
     
     return (
         <>
@@ -34,7 +59,7 @@ export default function BFShopBlogContent() {
                     <h1 className="w-full lg:w-1/3 p-2 text-center font-bebas text-5xl leading-[0.92] tracking-wide text-neutral-900 md:text-6xl lg:text-7xl">
                         <Link href="/blog" className="inline-block">
                             <span className="text-black">BF</span>
-                            <span className="text-[#FFA500]">blog</span>
+                            <span className="text-[#FFA500]">Shop</span>
                         </Link>
                     </h1>
                 </div>
@@ -44,109 +69,97 @@ export default function BFShopBlogContent() {
                         animate={{x: 0}}
                         whileInView={{opacity: 1}}
                         transition={{duration: 0.4}}
-                        className="w-full lg:w-1/3 border-r p-4 lg:p-8 leading-relaxed lg:h-[50vh] space-y-4 ">
+                        className="w-full lg:w-1/3 lg:shrink-0 border-r p-4 lg:p-8 leading-relaxed lg:h-[50vh] space-y-4 ">
                         
                         <p className="font-inter leading-loose">
                             BF shop is an extensive project so its notes and discussions have their own blog section.<br />
                             Here you'll be able to follow along with its progress as a full business system, and mine as a developer.
-                            The goal: Build an end to end e-commerce store, with customer and merchant interfaces, a backend, workflow autoamtion, and AI enhancement.
+                            The goal: Build an end to end e-commerce store, with customer and merchant interfaces, a backend, workflow automation, and AI enhancement.
                         </p>
                     </motion.div>
+                    <div className="flex w-full flex-1 flex-wrap gap-4 lg:gap-6 lg:pl-6">
                     <motion.div 
                         layout
-                        onMouseEnter={() => setHoveredBox(1)}
-                        onMouseLeave={() => setHoveredBox(0)}
-                        className="  relative bg-white w-full md:w-1/2 lg:w-1/5 lg:h-1/5  p-2 lg:p-8 rounded-lg shadow-md hover:shadow-lg flex flex-col justify-center items-center min-h-[200px] mt-4">
+                        className="relative overflow-hidden bg-white w-full md:w-[calc(50%-0.5rem)] lg:w-[calc(25%-1.125rem)] lg:flex-none lg:h-1/5 p-2 lg:p-6 rounded-lg shadow-md hover:shadow-lg flex flex-col justify-center items-center min-h-[200px] mt-4 scale-[0.94] origin-top">
                         <a 
                         href="https://github.com/BenPS927/BFshop"
                         target="_blank"
                         rel="noopener noreferrer">
                             <div className="absolute inset-0 flex items-center justify-center z-0">
                                 <GitHub sx={{ 
-                                    fontSize: 180, 
+                                    fontSize: 144, 
                                     color: 'orange',
                                     opacity: 0.2
                                 }} />
                             </div>
-                            <p className=" relative z-10 font-inter text-center text-lg mb-0 lg:mb-16 hover:text-orange-700 hover:scale-110">Project Code</p>
-                            <p className="block lg:hidden font-inter text-center text-sm">
-                                Take a look at the code on my GitHub
-                            </p>
-                            <AnimatePresence>
-                                {hoveredBox === 1 && 
-                                    <motion.p layout
-                                        initial={{y: -50, opacity: 0}}
-                                        animate={{y: 0, opacity: 1}}
-                                        transition={{duration: 0.2}}
-                                        className="font-inter text-center text-sm">
-                                        Take a look at the code on my GitHub
-                                    </motion.p>
-                                }
-                            </AnimatePresence>
+                            <p className="absolute inset-0 z-10 flex items-center justify-center px-4 text-center font-inter text-lg hover:text-orange-700 hover:scale-110 transition-transform duration-300 ease-out">Project Code</p>
                         </a>
                     </motion.div>
                     <motion.div 
                         layout
-                        onMouseEnter={() => setHoveredBox(2)}
-                        onMouseLeave={() => setHoveredBox(0)}
-                        className="  relative bg-white w-full md:w-1/2 lg:w-1/5 lg:h-1/5  p-2 lg:p-8 rounded-lg shadow-md hover:shadow-lg flex flex-col justify-center items-center min-h-[200px] mt-4">
+                        className="relative overflow-hidden bg-white w-full md:w-[calc(50%-0.5rem)] lg:w-[calc(25%-1.125rem)] lg:flex-none lg:h-1/5 p-2 lg:p-6 rounded-lg shadow-md hover:shadow-lg flex flex-col justify-center items-center min-h-[200px] mt-4 scale-[0.94] origin-top">
                         <Link href="/blog/blog-bfshop-1">
                             <div className="absolute inset-0 flex items-center justify-center z-0">
                                 <SmartToyIcon sx={{ 
-                                    fontSize: 180, 
+                                    fontSize: 144, 
                                     color: 'orange',
                                     opacity: 0.2
                                 }} />
                             </div>
-                            <p className=" relative z-10 font-inter text-center text-lg mb-0 lg:mb-16 hover:text-orange-700 hover:scale-110">1. Introduction to BFshop</p>
-                            <p className="block lg:hidden font-inter text-center text-sm">
-                                In this article I lay the groundworks for my BF shop project, focusing on its basic structure and purposes. 5th July 2026 · 2 min read
-                            </p>
-                            <AnimatePresence>
-                                {hoveredBox === 2 && 
-                                    <motion.p layout
-                                        initial={{y: -50, opacity: 0}}
-                                        animate={{y: 0, opacity: 1}}
-                                        transition={{duration: 0.2}}
-                                        className="font-inter text-center text-sm">
-                                        In this article I lay the groundworks for my BF shop project, focusing on its basic structure and purposes.
-                                        <br /> 5th July 2026 · 2 min read
-                                    </motion.p>
-                                }
-                            </AnimatePresence>
+                            <p className="absolute inset-0 z-10 flex items-center justify-center px-4 text-center font-inter text-lg hover:text-orange-700 hover:scale-110 transition-transform duration-300 ease-out">Introduction to BFshop</p>
                         </Link>
                     </motion.div>
                     <motion.div 
                         layout
-                        onMouseEnter={() => setHoveredBox(3)}
-                        onMouseLeave={() => setHoveredBox(0)}
-                        className="  relative bg-white w-full md:w-1/2 lg:w-1/5 lg:h-1/5  p-2 lg:p-8 rounded-lg shadow-md hover:shadow-lg flex flex-col justify-center items-center min-h-[200px] mt-4">
+                        className="relative overflow-hidden bg-white w-full md:w-[calc(50%-0.5rem)] lg:w-[calc(25%-1.125rem)] lg:flex-none lg:h-1/5 p-2 lg:p-6 rounded-lg shadow-md hover:shadow-lg flex flex-col justify-center items-center min-h-[200px] mt-4 scale-[0.94] origin-top">
                         <Link href="/blog/blog-bfshop-2">
                             <div className="absolute inset-0 flex items-center justify-center z-0">
                                 <SmartToyIcon sx={{ 
-                                    fontSize: 180, 
+                                    fontSize: 144, 
                                     color: 'orange',
                                     opacity: 0.2
                                 }} />
                             </div>
-                            <p className=" relative z-10 font-inter text-center text-lg mb-0 lg:mb-16 hover:text-orange-700 hover:scale-110">2. Project Specifications</p>
-                            <p className="block lg:hidden font-inter text-center text-sm">
-                                Project structure, dependencies, and next steps. March 18th, 2026 · 6 min read
-                            </p>
-                            <AnimatePresence>
-                                {hoveredBox === 3 && 
-                                    <motion.p layout
-                                        initial={{y: -50, opacity: 0}}
-                                        animate={{y: 0, opacity: 1}}
-                                        transition={{duration: 0.2}}
-                                        className="font-inter text-center text-sm">
-                                        Project structure, dependencies, and next steps.
-                                        <br /> March 18th, 2026 · 6 min read
-                                    </motion.p>
-                                }
-                            </AnimatePresence>
+                            <p className="absolute inset-0 z-10 flex items-center justify-center px-4 text-center font-inter text-lg hover:text-orange-700 hover:scale-110 transition-transform duration-300 ease-out">Project Specifications</p>
                         </Link>
                     </motion.div>
+
+                    <motion.div 
+                        layout
+                        className="relative overflow-hidden bg-white w-full md:w-[calc(50%-0.5rem)] lg:w-[calc(25%-1.125rem)] lg:flex-none lg:h-1/5 p-2 lg:p-6 rounded-lg shadow-md hover:shadow-lg flex flex-col justify-center items-center min-h-[200px] mt-4 scale-[0.94] origin-top">
+                        <Link href="/blog/blog-bfshop">
+                            <div className="absolute inset-0 flex items-center justify-center z-0">
+                                <ArticleIcon sx={{ 
+                                    fontSize: 144, 
+                                    color: 'orange',
+                                    opacity: 0.2
+                                }} />
+                            </div>
+                            <p className="absolute inset-0 z-10 flex items-center justify-center px-4 text-center font-inter text-lg hover:text-orange-700 hover:scale-110 transition-transform duration-300 ease-out">Progress reports</p>
+                        </Link>
+                    </motion.div>
+                        <div className="w-full space-y-2">
+                        {pages.map((page) =>
+                            page.title === 'Development Log' ? (
+                                <Link
+                                    key={page.title}
+                                    href="/blog/blog-bfshop/development-log"
+                                    className="block rounded-md bg-white p-2 font-inter hover:cursor-pointer hover:bg-orange-100"
+                                >
+                                    {page.title}
+                                </Link>
+                            ) : (
+                                <div
+                                    key={page.title}
+                                    className="rounded-md bg-white p-2 font-inter hover:cursor-pointer hover:bg-orange-100"
+                                >
+                                    {page.title}
+                                </div>
+                            )
+                        )}
+                        </div>
+
+                    </div>
 
                     </main>
 

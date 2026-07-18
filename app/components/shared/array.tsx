@@ -60,5 +60,6 @@ export const MenuItems = [
     delay: 0,
     animateOpacity: 1
     
-  }
+  },
+
 ]

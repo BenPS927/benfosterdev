@@ -42,3 +42,5 @@ next-env.d.ts
 
 # local-only playground practice routes
 /app/playground/
+
+/app/generated/prisma

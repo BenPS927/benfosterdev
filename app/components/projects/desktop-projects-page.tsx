@@ -21,7 +21,7 @@ export default function DesktopProjectsPage() {
                         transition={{ duration: 0.16, ease: 'easeOut' }}
                         className="font-bebas text-4xl leading-[0.92] tracking-wide drop-shadow-[0_1px_1px_rgba(0,0,0,0.08)] sm:text-5xl md:text-6xl lg:text-7xl"
                     >
-                        Projects
+                        BFshop
                     </motion.h1>
                     <p className="hidden mx-auto max-w-3xl font-inter text-base leading-relaxed text-gray-600 md:text-lg">
                         This is where you&apos;ll find the project I&apos;m currently working on, and the ones I&apos;ve completed.

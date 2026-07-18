@@ -23,12 +23,13 @@ export function ETCode() {
 export function ShopDesc() {
     return (
         <div className="h-full w-full rounded-2xl p-4 font-inter text-sm leading-relaxed text-gray-600 transition duration-300 hover:-translate-y-0.5 md:text-base">
-            <p>BFShop is an e-commerce store using AI to reduce the time spent managing orders, and a quality chatbot for customer service</p>
+            <p>BFShop is an AI-enhanced business system currently in development, exploring how AI, automation and connected systems can reduce manual work for businesses.</p>
             <ul className="list-disc pl-5 space-y-1">
-                <li>Separate customer and merchant interfaces, both working off the same system</li>
-                <li>A shared backend and database managing all order data and state</li>
+                <li>Separate customer and merchant applications sharing a common backend and database </li>
+                <li>AI-powered customer service and merchant assistants with access to live business data </li>
                 <li>AI chatbots for handling queries and assisting both sides</li>
                 <li>An AI Overwatch layer to monitor and control how AI is used across the system</li>
+                <li>Built as a complete business simulation, from storefront to internal operations</li>
             </ul>
             
         </div>
@@ -39,7 +40,7 @@ export function ShopDesc() {
 export function ShopBlog(){
     return(
         <Link href="/blog/blog-bfshop" className="flex w-full h-full max-w-sm self-stretch items-center justify-center rounded-2xl border border-neutral-900/15 bg-white p-6 shadow-[0_2px_10px_rgba(0,0,0,0.04)] ring-1 ring-white/40 transition duration-300 hover:-translate-y-0.5 hover:border-orange-600 hover:shadow-[0_8px_24px_rgba(0,0,0,0.08)]">
-            <p className="font-inter text-sm font-semibold text-[#FFA500]">Code and notes</p>
+            <p className="font-inter text-sm font-semibold text-[#FFA500]">Documentation</p>
         </Link>
     )
 }
@@ -61,7 +62,7 @@ export function ShopLink(){
             </h3>
 
             <p className="mt-3 font-inter text-sm leading-relaxed text-gray-600 md:text-base">
-                Visit the store build and explore the first release of the full-stack business platform.
+                Take a look at BFshop as it's built.
             </p>
 
             <span className="mt-6 inline-flex items-center font-inter text-sm font-semibold text-[#FFA500] transition group-hover:text-orange-600">

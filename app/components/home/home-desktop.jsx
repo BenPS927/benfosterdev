@@ -25,7 +25,7 @@ export default function HomePageDesktop() {
 
             <div className="mt-6 mb-10 space-y-4 font-inter text-base leading-relaxed text-gray-600 md:text-lg">
               <p>I&apos;m a systems builder with experience in IT administration and web development.</p>
-              <p>Designing systems that utilise AI to save you time and money.</p>
+              <p>Designing connected business systems that combine AI, automation and integrations to reduce manual work.</p>
             </div>
           </div>
 
