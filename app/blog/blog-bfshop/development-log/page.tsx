@@ -3,6 +3,8 @@ import { prisma } from '@/app/lib/prisma';
 import JsonLd from '@/app/components/shared/jsonld';
 import type { Metadata } from 'next';
 
+export const dynamic = 'force-dynamic';
+
 export const metadata: Metadata = {
     title: 'Development Log | BFshop Blog',
     description: 'Ongoing BFshop development updates of BFshop.',
