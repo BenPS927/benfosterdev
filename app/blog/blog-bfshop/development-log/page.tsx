@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { prisma } from '@/app/lib/prisma';
 import JsonLd from '@/app/components/shared/jsonld';
 import type { Metadata } from 'next';
+import type { dev_log } from '@prisma/client';
 
 export const metadata: Metadata = {
     title: 'Development Log | BFshop Blog',
@@ -28,7 +29,7 @@ const schema = {
 
 
 export default async function DevelopmentLogPage() {
-const devLogs = await prisma.dev_log.findMany({
+const devLogs: dev_log[] = await prisma.dev_log.findMany({
     orderBy: {
         published_at: "desc",
     },

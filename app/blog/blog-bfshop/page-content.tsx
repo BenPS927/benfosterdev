@@ -127,7 +127,7 @@ export default function BFShopBlogContent() {
                     <motion.div 
                         layout
                         className="relative overflow-hidden bg-white w-full md:w-[calc(50%-0.5rem)] lg:w-[calc(25%-1.125rem)] lg:flex-none lg:h-1/5 p-2 lg:p-6 rounded-lg shadow-md hover:shadow-lg flex flex-col justify-center items-center min-h-[200px] mt-4 scale-[0.94] origin-top">
-                        <Link href="/blog/blog-bfshop">
+                        <Link href="/blog/blog-bfshop/progress-reports">
                             <div className="absolute inset-0 flex items-center justify-center z-0">
                                 <ArticleIcon sx={{ 
                                     fontSize: 144, 
