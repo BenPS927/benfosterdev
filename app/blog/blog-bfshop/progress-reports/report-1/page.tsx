@@ -88,7 +88,6 @@ export default function BFShopProgressReport1Page() {
                 <div className="w-full max-w-3xl mx-auto px-4 py-10 bg-white relative z-50 min-h-screen">
                     <div className="text-center font-inter">
                         <h1 className="text-xl font-bold">Progress Report 1</h1>
-                        <p className="font-inter">26th July 2026</p>
                         <br />
                         <p>Ben Foster</p>
                         <p>23rd July 2026</p>

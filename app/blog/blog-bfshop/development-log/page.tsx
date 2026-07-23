@@ -49,7 +49,7 @@ const devLogs = await prisma.dev_log.findMany({
                     <div aria-hidden="true" className="h-10 w-[74px]" />
                 </section>
                 <section className="grid grid-cols-1 gap-3 rounded-md text-white">
-                   {devLogs.map(log => (
+                   {devLogs.map((log: any)=> (
                     <div key={log.id}
                          className="flex rounded-md border border-zinc-700 bg-zinc-900 p-6">
                         <div className="w-2/3">
