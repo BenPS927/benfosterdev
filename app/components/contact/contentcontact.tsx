@@ -37,9 +37,10 @@ export function ContentContact() {
                 transition={{ duration: 0.8 }}
                 className="mx-auto flex max-w-7xl flex-col items-center space-y-8 p-4 lg:p-12"
             >
-                <div className="space-y-4 text-center md:mt-8 lg:mt-12">
+                <div className="card-stack text-center md:mt-8 lg:mt-12">
+                    <p className="card-eyebrow text-[#FFA500]">Contact</p>
                     <h1 className="font-bebas text-5xl leading-[0.92] tracking-wide text-neutral-900 md:text-6xl lg:text-7xl">Get in touch</h1>
-                    <p className="mx-auto max-w-xl font-inter text-base leading-relaxed text-gray-600 md:text-lg">
+                    <p className="mx-auto max-w-xl card-body text-gray-600 md:text-lg">
                         Interested in working together? Reach out via the form or find me on socials.
                     </p>
                 </div>
@@ -56,16 +57,16 @@ export function ContentContact() {
                             onSubmit={handleSubmit}
                             className="space-y-4"
                         >
-                            <div className="flex flex-col gap-1">
-                                <label className="font-inter text-sm font-medium text-gray-600">Query</label>
+                            <div className="flex flex-col gap-2">
+                                <label className="card-meta font-medium text-gray-600">Query</label>
                                 <textarea
                                     className="min-h-[140px] w-full rounded-xl border border-neutral-900/10 bg-white px-4 py-3 font-inter text-sm text-neutral-900 shadow-sm outline-none transition focus:border-orange-600 focus:ring-1 focus:ring-orange-600/30"
                                     value={query}
                                     onChange={e => setQuery(e.target.value)}
                                 />
                             </div>
-                            <div className="flex flex-col gap-1">
-                                <label className="font-inter text-sm font-medium text-gray-600">Email</label>
+                            <div className="flex flex-col gap-2">
+                                <label className="card-meta font-medium text-gray-600">Email</label>
                                 <input
                                     className="w-full rounded-xl border border-neutral-900/10 bg-white px-4 py-3 font-inter text-sm text-neutral-900 shadow-sm outline-none transition focus:border-orange-600 focus:ring-1 focus:ring-orange-600/30"
                                     type="email"

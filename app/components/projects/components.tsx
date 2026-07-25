@@ -2,11 +2,12 @@ import Link from 'next/link'
 
 export function ETDesc() {
     return (
-        <div className="h-full w-full rounded-2xl border border-neutral-900/10 bg-white p-4 font-inter text-sm leading-[2] shadow-[0_2px_10px_rgba(0,0,0,0.04)] ring-1 ring-white/40 transition duration-300 hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(0,0,0,0.08)]">
-            <p>This is my expense tracker project. </p>
-            <p>This was my first project after building this site.</p>
-            <p>It includes a form submission, click and submission handlers, animations and calculation logic.</p>
-            <p>This was the perfect project for introducing me to the more complex side of React JS involving interactivity and function.</p>
+        <div className="card-stack h-full w-full p-3 text-gray-700">
+            <p className="card-eyebrow text-[#FFA500]">Project Summary</p>
+            <p className="card-title text-neutral-900">Expense Tracker</p>
+            <p className="card-body">This was my first project after building this site.</p>
+            <p className="card-body">It includes form submission, click handlers, animations, and calculation logic.</p>
+            <p className="card-body">This project was perfect for introducing the more complex, interactive side of React.</p>
         </div>
 
     )
@@ -14,17 +15,23 @@ export function ETDesc() {
 
 export function ETCode() {
     return (
-        <Link href="/trackercode" className="flex w-full h-full max-w-sm items-center justify-center rounded-2xl border border-neutral-900/15 bg-white p-6 shadow-[0_2px_10px_rgba(0,0,0,0.04)] ring-1 ring-white/40 transition duration-300 hover:-translate-y-0.5 hover:border-orange-600 hover:shadow-[0_8px_24px_rgba(0,0,0,0.08)]">
-            <p className="font-inter text-sm font-semibold text-[#FFA500]">Code and notes</p>
+        <Link href="/trackercode" className="surface-base-light is-interactive flex w-full h-full max-w-sm items-center justify-center p-6 ring-1 ring-white/40">
+            <div className="card-stack-tight text-center">
+                <p className="card-eyebrow text-[#FFA500]">Reference</p>
+                <p className="card-title text-neutral-900">Code and Notes</p>
+                <p className="card-meta text-gray-600">Open tracker source and build notes</p>
+            </div>
         </Link>
     )
 }
 
 export function ShopDesc() {
     return (
-        <div className="h-full w-full rounded-2xl p-4 font-inter text-sm leading-relaxed text-gray-600 transition duration-300 hover:-translate-y-0.5 md:text-base">
-            <p>BFShop is an AI-enhanced business system currently in development, exploring how AI, automation and connected systems can reduce manual work for businesses.</p>
-            <ul className="list-disc pl-5 space-y-1">
+        <div className="card-stack h-full w-full p-3 text-gray-600">
+            <p className="card-eyebrow text-[#FFA500]">Project Summary</p>
+            <p className="card-title text-neutral-900">BFshop</p>
+            <p className="card-meta md:text-sm">BFShop is an AI-enhanced business system in development, exploring how AI, automation, and integrations can reduce manual work.</p>
+            <ul className="list-disc pl-5 space-y-1 card-meta md:text-sm">
                 <li>Separate customer and merchant applications sharing a common backend and database </li>
                 <li>AI-powered customer service and merchant assistants with access to live business data </li>
                 <li>AI chatbots for handling queries and assisting both sides</li>
@@ -37,36 +44,26 @@ export function ShopDesc() {
     )
 }
 
-export function ShopBlog(){
-    return(
-        <Link href="/blog/blog-bfshop" className="flex w-full h-full max-w-sm self-stretch items-center justify-center rounded-2xl border border-neutral-900/15 bg-white p-6 shadow-[0_2px_10px_rgba(0,0,0,0.04)] ring-1 ring-white/40 transition duration-300 hover:-translate-y-0.5 hover:border-orange-600 hover:shadow-[0_8px_24px_rgba(0,0,0,0.08)]">
-            <p className="font-inter text-sm font-semibold text-[#FFA500]">Documentation</p>
-        </Link>
-    )
-}
-
 export function ShopLink(){
     return(
         <Link
-            href="https://bfshop.benfosterdev.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group w-full h-full max-w-sm rounded-2xl border border-neutral-900/15 bg-white p-6 shadow-[0_2px_10px_rgba(0,0,0,0.04)] ring-1 ring-white/40 transition duration-300 hover:-translate-y-0.5 hover:border-orange-600 hover:shadow-[0_8px_24px_rgba(0,0,0,0.08)]"
+            href="/blog/blog-bfshop"
+            className="surface-spotlight-light is-interactive group w-full h-full max-w-sm p-6 ring-1 ring-white/40"
         >
-            <div className="mb-4 inline-flex rounded-full border border-[#FFA500]/45 bg-[#FFA500]/10 px-3 py-1 font-inter text-xs font-medium uppercase tracking-[0.14em] text-[#FFA500]">
-                Live project
+            <div className="mb-4 inline-flex rounded-full border border-[#FFA500]/45 bg-[#FFA500]/10 px-3 py-1 card-eyebrow text-[#FFA500]">
+                Project hub
             </div>
 
             <h3 className="font-bebas text-4xl leading-none tracking-wide text-neutral-900 md:text-5xl">
-                BFShop
+                Project Portal
             </h3>
 
-            <p className="mt-3 font-inter text-sm leading-relaxed text-gray-600 md:text-base">
-                Take a look at BFshop as it's built.
+            <p className="mt-3 card-body text-gray-600 md:text-base">
+                Explore the live project, technical documentation, and build logbook in one place.
             </p>
 
-            <span className="mt-6 inline-flex items-center font-inter text-sm font-semibold text-[#FFA500] transition group-hover:text-orange-600">
-                Open project
+            <span className="mt-6 inline-flex items-center card-meta font-semibold text-[#FFA500] transition group-hover:text-orange-600">
+                Open portal
                 <span className="ml-2 transition group-hover:translate-x-1">-&gt;</span>
             </span>
         </Link>

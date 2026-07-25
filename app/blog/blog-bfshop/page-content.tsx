@@ -1,175 +1,203 @@
-'use client'
-import { motion, AnimatePresence }  from 'framer-motion';
 import Link from 'next/link';
-import SmartToyIcon from '@mui/icons-material/SmartToy';
-import { GitHub } from '@mui/icons-material';
-import ArticleIcon from '@mui/icons-material/Article';
-
-
-export default function BFShopBlogContent() {
-    const pages = [
-  {
-    title: "Vision"
-  },
-  {
-    title: "Architecture"
-  },
-  {
-    title: "Data Foundations"
-  },
-  {
-    title: "Vertical Slices"
-  },
-  {
-    title: "API"
-  },
-  {
-    title: "AI"
-  },
-  {
-    title: "Automation"
-  },
-  {
-    title: "Development Log"
-  }
+const portalNodes = [
+    {
+        title: 'Overview',
+        label: 'Introduction',
+        description: 'Read up on the basics of BFshop.',
+        href: '/blog/blog-bfshop-1',
+    },
+    {
+        title: 'Repository',
+        label: 'Project Code',
+        description: 'Browse the BFshop source code.',
+        href: 'https://github.com/BenPS927/BFshop',
+        external: true,
+    },
+    {
+        title: 'Specification',
+        label: 'Specifications',
+        description: 'Review the technical plan and scope.',
+        href: '/blog/blog-bfshop-2',
+    },
+    {
+        title: 'Updates',
+        label: 'Progress Reports',
+        description: 'Track how the project is evolving.',
+        href: '/blog/blog-bfshop/progress-reports',
+    },
 ];
-    
+
+const logbookItems = [
+    { title: 'Data Foundations', href: '/blog/blog-bfshop/data-foundations' },
+    { title: 'Vertical Slices', href: '/blog/blog-bfshop/vertical-slices' },
+    { title: 'AI', href: '/blog/blog-bfshop/ai' },
+    { title: 'Automation', href: '/blog/blog-bfshop/automation' },
+    { title: 'Development Log', href: '/blog/blog-bfshop/development-log' },
+];
+
+export default function BFShopPortalContent() {
     return (
-        <>
-            <div className="fixed top-0 left-0 w-full h-full pointer-events-none z-0">
-                
-                <img 
-                    src="/bg1.png" 
-                    alt="background image for bfshop-blog-home" 
-                    className="w-full h-full object-cover opacity-20"
-                />
-            </div>
-            
-            <div className="relative mx-auto min-h-screen max-w-full px-4 pb-20 pt-2 lg:px-8 lg:pb-24 lg:pt-4 z-10 ">
-                <div className="mx-auto flex w-full max-w-7xl items-center justify-start">
+        <main className="relative min-h-screen overflow-hidden bg-black px-4 py-8 text-white md:px-6 md:py-10 lg:px-8 lg:py-12">
+            <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(1200px_500px_at_15%_-10%,rgba(255,255,255,0.06),transparent_60%),linear-gradient(180deg,#050505_0%,#0A0A0A_45%,#121212_100%)]" />
+            <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-sky-400/40 to-transparent" />
+
+            <section className="relative mx-auto flex max-w-7xl flex-col gap-12 lg:gap-16">
+                <header className="mx-auto flex max-w-3xl flex-col items-center gap-4 text-center">
                     <Link
-                        href="/blog"
-                        className="inline-flex items-center rounded-full border border-neutral-900/15 bg-white px-4 py-2 font-inter text-sm font-semibold text-[#FFA500] shadow-sm transition hover:-translate-y-0.5 hover:border-orange-600 hover:text-orange-600"
+                        href="/#projects"
+                        className="accent-electric-blue hover-accent-electric-blue-border inline-flex items-center rounded-full border border-zinc-700 bg-zinc-900 px-4 py-2 text-sm font-medium transition hover:bg-zinc-800"
                     >
-                        Back
+                        Back to Main Site
                     </Link>
-                </div>
-
-                <div className="font-inter text-3xl text-center p-2 lg:p-4 flex items-center justify-center gap-4">
-                    <h1 className="w-full lg:w-1/3 p-2 text-center font-bebas text-5xl leading-[0.92] tracking-wide text-neutral-900 md:text-6xl lg:text-7xl">
-                        <Link href="/blog" className="inline-block">
-                            <span className="text-black">BF</span>
-                            <span className="text-[#FFA500]">Shop</span>
-                        </Link>
+                    
+                    <h1 className="font-bebas text-5xl leading-none tracking-[0.12em] text-white sm:text-6xl lg:text-7xl">
+                        BF<span className="text-sky-400">SHOP</span>
                     </h1>
-                </div>
-                <main className="flex flex-col lg:flex-row p-4 lg:p-16 gap-none lg:gap-16 ">
-                    <motion.div
-                        initial={{x: 0, opacity: 0}}
-                        animate={{x: 0}}
-                        whileInView={{opacity: 1}}
-                        transition={{duration: 0.4}}
-                        className="w-full lg:w-1/3 lg:shrink-0 border-r p-4 lg:p-8 leading-relaxed lg:h-[50vh] space-y-4 ">
-                        
-                        <p className="font-inter leading-loose">
-                            BF shop is an extensive project so its notes and discussions have their own blog section.<br />
-                            Here you'll be able to follow along with its progress as a full business system, and mine as a developer.
-                            The goal: Build an end to end e-commerce store, with customer and merchant interfaces, a backend, workflow automation, and AI enhancement.
-                        </p>
-                    </motion.div>
-                    <div className="flex w-full flex-1 flex-wrap gap-4 lg:gap-6 lg:pl-6">
-                    <motion.div 
-                        layout
-                        className="relative overflow-hidden bg-white w-full md:w-[calc(50%-0.5rem)] lg:w-[calc(25%-1.125rem)] lg:flex-none lg:h-1/5 p-2 lg:p-6 rounded-lg shadow-md hover:shadow-lg flex flex-col justify-center items-center min-h-[200px] mt-4 scale-[0.94] origin-top">
-                        <a 
-                        href="https://github.com/BenPS927/BFshop"
-                        target="_blank"
-                        rel="noopener noreferrer">
-                            <div className="absolute inset-0 flex items-center justify-center z-0">
-                                <GitHub sx={{ 
-                                    fontSize: 144, 
-                                    color: 'orange',
-                                    opacity: 0.2
-                                }} />
+                    <p className="max-w-2xl font-inter text-sm leading-7 text-zinc-300 sm:text-base">
+                        The project portal for BFshop. Here you can access the project and view the ongoing documentation, which includes styling detail, structural design, and a development log.</p>
+                </header>
+
+                <section className="relative mx-auto w-full max-w-6xl">
+                    <div className="grid gap-5 lg:hidden">
+                        <a
+                            href="https://bfshop.benfosterdev.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="group mx-auto flex h-52 w-52 items-center justify-center rounded-full border border-sky-400/30 bg-white/[0.08] p-8 text-center shadow-[0_0_0_1px_rgba(255,255,255,0.04)] transition duration-300 hover:-translate-y-1 hover:border-sky-400/50 hover:bg-sky-400/10"
+                        >
+                            <div className="space-y-3">
+                                <span className="block font-bebas text-4xl tracking-[0.12em] text-white">
+                                    Open project
+                                </span>
                             </div>
-                            <p className="absolute inset-0 z-10 flex items-center justify-center px-4 text-center font-inter text-lg hover:text-orange-700 hover:scale-110 transition-transform duration-300 ease-out">Project Code</p>
                         </a>
-                    </motion.div>
-                    <motion.div 
-                        layout
-                        className="relative overflow-hidden bg-white w-full md:w-[calc(50%-0.5rem)] lg:w-[calc(25%-1.125rem)] lg:flex-none lg:h-1/5 p-2 lg:p-6 rounded-lg shadow-md hover:shadow-lg flex flex-col justify-center items-center min-h-[200px] mt-4 scale-[0.94] origin-top">
-                        <Link href="/blog/blog-bfshop-1">
-                            <div className="absolute inset-0 flex items-center justify-center z-0">
-                                <SmartToyIcon sx={{ 
-                                    fontSize: 144, 
-                                    color: 'orange',
-                                    opacity: 0.2
-                                }} />
-                            </div>
-                            <p className="absolute inset-0 z-10 flex items-center justify-center px-4 text-center font-inter text-lg hover:text-orange-700 hover:scale-110 transition-transform duration-300 ease-out">Introduction to BFshop</p>
-                        </Link>
-                    </motion.div>
-                    <motion.div 
-                        layout
-                        className="relative overflow-hidden bg-white w-full md:w-[calc(50%-0.5rem)] lg:w-[calc(25%-1.125rem)] lg:flex-none lg:h-1/5 p-2 lg:p-6 rounded-lg shadow-md hover:shadow-lg flex flex-col justify-center items-center min-h-[200px] mt-4 scale-[0.94] origin-top">
-                        <Link href="/blog/blog-bfshop-2">
-                            <div className="absolute inset-0 flex items-center justify-center z-0">
-                                <SmartToyIcon sx={{ 
-                                    fontSize: 144, 
-                                    color: 'orange',
-                                    opacity: 0.2
-                                }} />
-                            </div>
-                            <p className="absolute inset-0 z-10 flex items-center justify-center px-4 text-center font-inter text-lg hover:text-orange-700 hover:scale-110 transition-transform duration-300 ease-out">Project Specifications</p>
-                        </Link>
-                    </motion.div>
 
-                    <motion.div 
-                        layout
-                        className="relative overflow-hidden bg-white w-full md:w-[calc(50%-0.5rem)] lg:w-[calc(25%-1.125rem)] lg:flex-none lg:h-1/5 p-2 lg:p-6 rounded-lg shadow-md hover:shadow-lg flex flex-col justify-center items-center min-h-[200px] mt-4 scale-[0.94] origin-top">
-                        <Link href="/blog/blog-bfshop/progress-reports">
-                            <div className="absolute inset-0 flex items-center justify-center z-0">
-                                <ArticleIcon sx={{ 
-                                    fontSize: 144, 
-                                    color: 'orange',
-                                    opacity: 0.2
-                                }} />
-                            </div>
-                            <p className="absolute inset-0 z-10 flex items-center justify-center px-4 text-center font-inter text-lg hover:text-orange-700 hover:scale-110 transition-transform duration-300 ease-out">Progress reports</p>
-                        </Link>
-                    </motion.div>
-                        <div className="w-full space-y-2">
-                        {pages.map((page) =>
-                            page.title === 'Development Log' ? (
-                                <Link
-                                    key={page.title}
-                                    href="/blog/blog-bfshop/development-log"
-                                    className="block rounded-md bg-white p-2 font-inter hover:cursor-pointer hover:bg-orange-100"
-                                >
-                                    {page.title}
-                                </Link>
-                            ) : (
-                                <div
-                                    key={page.title}
-                                    className="rounded-md bg-white p-2 font-inter hover:cursor-pointer hover:bg-orange-100"
-                                >
-                                    {page.title}
-                                </div>
-                            )
-                        )}
+                        <div className="grid gap-4 sm:grid-cols-2">
+                            {portalNodes.map((node) => {
+                                const itemClassName = 'group mx-auto flex h-52 w-52 items-center justify-center rounded-full border border-white/12 bg-white/[0.04] p-7 text-center transition duration-300 hover:border-sky-400/50';
+
+                                const itemContent = (
+                                    <div className="space-y-2">
+                                        <p className="font-inter text-xs font-semibold uppercase tracking-[0.14em] text-sky-400">
+                                            {node.title}
+                                        </p>
+                                        <h2 className="font-inter text-xl font-bold leading-6 text-white">
+                                            {node.label}
+                                        </h2>
+                                        <p className="font-inter text-sm leading-6 text-zinc-400">
+                                            {node.description}
+                                        </p>
+                                    </div>
+                                );
+
+                                return node.external ? (
+                                    <a
+                                        key={node.title}
+                                        href={node.href}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className={itemClassName}
+                                    >
+                                        {itemContent}
+                                    </a>
+                                ) : (
+                                    <Link key={node.title} href={node.href} className={itemClassName}>
+                                        {itemContent}
+                                    </Link>
+                                );
+                            })}
                         </div>
-
                     </div>
 
-                    </main>
+                    <div className="relative hidden h-[42rem] lg:block">
+                        <div className="absolute left-1/2 top-1/2 h-80 w-80 -translate-x-1/2 -translate-y-1/2 rounded-full border border-sky-400/30 bg-white/[0.08] shadow-[0_0_80px_rgba(56,189,248,0.08)]" />
 
-            </div>
-           
+                        <a
+                            href="https://bfshop.benfosterdev.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="group absolute left-1/2 top-1/2 flex h-80 w-80 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-sky-400/30 bg-white/[0.08] p-10 text-center transition duration-300 hover:scale-[1.02] hover:border-sky-400/50 hover:bg-sky-400/10"
+                        >
+                            <div className="space-y-4">
+                                <span className="block font-bebas text-6xl tracking-[0.14em] text-white">
+                                    Open project
+                                </span>
+                            </div>
+                        </a>
 
-                   
-               
+                        {portalNodes.map((node, index) => {
+                            const positions = [
+                                'left-10 top-14',
+                                'right-10 top-14',
+                                'left-16 bottom-10',
+                                'right-16 bottom-10',
+                            ];
 
+                            const itemClassName = `group absolute flex h-56 w-56 items-center justify-center rounded-full border border-white/12 bg-white/[0.04] p-8 text-center transition duration-300 hover:border-sky-400/50 ${positions[index]}`;
 
-        </>
+                            const itemContent = (
+                                <div className="space-y-2">
+                                    <p className="font-inter text-xs font-semibold uppercase tracking-[0.14em] text-sky-400">
+                                        {node.title}
+                                    </p>
+                                    <h2 className="font-inter text-2xl font-bold leading-7 text-white">
+                                        {node.label}
+                                    </h2>
+                                    <p className="font-inter text-sm leading-6 text-zinc-400">
+                                        {node.description}
+                                    </p>
+                                </div>
+                            );
+
+                            return node.external ? (
+                                <a
+                                    key={node.title}
+                                    href={node.href}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className={itemClassName}
+                                >
+                                    {itemContent}
+                                </a>
+                            ) : (
+                                <Link key={node.title} href={node.href} className={itemClassName}>
+                                    {itemContent}
+                                </Link>
+                            );
+                        })}
+                    </div>
+                </section>
+
+                <section id="logbook" className="mx-auto flex w-full max-w-4xl flex-col gap-5">
+                    <div className="flex flex-col gap-3 text-center">
+                        
+                        <h2 className="font-inter text-3xl font-bold tracking-tight text-white">
+                            Project Logbook
+                        </h2>
+                        
+                    </div>
+
+                    <div className="grid gap-4">
+                        {logbookItems.map((item, index) => (
+                            <Link
+                                key={item.title}
+                                href={item.href}
+                                className="group flex items-center justify-between rounded-3xl border border-white/12 bg-white/[0.08] px-5 py-4 transition duration-300 hover:border-sky-400/50 sm:px-6"
+                            >
+                                <div className="flex flex-col gap-1 text-left">
+                                   
+                                    <span className="font-inter text-lg font-semibold text-white">
+                                        {item.title}
+                                    </span>
+                                </div>
+                                <span className="font-inter text-sm text-zinc-500 transition group-hover:text-zinc-300">
+                                    Open
+                                </span>
+                            </Link>
+                        ))}
+                    </div>
+                </section>
+            </section>
+        </main>
     )
 }

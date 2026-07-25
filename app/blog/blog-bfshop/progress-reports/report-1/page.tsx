@@ -1,12 +1,11 @@
-import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import type { Metadata } from 'next';
-import Link from 'next/link';
 import JsonLd from '@/app/components/shared/jsonld';
 import BFShopProgressReport1 from '@/app/components/blogs/bfshop-progress-report-1';
+import { BackPillLink } from '../../../../components/ui/back-pill-link';
 
 export const metadata: Metadata = {
-    title: 'BFshop Progress Report 1 | Ben Foster\'s Blog',
-    description: 'First BFshop progress report page. This is a starter template for ongoing project updates.',
+    title: 'Progress Report 1 | BFshop Project Portal',
+    description: 'First BFshop delivery report covering customer slice progress, infrastructure setup, and current blockers.',
 };
 
 const schema = {
@@ -14,7 +13,7 @@ const schema = {
     '@type': 'BlogPosting',
     headline: 'BFshop Progress Report 1',
     name: 'BFshop Progress Report 1',
-    description: 'First BFshop progress report page. This is a starter template for ongoing project updates.',
+    description: 'First BFshop delivery report covering customer slice progress, infrastructure setup, and current blockers.',
     url: 'https://benfosterdev.com/blog/blog-bfshop/progress-reports/report-1',
     datePublished: '2026-07-23',
     author: {
@@ -23,8 +22,8 @@ const schema = {
         url: 'https://benfosterdev.com',
     },
     isPartOf: {
-        '@type': 'Blog',
-        name: 'BFshop Blog',
+        '@type': 'WebPage',
+        name: 'BFshop Project Portal',
         url: 'https://benfosterdev.com/blog/blog-bfshop',
     },
     mainEntityOfPage: 'https://benfosterdev.com/blog/blog-bfshop/progress-reports/report-1',
@@ -34,7 +33,7 @@ const schema = {
             {
                 '@type': 'ListItem',
                 position: 1,
-                name: 'BFshop Blog',
+                name: 'BFshop Project Portal',
                 item: 'https://benfosterdev.com/blog/blog-bfshop',
             },
             {
@@ -55,52 +54,26 @@ const schema = {
 
 export default function BFShopProgressReport1Page() {
     return (
-        <div className="relative p-4">
+        <>
             <JsonLd schema={schema} />
-            <div className="w-full flex flex-col lg:flex-row gap-0 lg:gap-24 p-2 lg:p-4">
-                <div className="fixed top-0 left-0 w-full h-full pointer-events-none z-0">
-                    <img
-                        src="/bg1.png"
-                        alt="background"
-                        className="w-full h-full object-cover opacity-20"
-                    />
-                </div>
+            <main className="min-h-screen bg-subtle-dark-gradient text-white">
+                <div className="mx-auto max-w-5xl px-6 py-12 md:px-8 md:py-16 lg:py-20">
+                    <section className="mb-10 md:mb-14 lg:mb-16">
+                        <BackPillLink href="/blog/blog-bfshop/progress-reports" label="Back to Reports" />
+                    </section>
 
-                <div className="hidden lg:block flex justify-center w-1/3 p-2 lg:p-8">
-                    <Link href="/blog/blog-bfshop/progress-reports">
-                        <ArrowBackIcon
-                            sx={{
-                                fontSize: 60,
-                                color: 'orange',
-                            }}
-                        />
-                    </Link>
-                </div>
-                <h1 className="w-full lg:w-1/3 text-center font-inter font-bold [text-shadow:0_2px_6px_rgba(0,0,0,0.4)] text-3xl lg:text-6xl p-6">
-                    <Link href="/blog" className="inline-block">
-                        <span className="text-black">BF</span>
-                        <span className="text-orange-500">blog</span>
-                    </Link>
-                </h1>
-                <div className="w-1/3"></div>
-            </div>
-            <main className="flex flex-col justify-center items-center p-2 lg:p-6 bg-gray-100">
-                <div className="w-full max-w-3xl mx-auto px-4 py-10 bg-white relative z-50 min-h-screen">
-                    <div className="text-center font-inter">
-                        <h1 className="text-xl font-bold">Progress Report 1</h1>
-                        <br />
-                        <p>Ben Foster</p>
-                        <p>23rd July 2026</p>
-                        <p>3 min read</p>
-                        <br />
-                        <BFShopProgressReport1 />
-                    </div>
+                    <section className="page-header-stack page-header-tight text-center">
+                        <h1 className="font-inter text-5xl font-bold tracking-tight">Progress Report 1</h1>
+                        <p className="card-meta text-zinc-400">Ben Foster | 23 Jul 2026 | 3 min read</p>
+                    </section>
+
+                    <section className="page-section-gap">
+                        <article className="surface-raised p-6 md:p-8">
+                            <BFShopProgressReport1 />
+                        </article>
+                    </section>
                 </div>
             </main>
-            <footer className="relative bg-gray-100 flex justify-between items-center p-4 lg:p-8 gap-8 w-full mt-8">
-                <img src="/logo.png" alt="Logo" className="w-16 lg:w-32 h-6 lg:h-12 ml-6 lg:ml-12" />
-                <p className="font-inter text-sm lg:text-normal text-orange-700">&copy; 2026 Ben Foster. All rights reserved.</p>
-            </footer>
-        </div>
+        </>
     );
 }

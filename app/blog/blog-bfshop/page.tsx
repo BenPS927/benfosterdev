@@ -1,18 +1,18 @@
-import BFShopBlogContent from "./page-content";
+import BFShopPortalContent from "./page-content";
 import JsonLd from "../../components/shared/jsonld"
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: "BFshop Blog",
-  description: "Follow the documented progress of BFshop, as I learn to build my first full stack AI enhanced business system.",
+  title: "BFshop Project Portal",
+  description: "Explore the BFshop portal, documentation, and ongoing project logbook from one central hub.",
 }
 
 const schema = {
   "@context": "https://schema.org",
-  "@type": "Blog",
-  "name": "BFshop Blog",
-  "description": "Documentation, updates, and technical articles for the BFshop project.",
-  "url": "https://benfosterdev.com/blog/bfshop-blog-home",
+  "@type": "CollectionPage",
+  "name": "BFshop Project Portal",
+  "description": "Portal, documentation, updates, and technical references for the BFshop project.",
+  "url": "https://benfosterdev.com/blog/blog-bfshop",
   "author": {
     "@type": "Person",
     "name": "Ben Foster",
@@ -26,7 +26,7 @@ export default function BFShopBlog() {
     return (
         <div>
             <JsonLd schema={schema} />
-            <BFShopBlogContent />
+      <BFShopPortalContent />
         </div>
     )
 }

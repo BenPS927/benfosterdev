@@ -18,14 +18,15 @@ export default function HomePageDesktop() {
           transition={{ duration: 0.45, ease: 'easeOut' }}
           className="order-last flex flex-col justify-center py-2 lg:order-first lg:py-6"
         >
-          <div>
+          <div className="card-stack">
+            <p className="card-eyebrow text-[#FFA500]">Ben Foster</p>
             <h1 className="font-bebas text-4xl leading-[0.92] tracking-wide drop-shadow-[0_1px_1px_rgba(0,0,0,0.08)] md:text-6xl lg:text-7xl">
               Building AI Enhanced Business Systems
             </h1>
 
-            <div className="mt-6 mb-10 space-y-4 font-inter text-base leading-relaxed text-gray-600 md:text-lg">
-              <p>I&apos;m a systems builder with experience in IT administration and web development.</p>
-              <p>Designing connected business systems that combine AI, automation and integrations to reduce manual work.</p>
+            <div className="card-stack mt-2 mb-8 text-gray-600">
+              <p className="card-body md:text-lg">I&apos;m a systems builder with experience in IT administration and web development.</p>
+              <p className="card-body md:text-lg">Designing connected business systems that combine AI, automation and integrations to reduce manual work.</p>
             </div>
           </div>
 

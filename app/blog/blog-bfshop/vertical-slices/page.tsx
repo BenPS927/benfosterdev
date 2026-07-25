@@ -1,21 +1,21 @@
 import type { Metadata } from 'next';
 import JsonLd from '@/app/components/shared/jsonld';
-import ProgressReportsPageContent from './page-content';
+import VerticalSlicesPageContent from './vertical-slices-page-content';
 
 export const metadata: Metadata = {
-    title: 'Progress Reports | BFshop Project Portal',
-    description: 'Chronological BFshop delivery updates, documenting milestones, blockers, and implementation decisions.',
+    title: 'BFshop building method | Ben Foster\'s Blog',
+    description: 'Description of how BFshop is being built using the slice method.',
 };
 
 const schema = {
     '@context': 'https://schema.org',
     '@type': 'CollectionPage',
-    name: 'BFshop Progress Reports',
-    description: 'Chronological BFshop delivery updates, documenting milestones, blockers, and implementation decisions.',
-    url: 'https://benfosterdev.com/blog/blog-bfshop/progress-reports',
+    name: 'BFshop Building Method',
+    description: 'Description of how BFshop is being built using the slice method.',
+    url: 'https://benfosterdev.com/blog/blog-bfshop/vertical-slices',
     isPartOf: {
-        '@type': 'WebPage',
-        name: 'BFshop Project Portal',
+        '@type': 'Blog',
+        name: 'BFshop Blog',
         url: 'https://benfosterdev.com/blog/blog-bfshop',
     },
     author: {
@@ -29,24 +29,24 @@ const schema = {
             {
                 '@type': 'ListItem',
                 position: 1,
-                name: 'BFshop Project Portal',
+                name: 'BFshop Blog',
                 item: 'https://benfosterdev.com/blog/blog-bfshop',
             },
             {
                 '@type': 'ListItem',
                 position: 2,
-                name: 'Progress Reports',
-                item: 'https://benfosterdev.com/blog/blog-bfshop/progress-reports',
+                name: 'Vertical Slices',
+                item: 'https://benfosterdev.com/blog/blog-bfshop/vertical-slices',
             },
         ],
     },
 };
 
-export default function ProgressReportsPage() {
+export default function VerticalSlicesPage() {
     return (
         <div>
             <JsonLd schema={schema} />
-            <ProgressReportsPageContent />
+            <VerticalSlicesPageContent />
         </div>
     );
 }

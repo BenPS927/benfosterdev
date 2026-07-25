@@ -8,18 +8,21 @@ import Link from 'next/link';
 
 export default function Blogs2Content() {
     return (
-    <main className="min-h-screen w-full bg-[linear-gradient(180deg,#eaeaea_0%,#f2f2f2_45%,#fafafa_100%)] px-4 py-6 text-neutral-950 sm:px-5 md:px-6 md:py-8 lg:px-8 space-y-2 ">
+    <main className="min-h-screen w-full bg-[linear-gradient(180deg,#eaeaea_0%,#f2f2f2_45%,#fafafa_100%)] px-4 py-6 text-neutral-950 sm:px-5 md:px-6 md:py-8 lg:px-8 space-y-4">
             <section className="mx-auto flex flex-col md:grid w-full max-w-7xl gap-8 sm:gap-10 lg:min-h-[calc(60vh-8rem)] lg:grid-cols-4 lg:grid-rows-1 lg:gap-x-12 lg:gap-y-10 mt-8 mb-8">
               <div className="flex items-center justify-center pt-2 sm:pt-4 lg:col-start-1 lg:col-end-3 " >
-                <motion.h2
+                <motion.div
                   initial={{ opacity: 0.5, x: 192 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true, amount: 0.12 }}
                   transition={{ duration: 0.16, ease: 'easeOut' }}
-                  className="font-bebas text-5xl leading-[0.92] text-center tracking-wide text-neutral-900 drop-shadow-[0_1px_1px_rgba(0,0,0,0.08)] sm:text-6xl md:text-7xl"
+                  className="card-stack text-center"
                 >
-                  Read in more depth about what I&apos;m doing
-                </motion.h2>
+                  <p className="card-eyebrow text-[#FFA500]">Deep Dive</p>
+                  <h2 className="font-bebas text-5xl leading-[0.92] text-center tracking-wide text-neutral-900 drop-shadow-[0_1px_1px_rgba(0,0,0,0.08)] sm:text-6xl md:text-7xl">
+                    Read in more depth about what I&apos;m doing
+                  </h2>
+                </motion.div>
               </div>
               
               <motion.div
@@ -42,8 +45,10 @@ export default function Blogs2Content() {
                 transition={{ duration: 0.45, ease: 'easeOut', delay: 0.06 }}
                 className="flex w-full h-full max-w-sm self-stretch items-center justify-center"
               >
-                <Link href="/blog" className="group flex h-24 w-24 items-center justify-center rounded-2xl border border-neutral-900/15 bg-white p-6 shadow-[0_2px_10px_rgba(0,0,0,0.04)] ring-1 ring-white/40 transition duration-300 hover:-translate-y-0.5 hover:border-orange-600 hover:shadow-[0_8px_24px_rgba(0,0,0,0.08)] lg:h-48 lg:w-48">
-                  <p className="font-inter text-2xl font-bold text-[#FFA500] transition group-hover:text-orange-600">BFBlog</p>
+                <Link href="/blog" className="surface-raised-light is-interactive group flex h-24 w-24 flex-col items-center justify-center p-4 ring-1 ring-white/40 lg:h-48 lg:w-48 lg:p-6">
+                  <p className="card-eyebrow text-[#FFA500]">Read</p>
+                  <p className="card-title text-[#FFA500] transition group-hover:text-orange-600">BFBlog</p>
+                  <p className="card-meta text-gray-600">Articles</p>
                 </Link>
               </motion.div>
             </section>
@@ -60,9 +65,11 @@ export default function Blogs2Content() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Open LinkedIn profile"
-                  className="group flex h-24 w-24 items-center justify-center rounded-2xl border border-neutral-900/15 bg-white p-6 shadow-[0_2px_10px_rgba(0,0,0,0.04)] ring-1 ring-white/40 transition duration-300 hover:-translate-y-0.5 hover:border-orange-600 hover:shadow-[0_8px_24px_rgba(0,0,0,0.08)] lg:h-48 lg:w-48"
+                  className="surface-base-light is-interactive group flex h-24 w-24 flex-col items-center justify-center p-4 ring-1 ring-white/40 lg:h-48 lg:w-48 lg:p-6"
                 >
-                  <LinkedInIcon sx={{ fontSize: 96, color: '#FFA500' }} className="transition group-hover:text-orange-600" />
+                  <p className="card-eyebrow text-[#FFA500]">Connect</p>
+                  <LinkedInIcon sx={{ fontSize: 72, color: '#FFA500' }} className="transition group-hover:text-orange-600 lg:!text-[96px]" />
+                  <p className="card-meta text-gray-600">LinkedIn</p>
                 </a>
                        
               </motion.div>
@@ -80,15 +87,18 @@ export default function Blogs2Content() {
                 
               </motion.div>
               <div className="order-1 md:order-3 flex items-center justify-center pt-2 sm:pt-4 md:col-start-3 md:col-end-5 lg:col-start-3 lg:col-end-5 " >
-                <motion.h2
+                <motion.div
                   initial={{ opacity: 0.5, x: -192 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true, amount: 0.12 }}
                   transition={{ duration: 0.16, ease: 'easeOut' }}
-                  className="font-bebas text-5xl leading-[0.92] text-center tracking-wide text-neutral-900 drop-shadow-[0_1px_1px_rgba(0,0,0,0.08)] sm:text-6xl md:text-7xl"
+                  className="card-stack text-center"
                 >
-                  Or get involved in the conversation on LinkedIn
-                </motion.h2>
+                  <p className="card-eyebrow text-[#FFA500]">Conversation</p>
+                  <h2 className="font-bebas text-5xl leading-[0.92] text-center tracking-wide text-neutral-900 drop-shadow-[0_1px_1px_rgba(0,0,0,0.08)] sm:text-6xl md:text-7xl">
+                    Or get involved in the conversation on LinkedIn
+                  </h2>
+                </motion.div>
               </div>
               
             </section>

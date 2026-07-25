@@ -1,6 +1,6 @@
 'use client'
 
-import { ETDesc, ETCode, ShopLink, ShopDesc, ShopBlog } from "./components"
+import { ETDesc, ETCode, ShopLink, ShopDesc } from "./components"
 import { ExpenseTracker } from "./expense-tracker"
 import { useState } from 'react'
 import KeyboardDoubleArrowLeftIcon from '@mui/icons-material/KeyboardDoubleArrowLeft';
@@ -12,8 +12,9 @@ export default function DesktopProjectsPage() {
 
     return (
         <div className="mx-auto overflow-x-hidden bg-[linear-gradient(180deg,#f4f4f4_0%,#f8f8f8_55%,#ffffff_100%)] px-4 py-6 text-neutral-950 sm:px-5 md:px-6 md:py-8 lg:px-8">
-            <div className="mx-auto w-full max-w-7xl space-y-6 md:space-y-8 lg:space-y-10">
-                <div className="space-y-5 text-center lg:space-y-6">
+            <div className="mx-auto w-full max-w-7xl space-y-8 md:space-y-10 lg:space-y-12">
+                <div className="space-y-4 text-center lg:space-y-5">
+                    <p className="card-eyebrow text-[#FFA500]">Current Work</p>
                     <motion.h1
                         initial={{ opacity: 0.5, x: -192 }}
                         whileInView={{ opacity: 1, x: 0 }}
@@ -23,10 +24,10 @@ export default function DesktopProjectsPage() {
                     >
                         BFshop
                     </motion.h1>
-                    <p className="hidden mx-auto max-w-3xl font-inter text-base leading-relaxed text-gray-600 md:text-lg">
+                    <p className="hidden mx-auto max-w-3xl card-body text-gray-600 md:text-lg">
                         This is where you&apos;ll find the project I&apos;m currently working on, and the ones I&apos;ve completed.
                     </p>
-                    <p className="hidden font-inter text-sm leading-relaxed text-gray-500 md:text-base">Use the arrows to switch project panels.</p>
+                    <p className="hidden card-meta text-gray-500 md:text-sm">Use the arrows to switch project panels.</p>
                 </div>
 
                 <div className="hidden flex justify-center gap-3 md:gap-4">
@@ -60,7 +61,7 @@ export default function DesktopProjectsPage() {
                         className="flex flex-row transition-transform duration-300"
                         style={{ transform: `translateX(-${panel * 100}%)` }}
                     >
-                        <div className="grid w-full min-w-full shrink-0 grid-cols-1 items-stretch gap-4 sm:gap-5 lg:grid-cols-3 lg:gap-6">
+                        <div className="grid w-full min-w-full shrink-0 grid-cols-1 items-stretch gap-4 md:gap-5 lg:grid-cols-3 lg:gap-6">
                             <article className="flex items-stretch p-3 sm:p-4 md:p-6">
                                 <ETDesc />
                             </article>
@@ -74,17 +75,13 @@ export default function DesktopProjectsPage() {
                             </article>
                         </div>
 
-                        <div className="grid w-full min-w-full shrink-0 grid-cols-1 items-stretch gap-4 sm:gap-5 lg:grid-cols-3 lg:gap-6">
+                        <div className="grid w-full min-w-full shrink-0 grid-cols-1 items-stretch gap-4 md:gap-5 lg:grid-cols-2 lg:gap-6">
                             <article className="flex items-stretch p-3 sm:p-4 md:p-6">
                                 <ShopDesc />
                             </article>
 
                             <article className="flex items-stretch justify-center p-3 pt-2 sm:p-4 sm:pt-4 md:p-6 md:pt-8 lg:pt-12">
                                 <ShopLink />
-                            </article>
-
-                            <article className="flex items-stretch justify-center p-3 pt-2 sm:p-4 sm:pt-8 md:p-6 md:pt-12 lg:pt-12">
-                                <ShopBlog />
                             </article>
                         </div>
                     </div>
