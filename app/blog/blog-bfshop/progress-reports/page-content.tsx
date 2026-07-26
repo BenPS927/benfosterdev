@@ -3,6 +3,13 @@ import { BackPillLink } from '../../../components/ui/back-pill-link';
 
 const reports = [
     {
+        eyebrow: 'Report 02',
+        title: 'Progress Report 2',
+        body: 'Backend cart-slice architecture progress, service-layer planning, and project portal refinements.',
+        meta: '26 Jul 2026 | 4 min read',
+        href: '/blog/blog-bfshop/progress-reports/report-2',
+    },
+    {
         eyebrow: 'Report 01',
         title: 'Progress Report 1',
         body: 'Current status of the customer-facing slice, cart/backend bridge planning, and infrastructure setup decisions.',
