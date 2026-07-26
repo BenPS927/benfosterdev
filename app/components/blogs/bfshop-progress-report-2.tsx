@@ -1,6 +1,7 @@
 export default function BFShopProgressReport2() {
     return (
         <article className="card-stack font-inter text-left">
+            <div className="card-stack card-cluster-gap">
             <section className="card-stack-tight">
                 <h2 className="card-title text-white">Progress update 2</h2>
                 <p className="card-body text-zinc-200">
@@ -47,11 +48,12 @@ export default function BFShopProgressReport2() {
                     </li>
                 </ul>
             </section>
+            </div>
 
             <section className="card-stack-tight">
                 <p className="card-body text-zinc-200">
                     Having only written frontend React until now, this is quite the learning curve. My javascript
-                    wasn't good, but I'm enjoying learning to visualise the flow of data as it is passed between
+                    isn't good, but I'm enjoying learning to visualise the flow of data as it is passed between
                     functions, stored in variables and then manipulated.
                 </p>
                 <p className="card-body text-zinc-200">
