@@ -16,7 +16,7 @@ export default function BFShopProgressReport2() {
             </section>
 
             <section className="card-stack-tight">
-                <h2 className="card-title text-white">So going from the top down</h2>
+                <h2 className="card-title text-white">Top to bottom:</h2>
                 <ul className="card-body list-disc space-y-3 pl-6 text-zinc-200">
                     <li>
                         The API performs validation on the order it receives to make sure it's not empty. If it
