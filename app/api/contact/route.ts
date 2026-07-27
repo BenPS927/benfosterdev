@@ -19,8 +19,14 @@ export async function POST(req: Request) {
     });
 
     if (!n8nRes.ok) {
-      return NextResponse.json({ error: "n8n failed" }, { status: 502 });
-    }
+  const errorText = await n8nRes.text();
+  console.error("n8n error:", n8nRes.status, errorText);
+
+  return NextResponse.json(
+    { error: "n8n failed", details: errorText },
+    { status: 502 }
+  );
+}
 
     return NextResponse.json({ ok: true });
   } catch {
