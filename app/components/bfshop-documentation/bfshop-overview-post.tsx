@@ -1,4 +1,4 @@
-export default function BFShopBlogPost() {
+export default function BFShopOverviewPost() {
 	return (
 		<article className="font-inter leading-relaxed text-left p-2 lg:p-4">
 			<div className="text-center">

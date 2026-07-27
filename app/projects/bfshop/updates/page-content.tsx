@@ -7,14 +7,14 @@ const reports = [
         title: 'Progress Report 2',
         body: 'Backend cart-slice architecture progress, service-layer planning, and project portal refinements.',
         meta: '26 Jul 2026 | 4 min read',
-        href: '/blog/blog-bfshop/progress-reports/report-2',
+        href: '/projects/bfshop/updates/report-2',
     },
     {
         eyebrow: 'Report 01',
         title: 'Progress Report 1',
         body: 'Current status of the customer-facing slice, cart/backend bridge planning, and infrastructure setup decisions.',
         meta: '23 Jul 2026 | 3 min read',
-        href: '/blog/blog-bfshop/progress-reports/report-1',
+        href: '/projects/bfshop/updates/report-1',
     },
 ];
 
@@ -23,7 +23,7 @@ export default function ProgressReportsPageContent() {
         <main className="min-h-screen bg-subtle-dark-gradient text-white">
             <div className="mx-auto max-w-7xl px-6 py-12 md:px-8 md:py-16 lg:py-20">
                 <section className="mb-10 md:mb-14 lg:mb-16">
-                    <BackPillLink href="/blog/blog-bfshop" label="Back to Portal" />
+                    <BackPillLink href="/projects/bfshop" label="Back to Portal" />
                 </section>
 
                 <section className="page-header-stack page-header-tight text-center">

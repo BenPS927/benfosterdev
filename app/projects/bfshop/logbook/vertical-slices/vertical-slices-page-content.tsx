@@ -1,4 +1,4 @@
-import { BackPillLink } from '../../../components/ui/back-pill-link';
+import { BackPillLink } from '../../../../components/ui/back-pill-link';
 import { PlaceOrderSlice } from './slice-content';
 
 export default function VerticalSlicesPageContent() {
@@ -42,7 +42,7 @@ export default function VerticalSlicesPageContent() {
       <main className="min-h-screen bg-subtle-dark-gradient text-white">
         <div className="mx-auto max-w-7xl px-6 py-12 md:px-8 md:py-16 lg:py-20">
           <section className="mb-10 md:mb-14 lg:mb-16">
-            <BackPillLink href="/blog/blog-bfshop" />
+            <BackPillLink href="/projects/bfshop" />
           </section>
 
           <section className="page-header-stack page-header-tight text-center">

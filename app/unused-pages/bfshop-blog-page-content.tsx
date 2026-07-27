@@ -11,24 +11,24 @@ export default function BFShopBlogContent() {
   
   {
     title: "Data Foundations",
-    link: "/blog/blog-bfshop/data-foundations"
+        link: "/projects/bfshop/logbook/data-foundations"
   },
   {
     title: "Vertical Slices",
-    link: "/blog/blog-bfshop/vertical-slices"
+        link: "/projects/bfshop/logbook/vertical-slices"
   },
 
   {
     title: "AI",
-    link: "/blog/blog-bfshop/ai"
+        link: "/projects/bfshop/logbook/ai"
   },
   {
     title: "Automation",
-    link: "/blog/blog-bfshop/automation"
+        link: "/projects/bfshop/logbook/automation"
   },
   {
     title: "Development Log",
-    link: "/blog/blog-bfshop/development-log"
+        link: "/projects/bfshop/logbook/development-log"
   }
 ];
     
@@ -96,7 +96,7 @@ export default function BFShopBlogContent() {
                     <motion.div 
                         layout
                         className="relative overflow-hidden bg-white w-full md:w-[calc(50%-0.5rem)] lg:w-[calc(25%-1.125rem)] lg:flex-none lg:h-1/5 p-2 lg:p-6 rounded-lg shadow-md hover:shadow-lg flex flex-col justify-center items-center min-h-[200px] mt-4 scale-[0.94] origin-top">
-                        <Link href="/blog/blog-bfshop-1">
+                        <Link href="/projects/bfshop/overview">
                             <div className="absolute inset-0 flex items-center justify-center z-0">
                                 <SmartToyIcon sx={{ 
                                     fontSize: 144, 
@@ -110,7 +110,7 @@ export default function BFShopBlogContent() {
                     <motion.div 
                         layout
                         className="relative overflow-hidden bg-white w-full md:w-[calc(50%-0.5rem)] lg:w-[calc(25%-1.125rem)] lg:flex-none lg:h-1/5 p-2 lg:p-6 rounded-lg shadow-md hover:shadow-lg flex flex-col justify-center items-center min-h-[200px] mt-4 scale-[0.94] origin-top">
-                        <Link href="/blog/blog-bfshop-2">
+                        <Link href="/projects/bfshop/specifications">
                             <div className="absolute inset-0 flex items-center justify-center z-0">
                                 <SmartToyIcon sx={{ 
                                     fontSize: 144, 
@@ -125,7 +125,7 @@ export default function BFShopBlogContent() {
                     <motion.div 
                         layout
                         className="relative overflow-hidden bg-white w-full md:w-[calc(50%-0.5rem)] lg:w-[calc(25%-1.125rem)] lg:flex-none lg:h-1/5 p-2 lg:p-6 rounded-lg shadow-md hover:shadow-lg flex flex-col justify-center items-center min-h-[200px] mt-4 scale-[0.94] origin-top">
-                        <Link href="/blog/blog-bfshop/progress-reports">
+                        <Link href="/projects/bfshop/updates">
                             <div className="absolute inset-0 flex items-center justify-center z-0">
                                 <ArticleIcon sx={{ 
                                     fontSize: 144, 

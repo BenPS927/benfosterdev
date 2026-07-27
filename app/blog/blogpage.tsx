@@ -67,12 +67,12 @@ export default function BlogPageContent() {
                         viewport={{ once: true }}
                         className="w-full"
                     >
-                        <div className="flex flex-col items-center gap-4 p-2 md:gap-12 lg:flex-row lg:items-stretch lg:gap-16 lg:p-8">
+                        <div className="flex flex-col items-center gap-4 p-2 md:gap-12 lg:p-8">
                             <motion.div 
                                 layout
                                 onMouseEnter={() => setHoveredCard(1)}
                                 onMouseLeave={() => setHoveredCard(null)}
-                                className="group relative flex min-h-[240px] w-full rounded-2xl border border-neutral-900/10 bg-white/95 p-4 shadow-sm transition duration-300 hover:-translate-y-0.5 hover:shadow-md lg:min-h-[320px] lg:w-1/2 lg:p-8"
+                                className="group relative flex min-h-[240px] w-full rounded-2xl border border-neutral-900/10 bg-white/95 p-4 shadow-sm transition duration-300 hover:-translate-y-0.5 hover:shadow-md lg:min-h-[320px] lg:max-w-3xl lg:p-8"
                             >
                                 <Link href="/blog/how-to-use-ai-to-enhance-your-skills" className="flex h-full w-full flex-col items-center justify-between">
                                     <div className="absolute inset-0 flex items-center justify-center z-0">
@@ -99,42 +99,6 @@ export default function BlogPageContent() {
                                                 <br /> Read this article to find out how
                                                 <br /> to make the most of it! 
                                                 <br /> Feb 25, 2026 · 8 min read
-                                            </motion.p>
-                                        }
-                                    </AnimatePresence>
-                                </Link>
-                            </motion.div>
-
-                            <motion.div 
-                                layout
-                                onMouseEnter={() => setHoveredCard(2)}
-                                onMouseLeave={() => setHoveredCard(null)}
-                                className="group relative flex min-h-[240px] w-full rounded-2xl border border-neutral-900/10 bg-white/95 p-4 shadow-sm transition duration-300 hover:-translate-y-0.5 hover:shadow-md lg:min-h-[320px] lg:w-1/2 lg:p-8"
-                            >
-                                <Link href="/blog/blog-bfshop" className="flex h-full w-full flex-col items-center justify-between">
-                                    <div className="absolute inset-0 flex items-center justify-center z-0">
-                                        <SmartToyIcon sx={{ 
-                                            fontSize: 170,
-                                            color: '#FFA500',
-                                            opacity: 0.14
-                                        }} />
-                                    </div>
-                                    <p className="relative z-10 mb-3 font-inter text-center text-base font-semibold text-neutral-900 transition group-hover:text-orange-600 md:text-lg lg:mb-16">
-                                        How I&apos;m Approaching my First Full Stack Project and what makes it different
-                                    </p>
-                                    <p className="font-inter text-center text-sm text-gray-600 lg:hidden">
-                                        I'm building my first full stack project <br /> Read this series to see my goals, architectural decisions, and progress. <br /> <br /> March 17th, 2026 · 8 min read
-                                    </p>
-                                    <AnimatePresence>
-                                        {hoveredCard === 2 && 
-                                            <motion.p layout
-                                                initial={{y: -50, opacity: 0}}
-                                                animate={{y: 0, opacity: 1}}
-                                                transition={{duration: 0.2}}
-                                                className="hidden font-inter text-center text-sm text-gray-600 lg:block">
-                                                I'm building my first full stack project. 
-                                                <br /> Read this article to see my goals, architectural decisions, and progress.
-                                                <br /> March 17th, 2026 · 8 min read
                                             </motion.p>
                                         }
                                     </AnimatePresence>

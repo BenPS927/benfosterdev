@@ -11,10 +11,7 @@ type LayoutChromeProps = {
 
 export function LayoutChrome({ children }: LayoutChromeProps) {
   const pathname = usePathname();
-  const hideChrome =
-    pathname.startsWith('/blog/blog-bfshop') ||
-    pathname === '/blog/blog-bfshop-1' ||
-    pathname === '/blog/blog-bfshop-2';
+  const hideChrome = pathname.startsWith('/projects/bfshop');
 
   return (
     <>

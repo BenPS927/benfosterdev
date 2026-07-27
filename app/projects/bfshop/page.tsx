@@ -12,7 +12,7 @@ const schema = {
   "@type": "CollectionPage",
   "name": "BFshop Project Portal",
   "description": "Portal, documentation, updates, and technical references for the BFshop project.",
-  "url": "https://benfosterdev.com/blog/blog-bfshop",
+  "url": "https://benfosterdev.com/projects/bfshop",
   "author": {
     "@type": "Person",
     "name": "Ben Foster",

@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 import Link from 'next/link'
-import AIEnhance from "@/app/components/blogs/how-to-use-ai-to-enhance-your-skills";
+import AIEnhance from "@/app/components/bfshop-documentation/how-to-use-ai-to-enhance-your-skills";
 import JsonLd from "@/app/components/shared/jsonld"
 
 export const metadata: Metadata = {

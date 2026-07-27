@@ -34,13 +34,13 @@ export default function UiSurfaceTiersPage() {
             <p className="mt-4 text-xs text-zinc-300">Utility: surface-raised</p>
           </article>
 
-          <Link href="/blog/blog-bfshop" className="surface-interactive block p-6">
+          <Link href="/projects/bfshop" className="surface-interactive block p-6">
             <p className="mb-2 text-xs uppercase tracking-[0.2em] text-zinc-300">Tier 3</p>
             <h2 className="mb-3 text-2xl font-semibold">Interactive Surface</h2>
             <p className="text-sm leading-relaxed text-zinc-200">
               Use for clickable panels. Hover adds lift and stronger contrast to signal interaction.
             </p>
-            <p className="mt-6 text-sm font-medium text-zinc-100">Open BFshop Blog -&gt;</p>
+            <p className="mt-6 text-sm font-medium text-zinc-100">Open BFshop Portal -&gt;</p>
             <p className="mt-4 text-xs text-zinc-300">Utility: surface-interactive</p>
           </Link>
         </section>
