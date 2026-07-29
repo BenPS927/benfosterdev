@@ -2,6 +2,7 @@
 import { motion, AnimatePresence }  from 'framer-motion';
 import Link from 'next/link'
 import SmartToyIcon from '@mui/icons-material/SmartToy';
+import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import { useState } from 'react'
 
 export default function BlogPageContent() {
@@ -67,7 +68,7 @@ export default function BlogPageContent() {
                         viewport={{ once: true }}
                         className="w-full"
                     >
-                        <div className="flex flex-col items-center gap-4 p-2 md:gap-12 lg:p-8">
+                        <div className="flex  items-center gap-4 p-2 md:gap-12 lg:p-8 ">
                             <motion.div 
                                 layout
                                 onMouseEnter={() => setHoveredCard(1)}
@@ -104,6 +105,42 @@ export default function BlogPageContent() {
                                     </AnimatePresence>
                                 </Link>
                             </motion.div>
+
+                            <motion.div 
+                                layout
+                                onMouseEnter={() => setHoveredCard(2)}
+                                onMouseLeave={() => setHoveredCard(null)}
+                                className="group relative flex min-h-[240px] w-full rounded-2xl border border-neutral-900/10 bg-white/95 p-4 shadow-sm transition duration-300 hover:-translate-y-0.5 hover:shadow-md lg:min-h-[320px] lg:max-w-3xl lg:p-8"
+                            >
+                                <Link href="/blog/automating-contact-form-emails-with-n8n" className="flex h-full w-full flex-col items-center justify-between">
+                                    <div className="absolute inset-0 flex items-center justify-center z-0">
+                                        <MailOutlineIcon sx={{
+                                            fontSize: 170,
+                                            color: '#FFA500',
+                                            opacity: 0.14
+                                        }} />
+                                    </div>
+                                    <p className="relative z-10 mb-3 font-inter text-center text-base font-semibold text-neutral-900 transition group-hover:text-orange-600 md:text-lg lg:mb-16">
+                                        How I set up a simple contact form automation with n8n
+                                    </p>
+                                    <p className="font-inter text-center text-sm text-gray-600 lg:hidden">
+                                        Learn how to build a simple automation to handle your contact form emails. <br /> Jul 29, 2026 · 10 min read
+                                    </p>
+                                    <AnimatePresence>
+                                        {hoveredCard === 2 && 
+                                            <motion.p layout
+                                                initial={{y: -50, opacity: 0}}
+                                                animate={{y: 0, opacity: 1}}
+                                                transition={{duration: 0.2}}
+                                                className="hidden font-inter text-center text-sm text-gray-600 lg:block">
+                                                Learn how to build a simple automation to handle your contact form emails.
+                                                <br /> Jul 29, 2026 · 10 min read
+                                            </motion.p>
+                                        }
+                                    </AnimatePresence>
+                                </Link>
+                            </motion.div>
+                            
                         </div>
                     </motion.div>
                 </main>
