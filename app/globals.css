@@ -138,6 +138,21 @@ body {
   outline-offset: 2px;
 }
 
+.is-interactive-orange {
+  transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease, background-color 180ms ease;
+}
+
+.is-interactive-orange:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 165, 0, 0.8);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.is-interactive-orange:focus-visible {
+  outline: 2px solid rgba(255, 165, 0, 0.8);
+  outline-offset: 2px;
+}
+
 .accent-electric-blue {
   color: var(--accent-electric-blue);
 }

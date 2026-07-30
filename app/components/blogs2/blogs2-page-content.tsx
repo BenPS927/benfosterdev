@@ -18,7 +18,7 @@ export default function Blogs2Content() {
                   transition={{ duration: 0.16, ease: 'easeOut' }}
                   className="card-stack text-center"
                 >
-                  <p className="card-eyebrow text-[#FFA500]">Deep Dive</p>
+                  
                   <h2 className="font-bebas text-5xl leading-[0.92] text-center tracking-wide text-neutral-900 drop-shadow-[0_1px_1px_rgba(0,0,0,0.08)] sm:text-6xl md:text-7xl">
                     Read in more depth about what I&apos;m doing
                   </h2>
@@ -45,7 +45,7 @@ export default function Blogs2Content() {
                 transition={{ duration: 0.45, ease: 'easeOut', delay: 0.06 }}
                 className="flex w-full h-full max-w-sm self-stretch items-center justify-center"
               >
-                <Link href="/blog" className="surface-raised-light is-interactive group flex h-24 w-24 flex-col items-center justify-center p-4 ring-1 ring-white/40 lg:h-48 lg:w-48 lg:p-6">
+                <Link href="/blog" className="surface-raised-light is-interactive-orange group flex h-24 w-24 flex-col items-center justify-center p-4 ring-1 ring-white/40 lg:h-48 lg:w-48 lg:p-6">
                   <p className="card-eyebrow text-[#FFA500]">Read</p>
                   <p className="card-title text-[#FFA500] transition group-hover:text-orange-600">BFBlog</p>
                   <p className="card-meta text-gray-600">Articles</p>
@@ -65,10 +65,10 @@ export default function Blogs2Content() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Open LinkedIn profile"
-                  className="surface-base-light is-interactive group flex h-24 w-24 flex-col items-center justify-center p-4 ring-1 ring-white/40 lg:h-48 lg:w-48 lg:p-6"
+                  className="surface-base-light is-interactive-orange group flex h-24 w-24 flex-col items-center justify-center p-4 ring-1 ring-white/40 lg:h-48 lg:w-48 lg:p-6"
                 >
                   <p className="card-eyebrow text-[#FFA500]">Connect</p>
-                  <LinkedInIcon sx={{ fontSize: 72, color: '#FFA500' }} className="transition group-hover:text-orange-600 lg:!text-[96px]" />
+                  <LinkedInIcon sx={{ fontSize: 46, color: '#FFA500' }} className="transition group-hover:text-orange-600 lg:!text-[96px]" />
                   <p className="card-meta text-gray-600">LinkedIn</p>
                 </a>
                        
@@ -94,7 +94,7 @@ export default function Blogs2Content() {
                   transition={{ duration: 0.16, ease: 'easeOut' }}
                   className="card-stack text-center"
                 >
-                  <p className="card-eyebrow text-[#FFA500]">Conversation</p>
+                
                   <h2 className="font-bebas text-5xl leading-[0.92] text-center tracking-wide text-neutral-900 drop-shadow-[0_1px_1px_rgba(0,0,0,0.08)] sm:text-6xl md:text-7xl">
                     Or get involved in the conversation on LinkedIn
                   </h2>

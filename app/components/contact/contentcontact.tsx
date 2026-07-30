@@ -14,6 +14,9 @@ export function ContentContact() {
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();  // stops page reload on form submit
 
+        setQuery('');
+        setEmail('');
+
         const response = await fetch("/api/contact", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
@@ -29,7 +32,7 @@ export function ContentContact() {
 
 
     return (
-        <div id="contact" className="mx-auto bg-[linear-gradient(180deg,#fafafa_0%,#e6e6e6_100%)] max-w-full">
+        <div id="contact" className="mx-auto bg-[linear-gradient(180deg,#fafafa_0%,#e6e6e6_100%)] max-w-full pt-16">
             <motion.div
                 initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
