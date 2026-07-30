@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 
 export default function WhyContent() {
   return (
-    <main className="min-h-screen w-full bg-[linear-gradient(180deg,#ffffff_0%,#f7f7f7_45%,#eaeaea_100%)] px-4 py-6 text-neutral-950 sm:px-5 md:px-6 md:py-8 lg:px-8 mt-20">
+    <main className="min-h-screen w-full bg-[linear-gradient(180deg,#ffffff_0%,#f7f7f7_45%,#eaeaea_100%)] px-4 py-6 pt-20 text-neutral-950 sm:px-5 md:px-6 md:py-8 md:pt-24 lg:px-8">
       <section className="mx-auto grid w-full max-w-7xl grid-cols-1 gap-8 sm:gap-10 lg:min-h-[calc(100vh-8rem)] lg:grid-cols-2 lg:grid-rows-2 lg:gap-x-12 lg:gap-y-10">
         <div className="flex items-start pt-2 sm:pt-4" >
           <motion.div
@@ -16,7 +16,7 @@ export default function WhyContent() {
             transition={{ duration: 0.16, ease: 'easeOut' }}
             className="card-stack"
           >
-            <p className="card-eyebrow text-[#FFA500]">Why This Matters</p>
+            
             <h2 className="font-bebas text-5xl leading-[0.92] tracking-wide text-neutral-900 drop-shadow-[0_1px_1px_rgba(0,0,0,0.08)] sm:text-6xl md:text-7xl">
               AI is here and it is here to stay.
             </h2>
@@ -44,7 +44,7 @@ export default function WhyContent() {
              transition={{ duration: 0.16, ease: 'easeOut' }}
              className="card-stack"
            >
-             <p className="card-eyebrow text-[#FFA500]">Build It Better</p>
+             
              <h2 className="font-bebas text-5xl leading-[0.92] tracking-wide text-neutral-900 drop-shadow-[0_1px_1px_rgba(0,0,0,0.08)] sm:text-6xl md:text-7xl">
                But it doesn&apos;t have to be a novelty.
              </h2>
