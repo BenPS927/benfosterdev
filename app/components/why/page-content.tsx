@@ -32,8 +32,8 @@ export default function WhyContent() {
           >
             <p className="card-body md:text-base">AI is an amazing tool. But the reality is that it has mostly become a novelty.</p>
             <p className="card-body md:text-base">Where it has been put to more purposeful use, it has often been underwhelming.</p>
-            <p className="card-body md:text-base">Customer service chatbots with no useful knowledge, seemingly only there to connect you to a human...</p>
-            <p className="card-body md:text-base">Picture creation tools that produce six-fingered hands and don&apos;t listen to prompts.</p>
+            <p className="card-body md:text-base">Customer service chatbots that know little beyond directing you to a human.</p>
+            <p className="card-body md:text-base">Image generators that struggle with basic instructions</p>
           </motion.div>
         </div>
         <div className="flex items-start pt-2 sm:pt-4" >

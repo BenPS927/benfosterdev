@@ -1,5 +1,6 @@
 
 import { NextResponse } from "next/server";
+import { ContactFormError } from "../../repositories/ContactFormError";
 
 export async function POST(req: Request) {
   try {
@@ -19,14 +20,16 @@ export async function POST(req: Request) {
     });
 
     if (!n8nRes.ok) {
-  const errorText = await n8nRes.text();
-  console.error("n8n error:", n8nRes.status, errorText);
+      const errorText = await n8nRes.text();
+      console.error("n8n error:", n8nRes.status, errorText);
 
-  return NextResponse.json(
-    { error: "n8n failed", details: errorText },
-    { status: 502 }
-  );
-}
+      await ContactFormError(errorText || "n8n failed");
+
+      return NextResponse.json(
+        { error: "n8n failed", details: errorText },
+        { status: 502 }
+      );
+    }
 
     return NextResponse.json({ ok: true });
   } catch {

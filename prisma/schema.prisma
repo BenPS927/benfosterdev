@@ -20,3 +20,12 @@ model playing_with_neon {
   name  String
   value Float? @db.Real
 }
+
+model contact_form_debug {
+  id            Int      @id(map: "contact_workflow_log_pkey") @default(autoincrement())
+  webhook       String   @default("Success") @db.VarChar(10)
+  receive_email String   @default("Success") @db.VarChar(10)
+  send_email    String   @default("Success") @db.VarChar(10)
+  notes         String?
+  created_at    DateTime @default(now()) @db.Timestamptz(6)
+}
