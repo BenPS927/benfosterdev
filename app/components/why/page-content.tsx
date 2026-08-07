@@ -18,7 +18,7 @@ export default function WhyContent() {
           >
             
             <h2 className="font-bebas text-5xl leading-[0.92] tracking-wide text-neutral-900 drop-shadow-[0_1px_1px_rgba(0,0,0,0.08)] sm:text-6xl md:text-7xl">
-              AI is here and it is here to stay.
+              Connectivity is Everything
             </h2>
           </motion.div>
         </div>
@@ -30,10 +30,10 @@ export default function WhyContent() {
             transition={{ duration: 0.45, ease: 'easeOut' }}
             className="card-stack text-gray-600"
           >
-            <p className="card-body md:text-base">AI is an amazing tool. But the reality is that it has mostly become a novelty.</p>
-            <p className="card-body md:text-base">Where it has been put to more purposeful use, it has often been underwhelming.</p>
-            <p className="card-body md:text-base">Customer service chatbots that know little beyond directing you to a human.</p>
-            <p className="card-body md:text-base">Image generators that struggle with basic instructions</p>
+            <p className="card-body md:text-base">Modern business sytems are a web of different platforms - the site itself, databases, analytics, Microsoft Office, messaging services.</p>
+            <p className="card-body md:text-base">The data on these platforms <i>is</i> the business.</p>
+            <p className="card-body md:text-base">Website leads, Whatsapp communications, data collection, site performance.</p>
+            <p className="card-body md:text-base">The connections between these platforms are what allows the business to run.</p>
           </motion.div>
         </div>
         <div className="flex items-start pt-2 sm:pt-4" >
@@ -46,7 +46,7 @@ export default function WhyContent() {
            >
              
              <h2 className="font-bebas text-5xl leading-[0.92] tracking-wide text-neutral-900 drop-shadow-[0_1px_1px_rgba(0,0,0,0.08)] sm:text-6xl md:text-7xl">
-               But it doesn&apos;t have to be a novelty.
+               Intelligent systems make the difference
              </h2>
            </motion.div>
         </div>
@@ -58,11 +58,12 @@ export default function WhyContent() {
             transition={{ duration: 0.45, ease: 'easeOut' }}
             className="card-stack text-gray-600"
           >
-            <p className="card-body md:text-base">The goal of what I&apos;m doing is to build systems that utilise the incredible capabilities of AI.</p>
-            <p className="card-body md:text-base">My BFShop project will feature chatbots for both interfaces that will be able to perform actions and provide useful information.</p>
-            <p className="card-body md:text-base">But this isn&apos;t enough; as we move into a more AI-dominated world, what we need is oversight.</p>
-            <p className="card-body md:text-base">That&apos;s why I&apos;m building AI Overwatch, an interface that will show AI behaviour and capabilities.</p>
-            <p className="card-body md:text-base">As I continue, I&apos;ll explore more ways to implement AI effectively and responsibly.</p>
+            <p className="card-body md:text-base">Most businesses already have the information they need. The problem is that it's scattered across disconnected systems.</p>
+            <p className="card-body md:text-base">Most users spend hours copying and pasting data, manually entering information, reading stats and metrics.</p>
+            <p className="card-body md:text-base">With modern technology we can automate these processes and save users time.</p>
+            <p className="card-body md:text-base">Automation moves information. AI gives it context. Together they create systems that can understand, decide and act.</p>
+            <p className="card-body md:text-base">The goal at BFdev is to develop personalised systems that do just that.</p>
+            
           </motion.div>
         </div>
 

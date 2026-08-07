@@ -21,12 +21,12 @@ export default function HomePageDesktop() {
           <div className="card-stack">
             <p className="card-eyebrow text-[#FFA500]">Ben Foster</p>
             <h1 className="font-bebas text-4xl leading-[0.92] tracking-wide drop-shadow-[0_1px_1px_rgba(0,0,0,0.08)] md:text-6xl lg:text-7xl">
-              Building AI Enhanced Business Systems
+              Building intelligent business systems
             </h1>
 
             <div className="card-stack mt-2 mb-8 text-gray-600">
-              <p className="card-body md:text-lg">I&apos;m a systems builder with experience in IT administration and web development.</p>
-              <p className="card-body md:text-lg">Designing connected business systems that combine AI, automation and integrations to reduce manual work.</p>
+              <p className="card-body md:text-lg">I&apos;m a systems builder with experience in IT administration and software development.</p>
+              <p className="card-body md:text-lg">The goal at BFdev is to utilise AI and automation to design systems that can understand, decide and act.</p>
             </div>
           </div>
 

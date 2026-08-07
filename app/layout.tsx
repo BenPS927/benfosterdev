@@ -38,10 +38,10 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "Ben Foster | React Developer & AI Builder",
+    default: "BFdev | Building Intelligent Systems that can Understand, Decide and Act",
     template: "%s | Ben Foster Dev",
   },
-  description: "Bristol-based web developer building AI enhanced business systems.",
+  description: "Software developer building intelligent business systems.",
 };
 
 const schema = {
