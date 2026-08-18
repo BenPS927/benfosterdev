@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     default: "BFdev | Building Intelligent Systems that can Understand, Decide and Act",
     template: "%s | Ben Foster Dev",
   },
-  description: "Software developer building intelligent business systems.",
+  description: "Software engineer building intelligent business systems.",
 };
 
 const schema = {
@@ -49,7 +49,7 @@ const schema = {
   "@type": "Person",
   "name": "Ben Foster",
   "url": "https://benfosterdev.com",
-  "jobTitle": "Web Developer and AI Builder",
+  "jobTitle": "Software engineer",
   "worksFor": {
     "@type": "Organization",
     "name": "Freelance"

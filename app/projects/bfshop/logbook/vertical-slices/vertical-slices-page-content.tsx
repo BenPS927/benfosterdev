@@ -1,4 +1,5 @@
 import { BackPillLink } from '../../../../components/ui/back-pill-link';
+import Link from 'next/link';
 import { PlaceOrderSlice } from './slice-content';
 
 export default function VerticalSlicesPageContent() {
@@ -65,7 +66,14 @@ export default function VerticalSlicesPageContent() {
                                             <p className="card-eyebrow accent-electric-blue">{slice.eyebrow}</p>
                       <h2 className="card-title text-white">{slice.title}</h2>
                       {slice.body ? <p className="card-body text-zinc-300">{slice.body}</p> : null}
-                      {slice.content ? <div className="text-zinc-300">{slice.content}</div> : null}
+                      {slice.content ? (
+                        <Link
+                          href="/projects/bfshop/logbook/vertical-slices/place-order"
+                          className="card-body accent-electric-blue underline-offset-4 hover:underline"
+                        >
+                          {slice.content}
+                        </Link>
+                      ) : null}
                     </div>
 
                     <p className="card-meta text-zinc-500">{slice.meta}</p>
