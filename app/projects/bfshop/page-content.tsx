@@ -53,8 +53,11 @@ export default function BFShopPortalContent() {
                     <h1 className="font-bebas text-5xl leading-none tracking-[0.12em] text-white sm:text-6xl lg:text-7xl">
                         BF<span className="text-sky-400">SHOP</span>
                     </h1>
-                    <p className="max-w-2xl font-inter text-sm leading-7 text-zinc-300 sm:text-base">
-                        The project portal for BFshop. Here you can access the project and view the ongoing documentation, which includes styling detail, structural design, and a development log.</p>
+                  
+                        <p className="max-w-2xl font-inter text-sm leading-7 text-zinc-300 sm:text-base">
+                        BFshop is an under construction, simulated business system. The goal is to have a simple, AI chat interface replace daunting analytics dashboards. Scroll down to the logbook for more details.</p>
+                        <p className="max-w-2xl font-inter text-sm leading-7 text-sky-400 sm:text-base">
+                        Current stage: Building and storing traditional business metrics for backend use</p>
                 </header>
 
                 <section className="relative mx-auto w-full max-w-6xl">
