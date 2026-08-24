@@ -30,13 +30,13 @@ export function ShopDesc() {
         <div className="card-stack h-full w-full p-3 text-gray-600">
             <p className="card-eyebrow text-[#FFA500]">Project Summary</p>
             <p className="card-title text-neutral-900">BFshop</p>
-            <p className="card-meta md:text-sm">BFShop is an AI-enhanced business system in development, exploring how AI, automation, and integrations can reduce manual work.</p>
+            <p className="card-meta md:text-sm">BFshop is a simulated business system with live data passing through it. The purpose is to create an intelligence and action tool without the user being swamped with dashboards.</p>
             <ul className="list-disc pl-5 space-y-1 card-meta md:text-sm">
-                <li>Separate customer and merchant applications sharing a common backend and database </li>
-                <li>AI-powered customer service and merchant assistants with access to live business data </li>
-                <li>AI chatbots for handling queries and assisting both sides</li>
-                <li>An AI Overwatch layer to monitor and control how AI is used across the system</li>
-                <li>Built as a complete business simulation, from storefront to internal operations</li>
+                <li>Place orders as customer and manage them as merchant</li>
+                <li>A synthetic customer base generating orders constantly</li>
+                <li>Business metrics are calculated and stored historically</li>
+                <li>Simulated ecommerce data and business actions influence customer buying behaviour</li>
+                <li>A simple AI interface explains what matters, answers questions and suggests actions</li>
             </ul>
             
         </div>
@@ -59,7 +59,7 @@ export function ShopLink(){
             </h3>
 
             <p className="mt-3 card-body text-gray-600 md:text-base">
-                Explore the live project, technical documentation, and build logbook in one place.
+                Watch the live order chain or read my documentation as the project progresses.
             </p>
 
             <span className="mt-6 inline-flex items-center card-meta font-semibold text-[#FFA500] transition group-hover:text-orange-600">

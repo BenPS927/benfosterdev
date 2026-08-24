@@ -6,34 +6,32 @@ export default function VerticalSlicesPageContent() {
     const slices = [
 
     {
-      eyebrow: 'Commerce Slice',
       title: 'Place Order',
       content: <PlaceOrderSlice />,
       meta: 'Status: in progress',
+      href: '/projects/bfshop/logbook/vertical-slices/place-order',
     },
     {
-      eyebrow: 'Operations Slice',
-      title: 'Receive Order',
-      body: 'This slice will cover the merchant-side flow for receiving, reviewing, and progressing new customer orders.',
-      meta: 'Status: early design stage',
+      title: 'Manage Orders',
+      body: 'The merchant-side flow for receiving, reviewing, and progressing new customer orders.',
+      meta: 'Status: documented',
+      href: '/projects/bfshop/logbook/vertical-slices/receive-order',
     },
 
     {
-      eyebrow: 'Support Slice',
-      title: 'Customer service AI',
-      body: 'This slice will define how AI supports customer questions, order lookups, and issue handling using live business data.',
+      title: 'Data Generation',
+      body: 'The generation of business data to provide data for BFshop.',
+      meta: 'Status: In progress',
+      
+    },
+    {
+      title: 'Metric Storage',
+      body: 'This slice will involve calculating business metrics from the generated business data and storing it.',
       meta: 'Status: early design stage',
     },
     {
-      eyebrow: 'Assistant Slice',
-      title: 'AI assistant',
-      body: 'This slice will focus on the merchant-facing assistant layer that helps with tasks, decisions, and operational visibility.',
-      meta: 'Status: early design stage',
-    },
-    {
-      eyebrow: 'Oversight Slice',
-      title: 'AI Overwatch',
-      body: 'This slice will document the oversight layer used to monitor AI behaviour, capabilities, and safe system usage.',
+      title: 'AI analysis',
+      body: 'This slice will involve feeding select data to AI for presentation to the user.',
       meta: 'Status: early design stage',
     },
   ];
@@ -63,17 +61,17 @@ export default function VerticalSlicesPageContent() {
                 >
                   <div className="card-stack h-full justify-between">
                     <div className="card-stack">
-                                            <p className="card-eyebrow accent-electric-blue">{slice.eyebrow}</p>
                       <h2 className="card-title text-white">{slice.title}</h2>
-                      {slice.body ? <p className="card-body text-zinc-300">{slice.body}</p> : null}
-                      {slice.content ? (
+                      {slice.href ? (
                         <Link
-                          href="/projects/bfshop/logbook/vertical-slices/place-order"
+                          href={slice.href}
                           className="card-body accent-electric-blue underline-offset-4 hover:underline"
                         >
-                          {slice.content}
+                          {slice.title === 'Place Order' ? 'Read Slice 1' : 'Read Slice 2'}
                         </Link>
                       ) : null}
+                      {slice.body ? <p className="card-body text-zinc-300">{slice.body}</p> : null}
+                      {slice.content ? <div className="card-body text-zinc-300">{slice.content}</div> : null}
                     </div>
 
                     <p className="card-meta text-zinc-500">{slice.meta}</p>
