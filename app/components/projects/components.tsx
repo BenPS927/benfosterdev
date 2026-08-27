@@ -47,7 +47,7 @@ export function ShopDesc() {
 export function ShopLink(){
     return(
         <Link
-            href="/projects/bfshop"
+            href="https://bfshop.benfosterdev.com"
             className="surface-spotlight-light is-interactive-orange group w-full h-full max-w-sm p-6 ring-1 ring-white/40 border"
         >
             <div className="mb-4 inline-flex rounded-full border border-[#FFA500]/45 bg-[#FFA500]/10 px-3 py-1 card-eyebrow text-[#FFA500]">
