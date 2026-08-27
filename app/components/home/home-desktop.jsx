@@ -26,7 +26,7 @@ export default function HomePageDesktop() {
 
             <div className="card-stack mt-2 mb-8 text-gray-600">
               <p className="card-body md:text-lg">I&apos;m a systems builder with experience in IT administration and software development.</p>
-              <p className="card-body md:text-lg">The goal at BFdev is to utilise AI and automation to design systems that can understand, decide and act.</p>
+              <p className="card-body md:text-lg">The current goal at BFdev is applying AI and automation to design eCommerce systems that can understand, decide and act.</p>
             </div>
           </div>
 

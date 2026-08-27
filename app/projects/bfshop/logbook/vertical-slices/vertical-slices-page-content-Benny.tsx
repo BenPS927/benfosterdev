@@ -6,34 +6,32 @@ export default function VerticalSlicesPageContent() {
     const slices = [
 
     {
-      title: 'Slice 1: Place Order',
+      title: 'Place Order',
       content: <PlaceOrderSlice />,
       meta: 'Status: in progress',
       href: '/projects/bfshop/logbook/vertical-slices/place-order',
-      linkLabel: 'Read Slice 1',
     },
     {
-      title: 'Slice 2: Manage Orders',
-      body: 'The merchant end of BFshop. The interface where the merchant can view and manage orders.',
+      title: 'Manage Orders',
+      body: 'The merchant-side flow for receiving, reviewing, and progressing new customer orders.',
       meta: 'Status: documented',
       href: '/projects/bfshop/logbook/vertical-slices/receive-order',
-      linkLabel: 'Read Slice 2',
     },
 
     {
-      title: 'Slice 3: Data Generation',
-      body: 'The generation, and input of into BFshop, of data simulating an eCommerce environment.',
+      title: 'Data Generation',
+      body: 'The generation of business data to provide data for BFshop.',
       meta: 'Status: In progress',
       
     },
     {
-      title: 'Slice 4: Metric Storage',
-      body: 'The calculation and storage of business metrics.',
+      title: 'Metric Storage',
+      body: 'This slice will involve calculating business metrics from the generated business data and storing it.',
       meta: 'Status: early design stage',
     },
     {
-      title: 'Slice 5: AI presentation',
-      body: 'The main user interface; a chatbot with access to the stored metrics.',
+      title: 'AI analysis',
+      body: 'This slice will involve feeding select data to AI for presentation to the user.',
       meta: 'Status: early design stage',
     },
   ];
@@ -50,7 +48,7 @@ export default function VerticalSlicesPageContent() {
             <div className="page-header-stack page-header-tight text-center">
               <h1 className="font-inter text-5xl font-bold tracking-tight">Slices</h1>
               <p className="mx-auto max-w-3xl card-body text-zinc-300">
-                For manageability this project is built in segments between the database and the user interface, called slices. Some slices will involve external input but are still considered slices. 
+                Rather than building the whole frontend and then backend separately, I am building each function of the shop as a vertical slice, from where it is interacted with in the frontend to where it connects to the database. Each slice can be seen below and its details will be written in as development continues.
               </p>
             </div>
           </section>
@@ -69,7 +67,7 @@ export default function VerticalSlicesPageContent() {
                           href={slice.href}
                           className="card-body accent-electric-blue underline-offset-4 hover:underline"
                         >
-                          {slice.linkLabel}
+                          {slice.title === 'Place Order' ? 'Read Slice 1' : 'Read Slice 2'}
                         </Link>
                       ) : null}
                       {slice.body ? <p className="card-body text-zinc-300">{slice.body}</p> : null}

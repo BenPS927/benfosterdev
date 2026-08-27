@@ -55,11 +55,9 @@ export default function BFShopPortalContent() {
                     </h1>
                   
                         <p className="max-w-2xl font-inter text-sm leading-7 text-zinc-300 sm:text-base">
-                         BFshop is an under-construction simulated ecommerce business used to develop an intelligence system that identifies what matters, explains it simply and suggests what to do next — without swamping the merchant with analytics dashboards.</p>
+                        BFshop is an under-construction simulated ecommerce business used to develop an intelligence system that identifies what matters, explains it simply and suggests what to do next — without swamping the merchant with analytics dashboards.</p>
                         <p className="max-w-2xl font-inter text-sm leading-7 text-sky-400 sm:text-base">
                         Current stage: Building and storing traditional business metrics for backend use</p>
-                        <p className="max-w-2xl font-inter text-sm leading-7 text-zinc-300 sm:text-base">
-                         Read the introduction to understand the vision, read progress reports to see exactly where the project is at, or scroll down to vertical slices in the logbook to understand the architecture.</p>
                 </header>
 
                 <section className="relative mx-auto w-full max-w-6xl">

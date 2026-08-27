@@ -5,7 +5,7 @@ export default function ReceiveOrderDocument() {
     return (
         <article className="card-stack font-inter text-left">
             <section className="card-stack-tight">
-                <h2 className="card-title text-white">Slice 2</h2>
+                <h2 className="card-title text-white">Slice 2: Manage Orders</h2>
                 <p className="card-body text-zinc-200">
                     The goal of Slice 2 is to display orders in received, sent, and delivered dashboards for the merchant, and allow the merchant to mark orders from received to sent and from sent to delivered.
                 </p>

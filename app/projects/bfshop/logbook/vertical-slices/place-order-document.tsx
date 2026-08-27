@@ -2,7 +2,7 @@ export default function PlaceOrderDocument() {
     return (
         <article className="card-stack font-inter text-left">
             <section className="card-stack-tight">
-                <h2 className="card-title text-white">Place Order Slice</h2>
+                <h2 className="card-title text-white">Slice 1: Place Order</h2>
                 <p className="card-body font-semibold text-zinc-200">
                     This slice uses an API, service, and data-access layer architecture. The original plan was to include an application layer between the API and service, but this seemed needless as it was just another layer which had no real function. The entirety of the place order functionality deals with the service layer taking data from the placed order, referencing it against the database, and creating a new order and its items. This document focuses on that, with the database operations mentioned but not discussed in too much detail as they are very simple.
                 </p>
