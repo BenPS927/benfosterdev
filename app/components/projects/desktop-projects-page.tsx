@@ -14,7 +14,7 @@ export default function DesktopProjectsPage() {
         <div className="mx-auto overflow-x-hidden bg-[linear-gradient(180deg,#f4f4f4_0%,#f8f8f8_55%,#ffffff_100%)] px-4 py-6 text-neutral-950 sm:px-5 md:px-6 md:py-8 lg:px-8">
             <div className="mx-auto w-full max-w-7xl space-y-8 md:space-y-10 lg:space-y-12">
                 <div className="space-y-4 text-center lg:space-y-5">
-                    <p className="card-eyebrow text-[#FFA500]">Current Work</p>
+                 
                     <motion.h1
                         initial={{ opacity: 0.5, x: -192 }}
                         whileInView={{ opacity: 1, x: 0 }}

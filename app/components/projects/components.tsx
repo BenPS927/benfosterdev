@@ -25,18 +25,29 @@ export function ETCode() {
     )
 }
 
+const shopFeatures = [
+    { text: 'Place orders as customer and manage them as merchant', status: 'Almost complete' },
+    { text: 'A synthetic economy where customer characteristics, business actions and external factors influence buying behavior', status: 'In progress' },
+    { text: 'Business metrics calculated and stored historically', status: 'In progress' },
+    { text: 'Data patterns and relationships investigated to find insights', status: 'Not yet started' },
+    { text: 'An AI chatbot to present findings and answer queries, replacing endless dashboards and answering questions before you ask them', status: 'Not yet started' },
+];
+
 export function ShopDesc() {
     return (
         <div className="card-stack h-full w-full p-3 text-gray-600">
-            <p className="card-eyebrow text-[#FFA500]">Project Summary</p>
+            
             <p className="card-title text-neutral-900">BFshop</p>
             <p className="card-meta md:text-sm">BFshop is a simulated business system with live data passing through it. The purpose is to create an intelligence and action tool without the user being swamped with dashboards.</p>
-            <ul className="list-disc pl-5 space-y-1 card-meta md:text-sm">
-                <li>Place orders as customer and manage them as merchant</li>
-                <li>A synthetic customer base generating orders constantly</li>
-                <li>Business metrics are calculated and stored historically</li>
-                <li>Simulated ecommerce data and business actions influence customer buying behaviour</li>
-                <li>A simple AI interface explains what matters, answers questions and suggests actions</li>
+            <ul className="space-y-2 card-meta md:text-sm">
+                {shopFeatures.map((feature) => (
+                    <li key={feature.text} className="flex items-start justify-between gap-3">
+                        <span className="flex-1 before:mr-2 before:content-['•']">{feature.text}</span>
+                        <span className="shrink-0 self-start rounded-md border border-[#FFA500]/30 bg-[#FFA500]/10 px-2 py-1 text-xs font-medium text-[#FFA500] whitespace-nowrap">
+                            {feature.status}
+                        </span>
+                    </li>
+                ))}
             </ul>
             
         </div>
@@ -50,9 +61,7 @@ export function ShopLink(){
             href="https://bfshop.benfosterdev.com"
             className="surface-spotlight-light is-interactive-orange group w-full h-full max-w-sm p-6 ring-1 ring-white/40 border"
         >
-            <div className="mb-4 inline-flex rounded-full border border-[#FFA500]/45 bg-[#FFA500]/10 px-3 py-1 card-eyebrow text-[#FFA500]">
-                Project hub
-            </div>
+            
 
             <h3 className="font-bebas text-4xl leading-none tracking-wide text-neutral-900 md:text-5xl">
                 Project Portal
@@ -62,10 +71,7 @@ export function ShopLink(){
                 Watch the live order chain or read my documentation as the project progresses.
             </p>
 
-            <span className="mt-6 inline-flex items-center card-meta font-semibold text-[#FFA500] transition group-hover:text-orange-600">
-                Open portal
-                <span className="ml-2 transition group-hover:translate-x-1">-&gt;</span>
-            </span>
+           
         </Link>
 
     )

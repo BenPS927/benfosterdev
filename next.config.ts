@@ -9,6 +9,21 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       {
+        source: '/projects/bfshop',
+        destination: 'https://bfshop.benfosterdev.com/',
+        permanent: true,
+      },
+      {
+        source: '/projects/bfshop/overview',
+        destination: 'https://bfshop.benfosterdev.com/playground/introduction',
+        permanent: true,
+      },
+      {
+        source: '/projects/bfshop/logbook/vertical-slices',
+        destination: 'https://bfshop.benfosterdev.com/playground/vertical-slices',
+        permanent: true,
+      },
+      {
         source: '/blog/blog-bfshop',
         destination: '/projects/bfshop',
         permanent: true,
